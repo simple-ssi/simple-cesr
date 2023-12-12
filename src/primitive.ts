@@ -1,3 +1,6 @@
+import * as CodeTable from './codeTable'
+import { LookupByDescriptionFactory } from './lookup'
+
 export type TextType = string & { _type: 'text' }
 export type BinaryType = Buffer & { _type: 'binary' }
 export type RawType = [string, Buffer] & { _type: 'raw' }
@@ -26,8 +29,11 @@ export function Binary (text: TextType): BinaryType {
   return Buffer.from(text, 'base64url') as BinaryType
 }
 
-export function Raw (primitive: Buffer): RawType {
-  return ['M', primitive] as RawType
+export function Raw (primitive: Buffer, description: PrimitiveDescriptionType): RawType {
+  const table = CodeTable.defaultTable
+  const lookup = LookupByDescriptionFactory(table)
+  const code = lookup(description)
+  return [code, primitive] as RawType
 }
 
 export function TextToBinary (text: TextType): BinaryType {
