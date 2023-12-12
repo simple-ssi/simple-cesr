@@ -2,6 +2,12 @@ export type TextType = string & { _type: 'text' }
 export type BinaryType = Buffer & { _type: 'binary' }
 export type RawType = [string, Buffer] & { _type: 'raw' }
 
+export type RawPrimitiveType = Buffer & { _type: 'primitive' }
+export type PrimitiveDescriptionType = 'NULL' | 'one-byte' | 'two-byte' | 'three-byte'
+export type CodeType = 'NULL' | 'L' | 'M' | 'N'
+
+export type CodeTableType = Map<CodeType, PrimitiveDescriptionType>
+
 export function Text (raw: RawType): TextType {
   // The code from the code table, which we assume to be a base64url char here
   const code = raw[0]

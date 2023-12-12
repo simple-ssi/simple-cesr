@@ -1,4 +1,6 @@
 import { Raw, Binary, BinaryType, Text, TextType, TextToBinary, BinaryToText, RawType } from './src/primitive'
+import { calculatePrePadBytes } from './src/util'
+import * as CodeTable from './src/codeTable'
 
 const primitive = Buffer.from('ffff', 'hex')
 const raw = Raw(primitive)
@@ -17,3 +19,5 @@ const altBinary = TextToBinary(text)
 const altText = BinaryToText(binary)
 
 printIt(raw, altText, altBinary)
+
+console.log(calculatePrePadBytes(3))
