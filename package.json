@@ -1,7 +1,7 @@
 {
-  "name": "ts-node-template",
+  "name": "jmr-cesr",
   "version": "1.0.0",
-  "description": "A template to quickly stand up ts-node projects",
+  "description": "An implementation of the CESR protocol.",
   "main": "index.ts",
   "scripts": {
     "start": "ts-node index.ts",
