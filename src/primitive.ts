@@ -1,9 +1,8 @@
 import * as CodeTable from './codeTable'
-import { LookupByDescriptionFactory } from './lookup'
 
 export type TextType = string & { _type: 'text' }
 export type BinaryType = Buffer & { _type: 'binary' }
-export type RawType = [string, Buffer] & { _type: 'raw' }
+export interface RawType { code: string, raw: Buffer }
 
 export type RawPrimitiveType = Buffer & { _type: 'primitive' }
 export type PrimitiveDescriptionType = 'NULL' | 'one-byte' | 'two-byte' | 'three-byte'
@@ -13,9 +12,9 @@ export type CodeTableType = Map<CodeType, PrimitiveDescriptionType>
 
 export function Text (raw: RawType): TextType {
   // The code from the code table, which we assume to be a base64url char here
-  const code = raw[0]
+  const code = raw.code
   // The binary representation of the raw primitive
-  const primitive = raw[1]
+  const primitive = raw.raw
   // A single zeroed byte, we are assuming a primitive byte length that is a multiple of 2
   const zeroByte = Buffer.from('00', 'hex')
   // Prepend the primitive binary with the single zeroed byte, we are assuming a primitive byte length that is a multiple of 2
@@ -30,10 +29,11 @@ export function Binary (text: TextType): BinaryType {
 }
 
 export function Raw (primitive: Buffer, description: PrimitiveDescriptionType): RawType {
-  const table = CodeTable.defaultTable
-  const lookup = LookupByDescriptionFactory(table)
-  const code = lookup(description)
-  return [code, primitive] as RawType
+  const code = CodeTable.Default.lookupByDescription(description)
+  return {
+    code,
+    raw: primitive
+  }
 }
 
 export function TextToBinary (text: TextType): BinaryType {

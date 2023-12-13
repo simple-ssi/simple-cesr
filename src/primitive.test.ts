@@ -3,7 +3,7 @@ import { Raw, Text, Binary } from './primitive'
 describe('Two-byte primitives:', () => {
   test('Raw', () => {
     const primitive = Buffer.from('0001', 'hex')
-    const expected = ['M', primitive]
+    const expected = { code: 'M', raw: primitive }
     const actual = Raw(Buffer.from('0001', 'hex'), 'two-byte')
     expect(actual).toStrictEqual(expected)
   })
