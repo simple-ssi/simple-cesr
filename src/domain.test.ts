@@ -1,21 +1,24 @@
-import { Raw, Text, Binary } from './primitive'
+import { CodeType } from './code'
+import { Raw, Text, Binary } from './domain'
+import { RawPrimitiveType } from './primitive'
 
 describe('Two-byte primitives:', () => {
   test('Raw', () => {
-    const primitive = Buffer.from('0001', 'hex')
-    const expected = { code: 'M', raw: primitive }
-    const actual = Raw(Buffer.from('0001', 'hex'), 'two-byte')
+    const primitive = Buffer.from('0001', 'hex') as RawPrimitiveType
+    const code = 'M' as CodeType
+    const expected = { code, raw: primitive }
+    const actual = Raw(Buffer.from('0001', 'hex') as RawPrimitiveType, 'two-byte')
     expect(actual).toStrictEqual(expected)
   })
   test('Text', () => {
-    const primitive = Buffer.from('0001', 'hex')
+    const primitive = Buffer.from('0001', 'hex') as RawPrimitiveType
     const raw = Raw(primitive, 'two-byte')
     const expected = 'MAAB'
     const actual = Text(raw)
     expect(expected).toEqual(actual)
   })
   test('Binary', () => {
-    const primitive = Buffer.from('0001', 'hex')
+    const primitive = Buffer.from('0001', 'hex') as RawPrimitiveType
     const raw = Raw(primitive, 'two-byte')
     const text = Text(raw)
     const expected = Buffer.from('300001', 'hex')

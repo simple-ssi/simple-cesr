@@ -1,4 +1,7 @@
-import { CodeTableType, CodeType, PrimitiveDescriptionType } from './primitive'
+import { CodeType } from './code'
+import { PrimitiveDescriptionType } from './primitive'
+
+export type CodeTableType = Map<CodeType, PrimitiveDescriptionType>
 
 const lookupByCode = (code: CodeType, table: CodeTableType): PrimitiveDescriptionType => table.get(code) ?? 'NULL'
 
