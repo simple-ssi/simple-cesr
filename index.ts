@@ -1,5 +1,5 @@
-import { Raw, Binary, BinaryType, Text, TextType, TextToBinary, BinaryToText, RawType } from './src/domain'
-import { RawPrimitiveType } from './src/primitive'
+import { Raw, Binary, BinaryType, Text, TextType, TextToBinary, BinaryToText, RawType } from './src/core/domain'
+import { RawPrimitiveType } from './src/core/primitive'
 import { calculatePrePadBytes } from './src/util'
 
 const primitive = Buffer.from('ffff', 'hex') as RawPrimitiveType

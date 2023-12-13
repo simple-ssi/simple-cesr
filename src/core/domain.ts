@@ -1,6 +1,6 @@
 import { PrimitiveDescriptionType, RawPrimitiveType } from './primitive'
 import { CodeType } from './code'
-import * as CodeTable from './codeTable'
+import * as CodeTable from './codeTables/codeTable'
 
 export type TextType = string & { _type: 'text' }
 export type BinaryType = Buffer & { _type: 'binary' }

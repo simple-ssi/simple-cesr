@@ -4,8 +4,9 @@
   "description": "A template to quickly stand up ts-node projects",
   "main": "index.ts",
   "scripts": {
-    "start": "npx ts-node index.ts",
-    "test": "jest"
+    "start": "ts-node index.ts",
+    "test": "jest",
+    "build": "npx tsc"
   },
   "author": "Jonathan Rayback",
   "license": "UNLICENSED",
