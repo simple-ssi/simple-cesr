@@ -1,3 +1,3 @@
-export function calculatePrePadBytes (bytes: number): number {
+export function calculatePadSize (bytes: number): number {
   return (3 - (bytes % 3)) % 3
 }

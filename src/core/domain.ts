@@ -1,5 +1,5 @@
-import { PrimitiveDescriptionType, RawPrimitiveType } from './primitive'
-import { CodeType } from './code'
+import { PrimitiveConstructorType, PrimitiveDescriptionType, RawPrimitiveType, primitiveConstructorDictionary } from './primitive'
+import { TypeCodeType } from './typeCode'
 import * as CodeTable from './codeTables/codeTable'
 
 export type TextType = string & { _type: 'text' }
@@ -24,11 +24,15 @@ export function Binary (text: TextType): BinaryType {
   return Buffer.from(text, 'base64url') as BinaryType
 }
 
-export function Raw (primitive: RawPrimitiveType, description: PrimitiveDescriptionType): RawType {
-  const code: CodeType = CodeTable.Default.lookupByDescription(description)
+export function Raw (description: PrimitiveDescriptionType, primitive: Buffer): RawType {
+  const code: TypeCodeType = CodeTable.Default.lookupByDescription(description)
+  const constructor: PrimitiveConstructorType =
+    primitiveConstructorDictionary.get(description) ??
+    ((primitive: Buffer) => Buffer.alloc(0) as RawPrimitiveType)
+  const raw: RawPrimitiveType = constructor(primitive)
   return {
     code,
-    raw: primitive
+    raw
   }
 }
 

@@ -1,15 +1,15 @@
-import { CodeType } from '../code'
+import { TypeCodeType } from '../typeCode'
 import { PrimitiveDescriptionType } from '../primitive'
 import { CodeTableType } from './codeTable'
 
-export const LookupByCodeFactory = (table: CodeTableType) => (code: CodeType) => lookupByCode(code, table)
+export const LookupByCodeFactory = (table: CodeTableType) => (code: TypeCodeType) => lookupByCode(code, table)
 export const LookupByDescriptionFactory = (table: CodeTableType) => (description: PrimitiveDescriptionType) => lookupByDescription(description, table)
 
-const lookupByCode = (code: CodeType, table: CodeTableType): PrimitiveDescriptionType => table.get(code) ?? 'NULL'
+const lookupByCode = (code: TypeCodeType, table: CodeTableType): PrimitiveDescriptionType => table.get(code) ?? 'NULL'
 
 const lookupByDescription = (
   primitiveDescription: PrimitiveDescriptionType,
-  table: CodeTableType): CodeType => {
+  table: CodeTableType): TypeCodeType => {
   // console.log(primitiveDescription)
   let returnCode
   table.forEach((description, code) => {
