@@ -1,5 +1,5 @@
 import { Raw, Binary, BinaryType, Text, TextType, TextToBinary, BinaryToText, RawType } from './src/core/domain'
-import { calculatePadSize } from './src/util'
+import { calculatePadSize } from './src/lib/util'
 
 const primitive = Buffer.from('ffff', 'hex')
 const raw = Raw('short', primitive)
