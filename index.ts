@@ -1,12 +1,12 @@
-import { Raw, Binary, BinaryType, Text, TextType, TextToBinary, BinaryToText, RawType } from './src/core/domain'
+import { buildRaw, buildBinary, Binary, buildText, Text, textToBinary, binaryToText, Raw } from './src/core/domain'
 import { calculatePadSize } from './src/lib/util'
 
 const primitive = Buffer.from('ffff', 'hex')
-const raw = Raw('short', primitive)
-const text = Text(raw)
-const binary = Binary(text)
+const raw = buildRaw('M', primitive)
+const text = buildText(raw)
+const binary = buildBinary(text)
 
-function printIt (raw: RawType, text: TextType, binary: BinaryType): void {
+function printIt (raw: Raw, text: Text, binary: Binary): void {
   console.log(raw)
   console.log(text)
   console.log(binary)
@@ -14,8 +14,8 @@ function printIt (raw: RawType, text: TextType, binary: BinaryType): void {
 
 printIt(raw, text, binary)
 
-const altBinary = TextToBinary(text)
-const altText = BinaryToText(binary)
+const altBinary = textToBinary(text)
+const altText = binaryToText(binary)
 
 printIt(raw, altText, altBinary)
 

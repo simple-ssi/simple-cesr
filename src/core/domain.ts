@@ -1,12 +1,12 @@
-import { PrimitiveConstructorType, PrimitiveDescriptionType, RawPrimitiveType, primitiveConstructorDictionary } from './primitive'
-import { TypeCodeType } from './typeCode'
-import * as CodeTable from './codeTables/codeTable'
+import { RawPrimitive, shortBuilder } from './primitive'
+import { TextCode } from './textCode'
+// import * as CodeTable from './codeTables/codeTable'
 
-export type TextType = string & { _type: 'text' }
-export type BinaryType = Buffer & { _type: 'binary' }
-export interface RawType { code: string, raw: Buffer }
+export type Text = string & { _type: 'text' }
+export type Binary = Buffer & { _type: 'binary' }
+export interface Raw { code: string, raw: Buffer }
 
-export function Text (raw: RawType): TextType {
+export function buildText (raw: Raw): Text {
   // The code from the code table, which we assume to be a base64url char here
   const code = raw.code
   // The binary representation of the raw primitive
@@ -17,29 +17,25 @@ export function Text (raw: RawType): TextType {
   const paddedBinary = Buffer.concat([zeroByte, primitive])
   // Replace the first character of the base64url encoded string (which contains no information about the primitive)
   // with the single code char
-  return code + paddedBinary.toString('base64url').slice(1) as TextType
+  return code + paddedBinary.toString('base64url').slice(1) as Text
 }
 
-export function Binary (text: TextType): BinaryType {
-  return Buffer.from(text, 'base64url') as BinaryType
+export function buildBinary (text: Text): Binary {
+  return Buffer.from(text, 'base64url') as Binary
 }
 
-export function Raw (description: PrimitiveDescriptionType, primitive: Buffer): RawType {
-  const code: TypeCodeType = CodeTable.Default.lookupByDescription(description)
-  const constructor: PrimitiveConstructorType =
-    primitiveConstructorDictionary.get(description) ??
-    ((primitive: Buffer) => Buffer.alloc(0) as RawPrimitiveType)
-  const raw: RawPrimitiveType = constructor(primitive)
+export function buildRaw (code: TextCode, primitive: Buffer): Raw {
+  const rawPrimitive: RawPrimitive = shortBuilder(primitive)
   return {
     code,
-    raw
+    raw: rawPrimitive
   }
 }
 
-export function TextToBinary (text: TextType): BinaryType {
-  return Buffer.from(text, 'base64url') as BinaryType
+export function textToBinary (text: Text): Binary {
+  return Buffer.from(text, 'base64url') as Binary
 }
 
-export function BinaryToText (binary: BinaryType): TextType {
-  return binary.toString('base64url') as TextType
+export function binaryToText (binary: Binary): Text {
+  return binary.toString('base64url') as Text
 }

@@ -1,4 +1,4 @@
-export type TypeCodeType =
+export type TextCode =
 'NULL' |
 'A' |
 'B' |
