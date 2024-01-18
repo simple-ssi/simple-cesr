@@ -4,11 +4,11 @@ import { TextCode } from './textCode'
 
 export type Text = string & { _type: 'text' }
 export type Binary = Buffer & { _type: 'binary' }
-export interface Raw { code: string, raw: Buffer }
+export interface Raw { code: TextCode, raw: RawPrimitive }
 
 export function buildText (raw: Raw): Text {
   // The code from the code table, which we assume to be a base64url char here
-  const code = raw.code
+  const code: TextCode = raw.code
   // The binary representation of the raw primitive
   const primitive = raw.raw
   // A single zeroed byte, we are assuming a primitive byte length that is a multiple of 2
