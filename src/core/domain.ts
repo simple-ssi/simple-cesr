@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer'
+
 import { RawPrimitive, shortBuilder } from './primitive'
 import { TextCode } from './textCode'
 // import * as CodeTable from './codeTables/codeTable'

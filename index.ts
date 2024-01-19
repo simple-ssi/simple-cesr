@@ -1,5 +1,4 @@
-import { Text, buildRawFromText } from './src/core/domain'
-
-const text = 'MAAA' as Text
-const raw = buildRawFromText(text)
-console.log(raw)
+const short = 11
+// const bytes = new Uint16Array([short])
+const temp = short.toString(16)
+console.log(temp)

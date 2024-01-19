@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer'
+
 import { rawToBinary } from './rawToBinary'
 
 describe('Raw to Binary', () => {

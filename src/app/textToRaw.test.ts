@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer'
+
 import { Text } from '../core/domain'
 import { RawPrimitive } from '../core/primitive'
 import { TextCode } from '../core/textCode'

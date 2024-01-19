@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer'
+
 import { rawToText } from './rawToText'
 
 describe('Raw To Text', () => {

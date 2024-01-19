@@ -1,6 +1,0 @@
-rawToText:      input->raw->textFromRaw
-rawToBinary:    input->raw->textFromRaw->binaryFromText
-textToRaw:      text->rawFromText
-textToBinary:   text->binaryFromText
-binaryToText:   binary->textFromBinary
-binaryToRaw:    binary->textFromBinary->rawFromText

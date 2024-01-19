@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer'
+
 export type RawPrimitive = Buffer & { _type: 'primitive' }
 type RawPrimitiveBuilder = (primitive: Buffer) => RawPrimitive
 

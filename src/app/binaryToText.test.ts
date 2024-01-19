@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer'
+
 import { Binary } from '../core/domain'
 import { binaryToText } from './binaryToText'
 
