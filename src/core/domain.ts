@@ -31,11 +31,3 @@ export function buildRaw (code: TextCode, primitive: Buffer): Raw {
     raw: rawPrimitive
   }
 }
-
-// function textToBinary (text: Text): Binary {
-//   return Buffer.from(text, 'base64url') as Binary
-// }
-
-// function binaryToText (binary: Binary): Text {
-//   return binary.toString('base64url') as Text
-// }
