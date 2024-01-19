@@ -27,10 +27,7 @@ export function buildRawFromText (text: Text): Raw {
     'hex'
   ) as RawPrimitive
 
-  return {
-    code,
-    raw: primitive
-  }
+  return buildRaw(code, primitive)
 }
 
 export function buildTextFromRaw (raw: Raw): Text {
