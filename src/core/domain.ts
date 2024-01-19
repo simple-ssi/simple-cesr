@@ -6,7 +6,7 @@ export type Text = string & { _type: 'text' }
 export type Binary = Buffer & { _type: 'binary' }
 export interface Raw { code: TextCode, raw: RawPrimitive }
 
-export function buildRaw (code: TextCode, primitive: Buffer): Raw {
+export const buildRaw = (code: TextCode, primitive: Buffer): Raw => {
   const rawPrimitive: RawPrimitive = shortBuilder(primitive)
   return {
     code,
@@ -14,7 +14,7 @@ export function buildRaw (code: TextCode, primitive: Buffer): Raw {
   }
 }
 
-export function buildRawFromText (text: Text): Raw {
+export const buildRawFromText = (text: Text): Raw => {
   const code = text.charAt(0) as TextCode
 
   const paddedBinary = Buffer.from(text, 'base64url')
@@ -30,7 +30,7 @@ export function buildRawFromText (text: Text): Raw {
   return buildRaw(code, primitive)
 }
 
-export function buildTextFromRaw (raw: Raw): Text {
+export const buildTextFromRaw = (raw: Raw): Text => {
   // The code from the code table, which we assume to be a base64url char here
   const code: TextCode = raw.code
   // The binary representation of the raw primitive
@@ -47,10 +47,10 @@ export function buildTextFromRaw (raw: Raw): Text {
 }
 
 // Sort of like an overload of `buildText()`...
-export function buildTextFromBinary (binary: Binary): Text {
+export const buildTextFromBinary = (binary: Binary): Text => {
   return binary.toString('base64url') as Text
 }
 
-export function buildBinaryFromText (text: Text): Binary {
+export const buildBinaryFromText = (text: Text): Binary => {
   return Buffer.from(text, 'base64url') as Binary
 }
