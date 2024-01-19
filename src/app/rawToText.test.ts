@@ -1,6 +1,6 @@
 import { rawToText } from './rawToText'
 
-describe('To Text', () => {
+describe('Raw To Text', () => {
   test('("M", 0x0000) -> "MAAA"', () => {
     const short = Buffer.from([0x00, 0x00])
     expect(rawToText('M', short)).toEqual('MAAA')
