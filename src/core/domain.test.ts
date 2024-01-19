@@ -1,5 +1,5 @@
 import { TextCode } from './textCode'
-import { buildRaw, buildTextFromRaw, buildTextFromBinary, buildBinaryFromText } from './domain'
+import { Text, buildRaw, buildRawFromText, buildTextFromRaw, buildTextFromBinary, buildBinaryFromText } from './domain'
 
 describe('Two-byte primitives:', () => {
   test('Raw', () => {
@@ -7,6 +7,14 @@ describe('Two-byte primitives:', () => {
     const code = 'M' as TextCode
     const expected = { code, raw: primitive }
     const actual = buildRaw('M', Buffer.from('0001', 'hex'))
+    expect(actual).toStrictEqual(expected)
+  })
+  test('Raw from Text', () => {
+    const text = 'MP__' as Text
+    const code = 'M' as TextCode
+    const prmitive = Buffer.from('ffff', 'hex')
+    const expected = { code, raw: prmitive }
+    const actual = buildRawFromText(text)
     expect(actual).toStrictEqual(expected)
   })
   test('Text from Raw', () => {
