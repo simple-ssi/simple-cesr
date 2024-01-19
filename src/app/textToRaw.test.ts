@@ -8,7 +8,7 @@ describe('Text to Raw', () => {
     const text = 'MAAA' as Text
     const code = 'M' as TextCode
     const raw = Buffer.from([0x00, 0x00]) as RawPrimitive
-    const expected = { code, raw }
+    const expected = [code, raw]
     const actual = textToRaw(text)
     expect(expected).toEqual(actual)
   })
@@ -16,7 +16,7 @@ describe('Text to Raw', () => {
     const text = 'MAAB' as Text
     const code = 'M' as TextCode
     const raw = Buffer.from([0x00, 0x01]) as RawPrimitive
-    const expected = { code, raw }
+    const expected = [code, raw]
     const actual = textToRaw(text)
     expect(expected).toEqual(actual)
   })
@@ -24,7 +24,7 @@ describe('Text to Raw', () => {
     const text = 'MP__' as Text
     const code = 'M' as TextCode
     const raw = Buffer.from([0xff, 0xff]) as RawPrimitive
-    const expected = { code, raw }
+    const expected = [code, raw]
     const actual = textToRaw(text)
     expect(expected).toEqual(actual)
   })

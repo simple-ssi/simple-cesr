@@ -5,7 +5,7 @@ describe('Two-byte primitives:', () => {
   test('Raw', () => {
     const primitive = Buffer.from('0001', 'hex')
     const code = 'M' as TextCode
-    const expected = { code, raw: primitive }
+    const expected = [code, primitive]
     const actual = buildRaw('M', Buffer.from('0001', 'hex'))
     expect(actual).toStrictEqual(expected)
   })
@@ -13,7 +13,7 @@ describe('Two-byte primitives:', () => {
     const text = 'MP__' as Text
     const code = 'M' as TextCode
     const prmitive = Buffer.from('ffff', 'hex')
-    const expected = { code, raw: prmitive }
+    const expected = [code, prmitive]
     const actual = buildRawFromText(text)
     expect(actual).toStrictEqual(expected)
   })
