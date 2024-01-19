@@ -1,3 +1,3 @@
-import { Text, Binary, buildBinary } from '../core/domain'
+import { Text, Binary, buildBinaryFromText } from '../core/domain'
 
-export const textToBinary = (text: Text): Binary => buildBinary(text)
+export const textToBinary = (text: Text): Binary => buildBinaryFromText(text)

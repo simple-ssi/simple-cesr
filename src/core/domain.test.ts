@@ -1,5 +1,5 @@
 import { TextCode } from './textCode'
-import { buildRaw, buildText, buildBinary } from './domain'
+import { buildRaw, buildTextFromRaw, buildTextFromBinary, buildBinaryFromText } from './domain'
 
 describe('Two-byte primitives:', () => {
   test('Raw', () => {
@@ -9,19 +9,28 @@ describe('Two-byte primitives:', () => {
     const actual = buildRaw('M', Buffer.from('0001', 'hex'))
     expect(actual).toStrictEqual(expected)
   })
-  test('Text', () => {
+  test('Text from Raw', () => {
     const primitive = Buffer.from('0001', 'hex')
     const raw = buildRaw('M', primitive)
     const expected = 'MAAB'
-    const actual = buildText(raw)
+    const actual = buildTextFromRaw(raw)
+    expect(expected).toEqual(actual)
+  })
+  test('Text from Binary', () => {
+    const primitive = Buffer.from('0001', 'hex')
+    const raw = buildRaw('M', primitive)
+    const text = buildTextFromRaw(raw)
+    const binary = buildBinaryFromText(text)
+    const expected = 'MAAB'
+    const actual = buildTextFromBinary(binary)
     expect(expected).toEqual(actual)
   })
   test('Binary', () => {
     const primitive = Buffer.from('0001', 'hex')
     const raw = buildRaw('M', primitive)
-    const text = buildText(raw)
+    const text = buildTextFromRaw(raw)
     const expected = Buffer.from('300001', 'hex')
-    const actual = buildBinary(text)
+    const actual = buildBinaryFromText(text)
     expect(expected).toEqual(actual)
   })
 })

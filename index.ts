@@ -1,5 +1,5 @@
-const f = (raw: Buffer): void => console.log(raw)
+import { Text, buildRawFromText } from './src/core/domain'
 
-const data: any = 0x000f
-
-f(data)
+const text = 'MAAA' as Text
+const raw = buildRawFromText(text)
+console.log(raw)
