@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
-    "buffer": "^6.0.3"
+    "buffer": "^6.0.3",
+    "remeda": "^1.37.0"
   }
 }
