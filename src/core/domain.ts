@@ -1,6 +1,7 @@
 import { Buffer } from 'buffer'
 
-import { RawPrimitive, shortBuilder } from './primitive'
+import { RawPrimitive } from './primitive'
+import { buildShort } from './primitives/short'
 import { TextCode } from './textCode'
 // import * as CodeTable from './codeTables/codeTable'
 
@@ -12,7 +13,7 @@ export type Raw = [TextCode, RawPrimitive] & { _type: 'raw' }
 export const buildRaw = (code: TextCode, primitive: Buffer): Raw => {
   // only handle shorts at this point
   // TO DO: correctly handle all supported primitive types
-  const rawPrimitive: RawPrimitive = shortBuilder(primitive)
+  const rawPrimitive: RawPrimitive = buildShort(primitive)
   return [code, rawPrimitive] as Raw
 }
 
