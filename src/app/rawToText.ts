@@ -1,4 +1,4 @@
 import { Text, Raw, buildTextFromRaw } from '../core/domain'
-export const rawToText = (raw: Raw): Text => {
+export default (raw: Raw): Text => {
   return buildTextFromRaw(raw)
 }
