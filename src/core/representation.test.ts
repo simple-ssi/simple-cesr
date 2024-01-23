@@ -1,5 +1,5 @@
 import { TextCode } from './textCode'
-import { Text, buildRaw, buildRawFromText, buildTextFromRaw, buildTextFromBinary, buildBinaryFromText } from './domain'
+import { Text, buildRaw, buildRawFromText, buildTextFromRaw, buildTextFromBinary, buildBinaryFromText } from './representation'
 import { Short } from './primitives/short'
 
 describe('Domain Builders:', () => {

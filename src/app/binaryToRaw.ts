@@ -1,4 +1,4 @@
-import { Binary, Raw, buildRawFromText, buildTextFromBinary } from '../core/domain'
+import { Binary, Raw, buildRawFromText, buildTextFromBinary } from '../core/representation'
 
 export default (binary: Binary): Raw => {
   const text = buildTextFromBinary(binary)

@@ -3,7 +3,7 @@ import { Buffer } from 'buffer'
 import rawToBinary from './rawToBinary'
 import { TextCode } from '../core/textCode'
 import { RawPrimitive } from '../core/primitive'
-import { Raw } from '../core/domain'
+import { Raw } from '../core/representation'
 
 describe('Raw to Binary', () => {
   test('("M", 0x0000) -> 0x300000', () => {

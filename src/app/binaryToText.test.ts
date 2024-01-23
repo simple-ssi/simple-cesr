@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
 
-import { Binary } from '../core/domain'
+import { Binary } from '../core/representation'
 import binaryToText from './binaryToText'
 
 describe('Binary to Text', () => {

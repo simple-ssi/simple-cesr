@@ -1,6 +1,7 @@
 import { Buffer } from 'buffer'
+import * as R from 'remeda'
 
-import { RawPrimitive } from './primitive'
+import { RawPrimitive, primitiveBuilderFactory } from './primitive'
 import { buildRawShort, buildShort } from './primitives/short'
 import { TextCode } from './textCode'
 
@@ -8,14 +9,16 @@ export type Text = string & { _type: 'text' }
 export type Binary = Buffer & { _type: 'binary' }
 export type Raw = [TextCode, RawPrimitive] & { _type: 'raw' }
 
-export const buildRaw = (code: TextCode, primitive: any): Raw => {
-  if (code === 'M') {
-    const short = buildShort(primitive)
-    const rawPrimitive = buildRawShort(short)
-    return [code, rawPrimitive] as Raw
-  } else {
-    throw new Error('Invalid Text Code.')
-  }
+export type Representation = Text | Binary | Raw
+
+export const buildRaw = (code: TextCode, value: any): Raw => {
+  const builders = primitiveBuilderFactory(code)
+  return R.pipe(
+    code,
+    code => builders.primitiveBuilder(value),
+    primitive => builders.rawPrimitiveBuilder(primitive),
+    rawPrimitive => [code, rawPrimitive]
+  ) as Raw
 }
 
 export const buildRawFromText = (text: Text): Raw => {

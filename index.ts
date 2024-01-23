@@ -2,7 +2,7 @@ import { Buffer } from 'buffer'
 import * as R from 'remeda'
 
 import rawToText from './src/app/rawToText'
-import { Raw } from './src/core/domain'
+import { Raw } from './src/core/representation'
 import textToBinary from './src/app/textToBinary'
 import binaryToRaw from './src/app/binaryToRaw'
 import rawToBinary from './src/app/rawToBinary'

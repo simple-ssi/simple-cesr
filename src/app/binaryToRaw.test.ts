@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
 
-import { Binary } from '../core/domain'
+import { Binary } from '../core/representation'
 import { RawPrimitive } from '../core/primitive'
 import { TextCode } from '../core/textCode'
 import binaryToRaw from './binaryToRaw'
