@@ -1,20 +1,21 @@
 import { Buffer } from 'buffer'
 
 import { RawPrimitive } from './primitive'
-import { buildShort } from './primitives/short'
+import { buildRawShort, buildShort } from './primitives/short'
 import { TextCode } from './textCode'
-// import * as CodeTable from './codeTables/codeTable'
 
 export type Text = string & { _type: 'text' }
 export type Binary = Buffer & { _type: 'binary' }
 export type Raw = [TextCode, RawPrimitive] & { _type: 'raw' }
-// export interface Raw { code: TextCode, raw: RawPrimitive }
 
-export const buildRaw = (code: TextCode, primitive: Buffer): Raw => {
-  // only handle shorts at this point
-  // TO DO: correctly handle all supported primitive types
-  const rawPrimitive: RawPrimitive = buildShort(primitive)
-  return [code, rawPrimitive] as Raw
+export const buildRaw = (code: TextCode, primitive: any): Raw => {
+  if (code === 'M') {
+    const short = buildShort(primitive)
+    const rawPrimitive = buildRawShort(short)
+    return [code, rawPrimitive] as Raw
+  } else {
+    throw new Error('Invalid Text Code.')
+  }
 }
 
 export const buildRawFromText = (text: Text): Raw => {
@@ -30,7 +31,7 @@ export const buildRawFromText = (text: Text): Raw => {
     'hex'
   ) as RawPrimitive
 
-  return buildRaw(code, primitive)
+  return [code, primitive] as Raw
 }
 
 export const buildTextFromRaw = (raw: Raw): Text => {

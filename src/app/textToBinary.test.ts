@@ -1,7 +1,7 @@
 import { Buffer } from 'buffer'
 
 import { Text, Binary } from '../core/domain'
-import { textToBinary } from './textToBinary'
+import textToBinary from './textToBinary'
 
 describe('Text to Binary', () => {
   test('"MAAA" -> 0x300000', () => {

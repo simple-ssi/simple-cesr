@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
 
-import { rawToText } from './rawToText'
+import rawToText from './rawToText'
 import { RawPrimitive } from '../core/primitive'
 import { TextCode } from '../core/textCode'
 import { Raw } from '../core/domain'

@@ -3,7 +3,7 @@ import { Buffer } from 'buffer'
 import { Text } from '../core/domain'
 import { RawPrimitive } from '../core/primitive'
 import { TextCode } from '../core/textCode'
-import { textToRaw } from './textToRaw'
+import textToRaw from './textToRaw'
 
 describe('Text to Raw', () => {
   test('"MAAA" -> ("M", 0x0000)', () => {
