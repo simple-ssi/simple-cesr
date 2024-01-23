@@ -1,7 +1,7 @@
 
 import { Buffer } from 'buffer'
-import convertNumberToBytes from '../../lib/convertNumberToBytes'
-import countBits from '../../lib/countBits'
+import convertNumberToBytes from '../helpers/convertNumberToBytes'
+import countBits from '../helpers/countBits'
 
 export type Short = number & { _type: 'short' }
 
