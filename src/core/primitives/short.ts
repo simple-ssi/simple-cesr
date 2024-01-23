@@ -1,11 +1,11 @@
 
-import { Buffer } from 'buffer'
 import convertNumberToBytes from '../helpers/convertNumberToBytes'
 import countBits from '../helpers/countBits'
+import { PrimitiveBuilder, RawPrimitive, RawPrimitiveBuilder } from '../primitive'
 
 export type Short = number & { _type: 'short' }
 
-export const buildShort = (value: number): Short => {
+export const buildShort: PrimitiveBuilder = (value: number): Short => {
   // must not be greater than 2 bytes or 16 bits
   if (countBits(value) <= 16) {
     return value as Short
@@ -14,4 +14,4 @@ export const buildShort = (value: number): Short => {
   }
 }
 
-export const buildRawShort = (short: Short): Buffer => convertNumberToBytes(short)
+export const buildRawShort: RawPrimitiveBuilder = (short: Short): RawPrimitive => convertNumberToBytes(short) as RawPrimitive

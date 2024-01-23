@@ -1,6 +1,6 @@
 import { TextCode } from './textCode'
 import { Text, buildRaw, buildRawFromText, buildTextFromRaw, buildTextFromBinary, buildBinaryFromText } from './representation'
-import { Short } from './primitives/short'
+import { Short, buildShort } from './primitives/short'
 
 describe('Domain Builders:', () => {
   test('Build Raw', () => {
@@ -20,15 +20,17 @@ describe('Domain Builders:', () => {
     expect(actual).toStrictEqual(expected)
   })
   test('Build Text from Raw', () => {
-    const value = 1
-    const raw = buildRaw('M', value)
+    const shortValue = 1
+    const short = buildShort(shortValue)
+    const raw = buildRaw('M', short)
     const expected = 'MAAB'
     const actual = buildTextFromRaw(raw)
     expect(expected).toEqual(actual)
   })
   test('Build Text from Binary', () => {
-    const value = 1
-    const raw = buildRaw('M', value)
+    const shortValue = 1
+    const short = buildShort(shortValue)
+    const raw = buildRaw('M', short)
     const text = buildTextFromRaw(raw)
     const binary = buildBinaryFromText(text)
     const expected = 'MAAB'
@@ -36,8 +38,9 @@ describe('Domain Builders:', () => {
     expect(expected).toEqual(actual)
   })
   test('Build Binary from Text', () => {
-    const value = 1
-    const raw = buildRaw('M', value)
+    const shortValue = 1
+    const short = buildShort(shortValue)
+    const raw = buildRaw('M', short)
     const text = buildTextFromRaw(raw)
     const expected = Buffer.from('300001', 'hex')
     const actual = buildBinaryFromText(text)

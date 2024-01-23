@@ -7,16 +7,7 @@ export type PrimitiveBuilder = (value: any) => Primitive
 export type RawPrimitive = Buffer & { _type: 'primitive' }
 export type RawPrimitiveBuilder = (primitive: Primitive) => RawPrimitive
 
-export interface PrimitiveFactoryObject {
-  primitiveBuilder: PrimitiveBuilder
-  rawPrimitiveBuilder: RawPrimitiveBuilder
-}
-
-export const primitiveBuilderFactory = (code: TextCode): PrimitiveFactoryObject => {
-  if (code === 'M') {
-    return {
-      primitiveBuilder: buildShort,
-      rawPrimitiveBuilder: buildRawShort as RawPrimitiveBuilder
-    }
-  } else throw new Error('Not a valid Text Code.')
+export const primitiveBuilderFactory = (code: TextCode): RawPrimitiveBuilder => {
+  if (code === 'M') return buildRawShort as RawPrimitiveBuilder
+  else throw new Error('Not a valid Text Code.')
 }
