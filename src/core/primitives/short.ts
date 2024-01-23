@@ -1,7 +1,7 @@
 
 import convertNumberToBytes from '../helpers/convertNumberToBytes'
 import countBits from '../helpers/countBits'
-import { PrimitiveBuilder, RawPrimitive, RawPrimitiveBuilder } from '../primitive'
+import { Primitive, PrimitiveBuilder, RawPrimitive, RawPrimitiveBuilder } from '../primitive'
 
 export type Short = number & { _type: 'short' }
 
@@ -14,4 +14,4 @@ export const buildShort: PrimitiveBuilder = (value: number): Short => {
   }
 }
 
-export const buildRawShort: RawPrimitiveBuilder = (short: Short): RawPrimitive => convertNumberToBytes(short) as RawPrimitive
+export const buildRawShort: RawPrimitiveBuilder = (short: Primitive): RawPrimitive => convertNumberToBytes(short as Short, 2) as RawPrimitive

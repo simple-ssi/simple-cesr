@@ -1,26 +1,38 @@
 import * as R from 'remeda'
 import { Buffer } from 'buffer'
 
+type ByteCount = 2 | 4
+type PaddedHex = string & { _type: 'paddedHex' }
+
 const toHex = (n: number): string => n.toString(16)
 
-const padHex = (hex: string): string => {
+const padHexForByteCount = (hex: string, count: ByteCount): PaddedHex => {
   let chars = hex.split('')
-  while (chars.length < 4) chars = ['0', ...chars]
-  return chars.join('')
+  while (chars.length < count * 2) chars = ['0', ...chars]
+  return chars.join('') as PaddedHex
 }
 
-const splitHex = (hex: string): string[] => [hex.slice(0, 2), hex.slice(2)]
+const splitHexIntoBytes = (paddedHex: PaddedHex): string[] => {
+  return R.pipe(
+    paddedHex,
+    hex => hex.split(''),
+    R.chunk(2), // creates subarrays of chars of length 2
+    R.map(pair => pair.join('')) // join each of the pairs into two-character strings
+  )
+}
 
 const toBytes = (hex: string[]): Buffer => {
-  const byte1 = parseInt(hex[0], 16)
-  const byte2 = parseInt(hex[1], 16)
-  return Buffer.from([byte1, byte2])
+  return R.pipe(
+    hex,
+    R.map(h => parseInt(h, 16)),
+    bytes => Buffer.from(bytes)
+  )
 }
 
-export default (n: number): Buffer => R.pipe(
+export default (n: number, count: ByteCount): Buffer => R.pipe(
   n,
   n => toHex(n),
-  hex => padHex(hex),
-  hex => splitHex(hex),
+  hex => padHexForByteCount(hex, count),
+  paddedHex => splitHexIntoBytes(paddedHex),
   array => toBytes(array)
 )

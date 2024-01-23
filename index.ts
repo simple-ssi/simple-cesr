@@ -73,3 +73,9 @@ const processShort = (code: TextCode, short: number): number => {
 const results = shorts.map(n => processShort(code, n))
 
 console.log(shorts, results)
+
+const hex = 'ffaa'
+const chars = hex.split('')
+const temp = R.chunk(chars, 2)
+const hexBytes = temp.map(pair => pair.join(''))
+console.log(hex, chars, temp, hexBytes)
