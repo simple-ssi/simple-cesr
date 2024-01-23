@@ -1,14 +1,16 @@
 import { TextCode } from './textCode'
 import { Text, buildRaw, buildRawFromText, buildTextFromRaw, buildTextFromBinary, buildBinaryFromText } from './representation'
 import { Short, buildShort } from './primitives/short'
+import { buildLong } from './primitives/long'
 
-describe('Domain Builders:', () => {
+describe('Representation Builders:', () => {
   test('Build Raw', () => {
     const primitive = Buffer.from('0001', 'hex')
     const code = 'M' as TextCode
-    const value = 1 as Short
+    const shortValue = 1
+    const short = buildShort(shortValue)
     const expected = [code, primitive]
-    const actual = buildRaw('M', value)
+    const actual = buildRaw(code, short)
     expect(actual).toStrictEqual(expected)
   })
   test('Build Raw from Text', () => {
@@ -45,5 +47,25 @@ describe('Domain Builders:', () => {
     const expected = Buffer.from('300001', 'hex')
     const actual = buildBinaryFromText(text)
     expect(expected).toEqual(actual)
+  })
+})
+
+describe('Build Raw for all Types', () => {
+  test('Short', () => {
+    const primitive = Buffer.from('0001', 'hex')
+    const code = 'M' as TextCode
+    const value = 1 as Short
+    const expected = [code, primitive]
+    const actual = buildRaw(code, value)
+    expect(actual).toStrictEqual(expected)
+  })
+  test('Long', () => {
+    const primitive = Buffer.from('00000001', 'hex')
+    const code = 'N' as TextCode
+    const longValue = 1
+    const long = buildLong(longValue)
+    const expected = [code, primitive]
+    const actual = buildRaw(code, long)
+    expect(actual).toStrictEqual(expected)
   })
 })

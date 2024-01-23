@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
 import { Short, buildRawShort } from './primitives/short'
-import { Long } from './primitives/long'
+import { Long, buildRawLong } from './primitives/long'
 import { TextCode } from './textCode'
 
 export type Primitive = Short | Long
@@ -10,5 +10,6 @@ export type RawPrimitiveBuilder = (primitive: Short | Long) => RawPrimitive
 
 export const primitiveBuilderFactory = (code: TextCode): RawPrimitiveBuilder => {
   if (code === 'M') return buildRawShort
+  else if (code === 'N') return buildRawLong
   else throw new Error('Not a valid Text Code.')
 }
