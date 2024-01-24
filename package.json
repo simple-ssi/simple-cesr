@@ -4,7 +4,7 @@
   "description": "An implementation of the CESR protocol.",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "ts-node src/main.ts",
     "test": "jest",
     "build": "npx tsc"
   },
