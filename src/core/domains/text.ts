@@ -1,35 +1,9 @@
 import { Buffer } from 'buffer'
-
-import { Primitive, RawPrimitive, primitiveBuilderFactory } from './primitive'
-import { TextCode } from './textCode'
+import { Binary } from './binary'
+import { Raw } from './raw'
+import { TextCode } from '../textCode'
 
 export type Text = string & { _type: 'text' }
-export type Binary = Buffer & { _type: 'binary' }
-export type Raw = [TextCode, RawPrimitive] & { _type: 'raw' }
-
-export type Representation = Text | Binary | Raw
-
-export const buildRaw = (code: TextCode, primitive: Primitive): Raw => {
-  const rawPrimitiveBuilder = primitiveBuilderFactory(code)
-  const rawPrimitive = rawPrimitiveBuilder(primitive)
-  return [code, rawPrimitive] as Raw
-}
-
-export const buildRawFromText = (text: Text): Raw => {
-  const code = text.charAt(0) as TextCode
-
-  const paddedBinary = Buffer.from(text, 'base64url')
-  // Assumes a two-byte primitive
-  // TO DO: use calculatePadSize to handle %1 and %3
-  const primitive = Buffer.from(
-    paddedBinary
-      .toString('hex')
-      .slice(2),
-    'hex'
-  ) as RawPrimitive
-
-  return [code, primitive] as Raw
-}
 
 export const buildTextFromRaw = (raw: Raw): Text => {
   // The code from the code table, which we assume to be a base64url char here
@@ -46,12 +20,8 @@ export const buildTextFromRaw = (raw: Raw): Text => {
   // with the single code char
   return code + paddedBinary.toString('base64url').slice(1) as Text
 }
-
 // Sort of like an overload of `buildText()`...
+
 export const buildTextFromBinary = (binary: Binary): Text => {
   return binary.toString('base64url') as Text
-}
-
-export const buildBinaryFromText = (text: Text): Binary => {
-  return Buffer.from(text, 'base64url') as Binary
 }
