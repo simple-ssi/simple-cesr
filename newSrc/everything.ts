@@ -6,14 +6,15 @@ import * as R from 'remeda'
 // secp256k1 public key: "04b1e3697bca6f37d93a4e7b029b751bca2a065f2a8e90f1b3ed9e1f95a51a6e3a5e28e5a280b5f24c4a05f6759ee2d907e6d56bc6f6981d62142a01db2c4e535a"
 
 type TextCode =
-'NULL' |
 'M' |
 '0F' |
 '1AAB'
 
 interface Short { code: 'M', value: Buffer }
 interface SHA3_512_Digest { code: '0F', value: Buffer }
-interface SECP_256k1_Pub_or_Enc_Key { code: '1AAB', value: any }
+interface SECP_256k1_Pub_or_Enc_Key { code: '1AAB', value: Buffer }
+
+type Primitive = Short | SHA3_512_Digest | SECP_256k1_Pub_or_Enc_Key
 
 const Examples = {
   M: 'ffff',
@@ -83,8 +84,34 @@ const pubKey: SECP_256k1_Pub_or_Enc_Key = {
   )
 }
 
-const oneCharText = convertOneCharCode(short)
-log(oneCharText)
+const makePrimitive = (code: TextCode, value: any): Primitive => {
+  switch (code) {
+    case 'M': {
+      // convert the raw primitive to two-byte hex
+      const hex = value.toString(16).padStart(4, '0')
+      console.log(hex)
+      return { code, value: Buffer.from(hex, 'hex') } }
+    // todo: deal with default other than throwing an error
+    default: throw new Error('unknown code')
+  }
+}
 
-const twoCharText = convertTwoCharCode(sha512)
-log(twoCharText)
+export const toText = (code: TextCode, primitive: any): string => {
+  // process the primitive based on the code -> should be a Buffer
+  const short = makePrimitive(code, primitive)
+
+  // convert the Buffer to cesr Text
+  switch (code) {
+    case 'M': return convertOneCharCode(short as Short)
+    // Todo: deal with default other than throwing an error
+    default: throw new Error('unknown code')
+  }
+}
+export const toBinary = (text: string): Buffer => Buffer.from(text, 'base64url')
+export const toRaw = (binary: Buffer): { code: TextCode, primitive: Buffer } => {
+  const code = binary.toString('base64url').charAt(0) as TextCode
+  console.log(code)
+  const primitive = Buffer.from(binary.subarray(1))
+  console.log(primitive)
+  return { code, primitive }
+}
