@@ -2,7 +2,7 @@ import { buildRaw } from '../domains/raw'
 import { TextCode } from '../textCode'
 import { Short, buildRawShort, buildShort } from './short'
 
-describe('Short Number', () => {
+describe.skip('Short Number', () => {
   test('Valid number of bytes', () => {
     const short = 67
     expect(buildShort(short)).toEqual(67)

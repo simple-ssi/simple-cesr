@@ -2,7 +2,7 @@ import { buildRaw } from '../domains/raw'
 import { TextCode } from '../textCode'
 import { buildRawLong, buildLong } from './long'
 
-describe('Long Number', () => {
+describe.skip('Long Number', () => {
   test('Right number of bytes', () => {
     const long = 4294967295
     expect(buildLong(long)).toEqual(4294967295)

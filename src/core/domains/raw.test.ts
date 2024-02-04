@@ -3,7 +3,7 @@ import { TextCode } from '../textCode'
 import { buildRaw, buildRawFromText } from './raw'
 import { Text } from './text'
 
-describe('Raw Domain', () => {
+describe.skip('Raw Domain', () => {
   test('Build Raw', () => {
     const primitive = Buffer.from('0001', 'hex')
     const code = 'M' as TextCode

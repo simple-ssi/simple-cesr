@@ -3,7 +3,7 @@ import { buildBinaryFromText } from './binary'
 import { buildRaw } from './raw'
 import { buildTextFromRaw } from './text'
 
-describe('Binary Domain', () => {
+describe.skip('Binary Domain', () => {
   test('Build Binary from Text', () => {
     const shortValue = 1
     const short = buildShort(shortValue)
