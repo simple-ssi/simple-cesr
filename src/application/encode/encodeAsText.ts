@@ -1,10 +1,13 @@
 import { Buffer } from 'buffer'
 import * as R from 'remeda'
 import { match } from 'ts-pattern'
+
 import { TextCode, ValidTextCodeSize } from '../../core/codes/textCode'
 import { Text } from '../../core/domains/text'
 import { encodeAsRaw } from './encodeAsRaw'
 import { Raw } from '../../core/domains/raw'
+
+import { trace } from '../../util/trace'
 
 const extractBuffer = (raw: Raw): Buffer => raw[1]
 
@@ -33,8 +36,13 @@ const swapInTextCode = (codeLength: ValidTextCodeSize) => (code: TextCode): Swap
 export const encodeAsText = (code: TextCode, primitive: any): Text =>
   R.pipe(
     encodeAsRaw(code, primitive),
+    // trace('Raw'),
     extractBuffer,
+    // trace('Buffer'),
     padBuffer(code.length as ValidTextCodeSize),
+    // trace('Padded Buffer'),
     toBase64,
+    // trace('Base64'),
     swapInTextCode(code.length as ValidTextCodeSize)(code)
+    // trace('Encoded Text')
   ) as Text
