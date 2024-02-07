@@ -1,4 +1,5 @@
 import { Buffer } from 'buffer'
+import { PrimitiveWrongLength } from '../../makePrimitive'
 
 export interface Long { code: 'N', value: Buffer}
 
@@ -6,7 +7,7 @@ export interface Long { code: 'N', value: Buffer}
 // for now, I'm assuming that the spec is wrong and that 'N' is for 8-byte numbers.
 export const makeLong = (primitive: number): Long => {
   // Don't take anything higher than Javascript's maximum safe integer
-  if (primitive > Number.MAX_SAFE_INTEGER) throw new Error('primitive is too big')
+  if (primitive > Number.MAX_SAFE_INTEGER) throw new PrimitiveWrongLength()
   const hex = primitive.toString(16)
   return {
     code: 'N',

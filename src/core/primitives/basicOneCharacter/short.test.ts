@@ -1,3 +1,4 @@
+import { PrimitiveWrongLength } from '../../makePrimitive'
 import { makeShort } from './short'
 
 test('makeShort', () => {
@@ -6,5 +7,5 @@ test('makeShort', () => {
   expect(makeShort(255).value.toString('hex')).toBe('00ff')
   expect(makeShort(256).value.toString('hex')).toBe('0100')
   expect(makeShort(65535).value.toString('hex')).toBe('ffff')
-  expect(() => makeShort(65536)).toThrow('primitive is too big')
+  expect(() => makeShort(65536)).toThrowError(PrimitiveWrongLength)
 })
