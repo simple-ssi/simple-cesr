@@ -1,5 +1,5 @@
 import { match } from 'ts-pattern'
-import { makeSecp256k1PubOrEncKey } from './primitives/basicFourCharacter/secpPubOrEncKey'
+import { makeSecp256k1PubOrEncKey } from './primitives/basicFourCharacter/secp256k1PubOrEncKey'
 import { makeSha3512Digest } from './primitives/basicTwoCharacter/sha3512Digest'
 import { makeLong } from './primitives/basicOneCharacter/long'
 import { makeShort } from './primitives/basicOneCharacter/short'
