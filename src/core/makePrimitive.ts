@@ -1,7 +1,7 @@
 import { match } from 'ts-pattern'
-import { makeSecp256k1PubOrEncKey } from './primitives/basicFourCharacter/secp256k1PubOrEncKey'
-import { makeSha3512Digest } from './primitives/basicTwoCharacter/sha3512Digest'
-import { makeLong } from './primitives/basicOneCharacter/long'
+import { makeEcdsa256k1 } from './primitives/basicFourCharacter/ecdsa256k1'
+import { makeSha3x512 } from './primitives/basicTwoCharacter/sha3x512'
+import { makeBig } from './primitives/basicOneCharacter/big'
 import { makeShort } from './primitives/basicOneCharacter/short'
 import { TextCode } from './codes/textCode'
 import { Primitive } from './primitives/primitive'
@@ -24,7 +24,7 @@ export class PrimitiveInvalidInput extends Error {
 export const makePrimitive = (code: TextCode, primitive: any): Primitive => match(code)
   .with('A', () => makeEd25519Seed(primitive))
   .with('M', () => makeShort(primitive))
-  .with('N', () => makeLong(primitive))
-  .with('0F', () => makeSha3512Digest(primitive))
-  .with('1AAB', () => makeSecp256k1PubOrEncKey(primitive))
+  .with('N', () => makeBig(primitive))
+  .with('0F', () => makeSha3x512(primitive))
+  .with('1AAB', () => makeEcdsa256k1(primitive))
   .exhaustive()

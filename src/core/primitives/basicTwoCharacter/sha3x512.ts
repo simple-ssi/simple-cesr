@@ -1,9 +1,10 @@
 import { Buffer } from 'buffer'
 import { PrimitiveWrongLength } from '../../makePrimitive'
 
-export interface Sha3512Digest { code: '0F', value: Buffer}
+// SHA3 512-bit digest
+export interface SHA3_512 { code: '0F', value: Buffer}
 
-export const makeSha3512Digest = (primitive: string): Sha3512Digest => {
+export const makeSha3x512 = (primitive: string): SHA3_512 => {
   if (primitive.length !== 128) throw new PrimitiveWrongLength()
   return {
     code: '0F',

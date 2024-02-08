@@ -1,12 +1,12 @@
-import { Secp256k1PubOrEncKey } from './basicFourCharacter/secp256k1PubOrEncKey'
-import { Sha3512Digest } from './basicTwoCharacter/sha3512Digest'
-import { Long } from './basicOneCharacter/long'
+import { ECDSA_256k1 } from './basicFourCharacter/ecdsa256k1'
+import { SHA3_512 } from './basicTwoCharacter/sha3x512'
+import { Big } from './basicOneCharacter/big'
 import { Short } from './basicOneCharacter/short'
 import { Ed25519Seed } from './basicOneCharacter/ed25519Seed'
 
 export type Primitive =
   Ed25519Seed |
   Short |
-  Long |
-  Sha3512Digest |
-  Secp256k1PubOrEncKey
+  Big |
+  SHA3_512 |
+  ECDSA_256k1
