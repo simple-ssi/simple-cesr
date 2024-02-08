@@ -5,6 +5,7 @@ import { makeLong } from './primitives/basicOneCharacter/long'
 import { makeShort } from './primitives/basicOneCharacter/short'
 import { TextCode } from './codes/textCode'
 import { Primitive } from './primitives/primitive'
+import { makeEd25519Seed } from './primitives/basicOneCharacter/ed25519Seed'
 
 // to do: I'm not comfortable throwing errors if I can avoid it...research this more ... perhaps it's OK? What's the alternative?
 export class PrimitiveWrongLength extends Error {
@@ -20,8 +21,8 @@ export class PrimitiveInvalidInput extends Error {
     this.name = 'PRIMITIVE_INVALID_INPUT'
   }
 }
-
 export const makePrimitive = (code: TextCode, primitive: any): Primitive => match(code)
+  .with('A', () => makeEd25519Seed(primitive))
   .with('M', () => makeShort(primitive))
   .with('N', () => makeLong(primitive))
   .with('0F', () => makeSha3512Digest(primitive))
