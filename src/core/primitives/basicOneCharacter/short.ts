@@ -1,5 +1,5 @@
 import { Buffer } from 'buffer'
-import { PrimitiveWrongLength } from '../../makePrimitive'
+import { PrimitiveWrongLength } from '../../make'
 
 // 2-byte base-2 number
 export interface Short { code: 'M', value: Buffer}

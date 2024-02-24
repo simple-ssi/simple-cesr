@@ -1,4 +1,4 @@
-import { PrimitiveWrongLength } from '../../makePrimitive'
+import { PrimitiveWrongLength } from '../../make'
 import { makeShort } from './short'
 
 describe('makeShort enforces validity', () => {

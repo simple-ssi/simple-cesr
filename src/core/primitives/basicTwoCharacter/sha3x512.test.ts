@@ -1,4 +1,4 @@
-import { PrimitiveWrongLength } from '../../makePrimitive'
+import { PrimitiveWrongLength } from '../../make'
 import { makeSha3x512 } from './sha3x512'
 
 describe('makeSha3x512 enforces validity', () => {

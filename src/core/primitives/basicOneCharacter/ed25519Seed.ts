@@ -1,4 +1,4 @@
-import { PrimitiveWrongLength } from '../../makePrimitive'
+import { PrimitiveWrongLength } from '../../make'
 
 export interface Ed25519Seed { code: 'A', value: Buffer }
 

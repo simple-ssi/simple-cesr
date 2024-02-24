@@ -1,6 +1,7 @@
 import { Buffer } from 'buffer'
-import { TextCode } from '../../core/codes/textCode'
+import { Code } from '../../core/code'
 import { Binary } from '../../core/domains/binary'
 import { encodeAsText } from './encodeAsText'
 
-export const encodeAsBinary = (code: TextCode, primitive: any): Binary => Buffer.from(encodeAsText(code, primitive), 'base64url') as Binary
+export const encodeAsBinary = (code: Code, primitive: any): Binary =>
+  Buffer.from(encodeAsText(code, primitive), 'base64url') as Binary

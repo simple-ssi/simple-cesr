@@ -1,4 +1,4 @@
-import { PrimitiveInvalidInput, PrimitiveWrongLength } from '../../makePrimitive'
+import { PrimitiveInvalidInput, PrimitiveWrongLength } from '../../make'
 import { makeEcdsa256k1 } from './ecdsa256k1'
 
 describe('makeEcdsa256k1 enforces validity', () => {

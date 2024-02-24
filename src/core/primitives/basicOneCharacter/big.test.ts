@@ -1,4 +1,4 @@
-import { PrimitiveWrongLength } from '../../makePrimitive'
+import { PrimitiveWrongLength } from '../../make'
 import { makeBig } from './big'
 
 describe('makeBig enforces validity', () => {

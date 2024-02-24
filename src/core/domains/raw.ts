@@ -1,4 +1,4 @@
 import { Buffer } from 'buffer'
-import { TextCode } from '../codes/textCode'
+import { Code } from '../code'
 
-export type Raw = [TextCode, Buffer] & { __type: 'raw' }
+export type Raw = [Code, Buffer] & { __type: 'raw' }

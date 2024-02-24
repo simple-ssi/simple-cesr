@@ -1,4 +1,4 @@
-import { PrimitiveWrongLength } from '../../makePrimitive'
+import { PrimitiveWrongLength } from '../../make'
 import { makeEd25519Seed } from './ed25519Seed'
 
 describe('makeEd25519Seed enforces validity', () => {

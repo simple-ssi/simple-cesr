@@ -3,7 +3,7 @@ import { makeEcdsa256k1 } from './primitives/basicFourCharacter/ecdsa256k1'
 import { makeSha3x512 } from './primitives/basicTwoCharacter/sha3x512'
 import { makeBig } from './primitives/basicOneCharacter/big'
 import { makeShort } from './primitives/basicOneCharacter/short'
-import { TextCode } from './codes/textCode'
+import { Code } from './code'
 import { Primitive } from './primitive'
 import { makeEd25519Seed } from './primitives/basicOneCharacter/ed25519Seed'
 
@@ -21,7 +21,7 @@ export class PrimitiveInvalidInput extends Error {
     this.name = 'PRIMITIVE_INVALID_INPUT'
   }
 }
-export const makePrimitive = (code: TextCode, primitive: any): Primitive => match(code)
+export const make = (code: Code, primitive: any): Primitive => match(code)
   .with('A', () => makeEd25519Seed(primitive))
   .with('M', () => makeShort(primitive))
   .with('N', () => makeBig(primitive))
