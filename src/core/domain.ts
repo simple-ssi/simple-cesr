@@ -1,5 +1,5 @@
-import { Text } from './text'
-import { Binary } from './binary'
-import { Raw } from './raw'
+import { Text } from './domains/text'
+import { Binary } from './domains/binary'
+import { Raw } from './domains/raw'
 
 export type Domain = Text | Binary | Raw
