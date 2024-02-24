@@ -4,7 +4,7 @@ import { makeSha3x512 } from './primitives/basicTwoCharacter/sha3x512'
 import { makeBig } from './primitives/basicOneCharacter/big'
 import { makeShort } from './primitives/basicOneCharacter/short'
 import { TextCode } from './codes/textCode'
-import { Primitive } from './primitives/primitive'
+import { Primitive } from './primitive'
 import { makeEd25519Seed } from './primitives/basicOneCharacter/ed25519Seed'
 
 // to do: I'm not comfortable throwing errors if I can avoid it...research this more ... perhaps it's OK? What's the alternative?
