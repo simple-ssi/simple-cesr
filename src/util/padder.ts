@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
 import { match } from 'ts-pattern'
-import { CodeSize } from '../core/code'
+import { CodeSize } from '../core/code.ts'
 
 // Padders are functions that take a raw primitive value as a buffer and return a padded buffer
 type Padder = (raw: Buffer) => Buffer

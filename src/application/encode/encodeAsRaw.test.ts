@@ -1,4 +1,4 @@
-import { encodeAsRaw } from './encodeAsRaw'
+import { encodeAsRaw } from './encodeAsRaw.ts'
 
 // to do: move the essential primitive-specific tests to the primitive-specific test files and make this test a more general test of makeRaw
 describe('encodeAsRaw: one character codes', () => {

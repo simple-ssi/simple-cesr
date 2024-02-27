@@ -1,4 +1,4 @@
-import { PrimitiveWrongLength } from '../../make'
+import { PrimitiveWrongLength } from '../../make.ts'
 
 export interface Ed25519Seed { code: 'A', value: Buffer }
 

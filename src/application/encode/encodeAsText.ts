@@ -1,15 +1,15 @@
 import { Buffer } from 'buffer'
 import * as R from 'remeda'
 
-import { Code, CodeSize } from '../../core/code'
-import { Text } from '../../core/domains/text'
-import { encodeAsRaw } from './encodeAsRaw'
-import { Raw } from '../../core/domains/raw'
+import { Code, CodeSize } from '../../core/code.ts'
+import { Text } from '../../core/domains/text.ts'
+import { encodeAsRaw } from './encodeAsRaw.ts'
+import { Raw } from '../../core/domains/raw.ts'
 
-import { trace } from '../../util/trace'
-import { swapInTextCode } from '../../util/swapper'
-import { padRawPrimitive } from '../../util/padder'
-import { toBase64 } from '../../util/toBase64'
+import { trace } from '../../util/trace.ts'
+import { swapInTextCode } from '../../util/swapper.ts'
+import { padRawPrimitive } from '../../util/padder.ts'
+import { toBase64 } from '../../util/toBase64.ts'
 
 const extractRawPrimitive = (raw: Raw): Buffer => raw[1]
 

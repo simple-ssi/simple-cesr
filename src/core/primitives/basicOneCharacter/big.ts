@@ -1,5 +1,5 @@
 import { Buffer } from 'buffer'
-import { PrimitiveWrongLength } from '../../make'
+import { PrimitiveWrongLength } from '../../make.ts'
 
 // 8-byte base-2 number
 export interface Big { code: 'N', value: Buffer}

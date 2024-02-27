@@ -1,5 +1,5 @@
 import { Buffer } from 'buffer'
-import { PrimitiveWrongLength } from '../../make'
+import { PrimitiveWrongLength } from '../../make.ts'
 
 // SHA3 512-bit digest
 export interface SHA3_512 { code: '0F', value: Buffer}

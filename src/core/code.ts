@@ -1,6 +1,6 @@
-import { BasicFourCharacterCode } from './codes/basicFourCharacterCode'
-import { BasicOneCharacterCode } from './codes/basicOneCharacterCode'
-import { BasicTwoCharacterCode } from './codes/basicTwoCharacterCode'
+import { BasicFourCharacterCode } from './codes/basicFourCharacterCode.ts'
+import { BasicOneCharacterCode } from './codes/basicOneCharacterCode.ts'
+import { BasicTwoCharacterCode } from './codes/basicTwoCharacterCode.ts'
 
 export type CodeSize = 1 | 2 | 4
 

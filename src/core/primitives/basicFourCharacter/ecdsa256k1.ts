@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
 
-import { PrimitiveInvalidInput, PrimitiveWrongLength } from '../../make'
+import { PrimitiveInvalidInput, PrimitiveWrongLength } from '../../make.ts'
 
 // ECDSA public verification or encryption key, compressed
 export interface ECDSA_256k1 { code: '1AAB', value: Buffer}

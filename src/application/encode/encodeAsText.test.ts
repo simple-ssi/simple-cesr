@@ -1,4 +1,4 @@
-import { encodeAsText } from './encodeAsText'
+import { encodeAsText } from './encodeAsText.ts'
 
 describe('encodeAsText', () => {
   test('["M", 1] -> "MAAB"', () => {

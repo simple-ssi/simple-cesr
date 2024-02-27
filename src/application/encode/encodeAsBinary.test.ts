@@ -1,4 +1,4 @@
-import { encodeAsBinary } from './encodeAsBinary'
+import { encodeAsBinary } from './encodeAsBinary.ts'
 
 describe('encodeAsBinary', () => {
   test('should process code "M" correctly', () => {
