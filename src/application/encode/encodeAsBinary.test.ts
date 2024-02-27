@@ -1,7 +1,7 @@
-import { encodeAsBinary } from './encodeAsBinary'
+import { encodeAsBinary } from './encodeAsBinary.ts'
 
 describe('encodeAsBinary', () => {
-  it('should return a Buffer', () => {
+  test('should process code "M" correctly', () => {
     const result = encodeAsBinary('M', 1)
     expect(result).toStrictEqual(Buffer.from([48, 0, 1]))
   })
