@@ -1,4 +1,4 @@
-import { encodeAsText } from './application/encode/encodeAsText'
+import { encodeAsText } from './api/encode/encodeAsText.ts'
 
 // note: eventually this file should contain helpful demonstration code to help those working on the project
 // ...as such, it should be noted in the README
