@@ -1,5 +1,5 @@
 import { match } from 'ts-pattern'
-import { Code, CodeSize } from '../core/code.ts'
+import { Code, CodeSize } from '../core/code/code.ts'
 
 type Swapper = (text: string) => string
 const swapInOneCharacterCode = (code: Code): Swapper => (text: string) => code + text.substring(1)
