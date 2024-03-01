@@ -1,4 +1,4 @@
-import { makeBig } from '../src/application/makeRaw/maker/makers/basicOne/makeBig.ts'
+import { makeBig } from '../src/useCases/make/maker/makers/basicOne/makeBig.ts'
 import { Code } from '../src/core/code/code.ts'
 import { pipe } from '../src/util/pipe.ts'
 import { canMakeIt } from './checks/canMakeIt.ts'
@@ -13,7 +13,7 @@ const configuration = {
   code: 'N' as Code,
   maker: makeBig,
   example: Buffer.from(example, 'hex'),
-  length: 16
+  length: 8
 }
 
 describe(suite, () => {

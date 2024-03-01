@@ -5,7 +5,10 @@ export const canMakeIt = (configuration: TestConfiguration): TestConfiguration =
 
   it('makes it', () => {
     const actual = maker(example)
+
     expect(actual.code).toBe(code)
+
+    // handle both options for example: a string or a Buffer
     switch (typeof example) {
       case 'string':
         expect(actual.raw.toString('hex')).toEqual(example)

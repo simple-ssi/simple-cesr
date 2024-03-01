@@ -1,17 +1,38 @@
-import { PrimitiveWrongLength } from '../../src/application/makeRaw/maker/error.ts'
+import { PrimitiveWrongLength } from '../../src/useCases/make/maker/error.ts'
+import { HexString } from '../HexString.ts'
 import { TestConfiguration } from '../TestConfiguration.ts'
 
-const oneTooLong = (length: number): string => '0'.padEnd(length + 1, '0')
-const oneTooShort = (length: number): string => '0'.padEnd(length - 1, '0')
+// const oneTooLong = (length: number): string => '0'.padEnd(length + 1, '0')
+// const oneTooShort = (length: number): string => '0'.padEnd(length - 1, '0')
+
+const oneTooLong = (prmitive: HexString | Buffer): HexString | Buffer => {
+  const length = prmitive.length
+  switch (typeof prmitive) {
+    case 'string':
+      return '0'.padEnd(length + 1, '0')
+    default:
+      return Buffer.alloc(length + 1, 0)
+  }
+}
+
+const oneTooShort = (prmitive: HexString | Buffer): HexString | Buffer => {
+  const length = prmitive.length
+  switch (typeof prmitive) {
+    case 'string':
+      return '0'.padEnd(length - 1, '0')
+    default:
+      return Buffer.alloc(length - 1, 0)
+  }
+}
 
 export const lengthNotWrong = (configuration: TestConfiguration): TestConfiguration => {
-  const { maker, length } = configuration
+  const { maker, example } = configuration
 
   it('checks length', () => {
-    expect(() => maker(oneTooLong(length)))
+    expect(() => maker(oneTooLong(example)))
       .toThrow(PrimitiveWrongLength)
 
-    expect(() => maker(oneTooShort(length)))
+    expect(() => maker(oneTooShort(example)))
       .toThrow(PrimitiveWrongLength)
   })
 

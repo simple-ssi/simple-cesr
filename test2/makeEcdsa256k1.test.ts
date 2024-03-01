@@ -5,7 +5,7 @@
 // - The code
 // - The example
 
-import { makeEcdsa256k1 } from '../src/application/makeRaw/maker/makers/basicFour/makeEcdsa256k1.ts'
+import { makeEcdsa256k1 } from '../src/useCases/make/maker/makers/basicFour/makeEcdsa256k1.ts'
 import { pipe } from '../src/util/pipe.ts'
 import { Code } from '../src/core/code/code.ts'
 import { prefixNotWrong } from './checks/prefixNotWrong.ts'

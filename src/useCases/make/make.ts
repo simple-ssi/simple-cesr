@@ -7,7 +7,7 @@ import { Code } from '../../core/code/code.ts'
 import { Raw } from '../../core/domain/domains.ts'
 import { makeEd25519Seed } from './maker/makers/basicOne/makeEd25519Seed.ts'
 
-export const makeRaw = (code: Code, primitive: any): Raw => match(code)
+export const make = (code: Code, primitive: any): Raw => match(code)
   .with('A', () => makeEd25519Seed(primitive))
   .with('M', () => makeShort(primitive))
   .with('N', () => makeBig(primitive))

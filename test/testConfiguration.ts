@@ -1,4 +1,4 @@
-import { Maker } from '../src/application/makeRaw/maker/maker.ts'
+import { Maker } from '../src/useCases/make/maker/maker.ts'
 import { Code } from '../src/core/code/code.ts'
 import { Validator } from './validator.ts'
 
