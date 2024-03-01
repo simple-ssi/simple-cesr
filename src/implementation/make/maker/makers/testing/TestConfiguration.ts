@@ -1,10 +1,11 @@
 import { Buffer } from 'buffer'
 
-import { Maker } from '../src/useCases/make/maker/maker.ts'
-import { Code } from '../src/core/code/code.ts'
+import { Maker } from '../../maker.ts'
+import { Code } from '../../../../../core/code/code.ts'
 import { HexString } from './HexString.ts'
 
 export interface TestConfiguration {
+  suite: string
   type: string
   code: Code
   maker: Maker

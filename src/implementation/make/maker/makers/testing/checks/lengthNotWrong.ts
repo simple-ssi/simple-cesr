@@ -1,4 +1,4 @@
-import { PrimitiveWrongLength } from '../../src/useCases/make/maker/error.ts'
+import { PrimitiveWrongLength } from '../../../error.ts'
 import { HexString } from '../HexString.ts'
 import { TestConfiguration } from '../TestConfiguration.ts'
 
