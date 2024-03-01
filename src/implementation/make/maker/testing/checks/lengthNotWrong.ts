@@ -1,9 +1,6 @@
-import { PrimitiveWrongLength } from '../../../error.ts'
+import { PrimitiveWrongLength } from '../../error.ts'
 import { HexString } from '../HexString.ts'
 import { TestConfiguration } from '../TestConfiguration.ts'
-
-// const oneTooLong = (length: number): string => '0'.padEnd(length + 1, '0')
-// const oneTooShort = (length: number): string => '0'.padEnd(length - 1, '0')
 
 const oneTooLong = (prmitive: HexString | Buffer): HexString | Buffer => {
   const length = prmitive.length

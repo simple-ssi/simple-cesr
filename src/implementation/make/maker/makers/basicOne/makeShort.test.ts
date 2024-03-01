@@ -1,7 +1,7 @@
 import { Code } from '../../../../../core/code/code.ts'
-import { check } from '../testing/check.ts'
-import { canMakeIt } from '../testing/checks/canMakeIt.ts'
-import { lengthNotWrong } from '../testing/checks/lengthNotWrong.ts'
+import { check } from '../../testing/check.ts'
+import { canMakeIt } from '../../testing/checks/canMakeIt.ts'
+import { lengthNotWrong } from '../../testing/checks/lengthNotWrong.ts'
 import { makeShort } from './makeShort.ts'
 
 const example = '011F' // becomes two byte Buffer

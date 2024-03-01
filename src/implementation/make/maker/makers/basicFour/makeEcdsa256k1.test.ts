@@ -1,8 +1,8 @@
 import { Code } from '../../../../../core/code/code.ts'
-import { check } from '../testing/check.ts'
-import { prefixNotWrong } from '../testing/checks/prefixNotWrong.ts'
-import { lengthNotWrong } from '../testing/checks/lengthNotWrong.ts'
-import { canMakeIt } from '../testing/checks/canMakeIt.ts'
+import { check } from '../../testing/check.ts'
+import { prefixNotWrong } from '../../testing/checks/prefixNotWrong.ts'
+import { lengthNotWrong } from '../../testing/checks/lengthNotWrong.ts'
+import { canMakeIt } from '../../testing/checks/canMakeIt.ts'
 import { makeEcdsa256k1 } from './makeEcdsa256k1.ts'
 
 const configuration = {
