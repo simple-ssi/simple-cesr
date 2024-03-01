@@ -4,7 +4,7 @@ import { canMakeIt } from '../testing/checks/canMakeIt.ts'
 import { lengthNotWrong } from '../testing/checks/lengthNotWrong.ts'
 import { makeBig } from './makeBig.ts'
 
-const example = '0110abcdef012345'
+const example = '0110abcdef012345' // becomes 8 byte Buffer
 
 const configuration = {
   suite: 'Big maker',
@@ -12,7 +12,7 @@ const configuration = {
   code: 'N' as Code,
   maker: makeBig,
   example: Buffer.from(example, 'hex'),
-  length: 8
+  length: 8 // 8 bytes
 }
 
 check(

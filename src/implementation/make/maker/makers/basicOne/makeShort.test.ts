@@ -1,14 +1,22 @@
-import { PrimitiveWrongLength } from '../../error.ts'
+import { Code } from '../../../../../core/code/code.ts'
+import { check } from '../testing/check.ts'
+import { canMakeIt } from '../testing/checks/canMakeIt.ts'
+import { lengthNotWrong } from '../testing/checks/lengthNotWrong.ts'
 import { makeShort } from './makeShort.ts'
 
-describe('Short maker', () => {
-  it('makes a Short', () => {
-    const example = '001f'
-    const actual = makeShort(Buffer.from(example, 'hex'))
-    expect(actual.code).toBe('M')
-    expect(actual.raw.toString('hex')).toBe(example)
-  })
-  it('checks length', () => {
-    expect(() => makeShort(65536)).toThrow(PrimitiveWrongLength)
-  })
-})
+const example = '011F' // becomes two byte Buffer
+
+const configuration = {
+  suite: 'Short maker',
+  type: 'Short',
+  code: 'M' as Code,
+  maker: makeShort,
+  example: Buffer.from(example, 'hex'),
+  length: 2 // 2 bytes
+}
+
+check(
+  configuration,
+  canMakeIt,
+  lengthNotWrong
+)

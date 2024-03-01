@@ -1,6 +1,6 @@
 import { encodeAsText } from './encodeAsText.ts'
 
-describe('Text encoder (basic test for each code type)', () => {
+describe('Text Encoder', () => {
   it('gets "MAAB" from ["M", 1]', () => {
     const result = encodeAsText('M', Buffer.from([0x00, 0x01]))
     expect(result).toBe('MAAB')
