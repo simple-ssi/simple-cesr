@@ -10,8 +10,8 @@ const configuration = {
   type: 'Ecdsa256k1',
   code: '1AAB' as Code,
   maker: makeEcdsa256k1,
-  example: '02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1',
-  length: 66
+  example: Buffer.from('02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1', 'hex'),
+  length: 33
 }
 
 const checkPrefix = prefixNotWrong('04')
