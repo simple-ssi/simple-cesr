@@ -11,7 +11,7 @@ import { toBase64 } from '../../util/toBase64.ts'
 
 const extractRawPrimitive = (raw: Raw): Buffer => raw.raw
 
-export const encodeAsText = (code: Code, primitive: any): Text =>
+export const encodeAsText = (code: Code, primitive: Uint8Array): Text =>
   pipe(
     encodeAsRaw(code, primitive),
     extractRawPrimitive,
