@@ -1,13 +1,16 @@
-import { encodeAsText } from './api/encode/encodeAsText.ts'
+import { validate } from './implementation/make/maker/validation/validate.ts'
+import { validateLength } from './implementation/make/maker/validation/validations/validateLength.ts'
 
-// note: eventually this file should contain helpful demonstration code to help those working on the project
-// ...as such, it should be noted in the README
+const lengthThreeBytes = validateLength(3)
 
-// const example = '02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1' // compressed key -> 33 bytes long
+const raw = Buffer.from([1, 2, 3])
+const rawIsCorrectLength = lengthThreeBytes(raw)
 
-// const encoded = encodeAsText('1AAB', example)
+const throwInAWrench = (): boolean => true
 
-const example = 'c6e64b12b9fe842c'
-const encoded = encodeAsText('N', Buffer.from(example, 'hex'))
+const result = validate(
+  rawIsCorrectLength,
+  throwInAWrench
+)
 
-console.log(encoded)
+console.log(result)
