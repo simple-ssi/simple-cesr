@@ -1,16 +1,16 @@
-import { validate } from './implementation/make/maker/validation/validate.ts'
-import { validateLength } from './implementation/make/maker/validation/validations/validateLength.ts'
+import { makeSureThat } from './implementation/make/maker/lib/validation/validate.ts'
+import { primitiveIsEightBytes } from './implementation/make/maker/lib/validation/validations/validateLength.ts'
 
-const lengthThreeBytes = validateLength(3)
+const raw = Buffer.from([1, 2, 3, 4, 5, 6, 7, 8])
+const rawIsCorrectLength = primitiveIsEightBytes(raw)
 
-const raw = Buffer.from([1, 2, 3])
-const rawIsCorrectLength = lengthThreeBytes(raw)
+const thisCheckPasses = (): boolean => true
+const throwInAWrench = (): boolean => false
 
-const throwInAWrench = (): boolean => true
-
-const result = validate(
+const result = makeSureThat(
   rawIsCorrectLength,
-  throwInAWrench
+  thisCheckPasses
+  // throwInAWrench
 )
 
 console.log(result)

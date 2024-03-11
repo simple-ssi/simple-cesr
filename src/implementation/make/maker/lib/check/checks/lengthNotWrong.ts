@@ -1,4 +1,4 @@
-import { PrimitiveWrongLength } from '../../error.ts'
+import { PrimitiveWrongLength } from '../../../error.ts'
 import { TestConfiguration } from '../TestConfiguration.ts'
 
 const oneTooLong = (primitive: Buffer): Buffer => Buffer.alloc(primitive.length + 1, 0)

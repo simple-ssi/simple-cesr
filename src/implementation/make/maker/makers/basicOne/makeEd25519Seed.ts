@@ -1,9 +1,12 @@
 import { Maker } from '../../maker.ts'
-import { PrimitiveWrongLength } from '../../error.ts'
 import { Ed25519Seed } from '../../../../../core/primitive/primitives.ts'
+import { primitiveIs32Bytes } from '../../lib/validation/validations/validateLength.ts'
+import { makeSureThat } from '../../lib/validation/validate.ts'
 
 export const makeEd25519Seed: Maker = (primitive: Buffer): Ed25519Seed => {
-  if (primitive.length !== 32) throw new PrimitiveWrongLength()
+  makeSureThat(
+    primitiveIs32Bytes(primitive)
+  )
   return {
     code: 'A',
     raw: primitive

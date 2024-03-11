@@ -1,7 +1,7 @@
 import { Code } from '../../../../../core/code/code.ts'
-import { check } from '../../testing/check.ts'
-import { canMakeIt } from '../../testing/checks/canMakeIt.ts'
-import { lengthNotWrong } from '../../testing/checks/lengthNotWrong.ts'
+import { check } from '../../lib/check/check.ts'
+import { lengthNotWrong } from '../../lib/check/checks/lengthNotWrong.ts'
+import { canMakeIt } from '../../lib/check/checks/canMakeIt.ts'
 import { makeSha3512 } from './sha3512.ts'
 
 const configuration = {
