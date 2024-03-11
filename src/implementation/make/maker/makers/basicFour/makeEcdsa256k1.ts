@@ -1,9 +1,9 @@
 import { Maker } from '../../maker.ts'
 import { PrimitiveInvalidInput } from '../../error.ts'
 import { Ecdsa256k1 } from '../../../../../core/primitive/primitives.ts'
-import { primitiveIs33Bytes } from '../../lib/validation/validations/validateLength.ts'
-import { Validation } from '../../lib/validation/Validation.ts'
-import { makeSureThat } from '../../lib/validation/validate.ts'
+import { primitiveIs33Bytes } from '../../lib/validate/validations/lengthIs.ts'
+import { Validation } from '../../lib/validate/Validation.ts'
+import { makeSureThat } from '../../lib/validate/validate.ts'
 
 // ECDSA public verification or encryption key, compressed
 export const makeEcdsa256k1: Maker = (primitive: Buffer): Ecdsa256k1 => {

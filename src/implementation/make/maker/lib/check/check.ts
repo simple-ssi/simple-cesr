@@ -1,10 +1,10 @@
-import { TestConfiguration } from './TestConfiguration.ts'
-import { Step } from './Step.ts'
+import { TestConfiguration } from '../test/TestConfiguration.ts'
+import { TestStep } from '../test/TestStep.ts'
 
-export const check = (configuration: TestConfiguration, ...steps: Step[]): void => {
+export const check = (configuration: TestConfiguration, ...steps: TestStep[]): void => {
   describe(configuration.suite, () => {
     steps.reduce(
-      (acc: any, step: Step) => step(acc),
+      (acc: any, step: TestStep) => step(acc),
       configuration
     )
   })

@@ -1,8 +1,8 @@
 import { Buffer } from 'buffer'
 import { Maker } from '../../maker.ts'
 import { Sha3512 } from '../../../../../core/primitive/primitives.ts'
-import { makeSureThat } from '../../lib/validation/validate.ts'
-import { primitiveIs64Bytes } from '../../lib/validation/validations/validateLength.ts'
+import { makeSureThat } from '../../lib/validate/validate.ts'
+import { primitiveIs64Bytes } from '../../lib/validate/validations/lengthIs.ts'
 
 // SHA3 512-bit digest
 export const makeSha3512: Maker = (primitive: Buffer): Sha3512 => {
