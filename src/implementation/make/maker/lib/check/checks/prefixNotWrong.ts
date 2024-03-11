@@ -1,5 +1,5 @@
-import { PrimitiveInvalidInput } from '../../error.ts'
-import { TestConfiguration } from '../TestConfiguration.ts'
+import { PrimitiveInvalidInput } from '../../../error.ts'
+import { TestConfiguration } from '../../test/TestConfiguration.ts'
 
 const invalidString = (badPrefix: string, example: string): string => badPrefix + example.substring(badPrefix.length)
 

@@ -1,4 +1,4 @@
-import { TestConfiguration } from '../TestConfiguration.ts'
+import { TestConfiguration } from '../../test/TestConfiguration.ts'
 
 export const canMakeIt = (configuration: TestConfiguration): TestConfiguration => {
   const { code, maker, example } = configuration

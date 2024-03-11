@@ -1,13 +1,13 @@
 import { Buffer } from 'buffer'
 
-import { pipe } from '../../util/pipe.ts'
+import { pipe } from '../../lib/pipe.ts'
 import { Code, CodeSize } from '../../core/code/code.ts'
 import { Text, Raw } from '../../core/domain/domains.ts'
 import { encodeAsRaw } from './encodeAsRaw.ts'
 
-import { swapInTextCode } from '../../util/swapper.ts'
-import { padRawPrimitive } from '../../util/padder.ts'
-import { toBase64 } from '../../util/toBase64.ts'
+import { swapInTextCode } from '../../lib/swapper.ts'
+import { padRawPrimitive } from '../../lib/padder.ts'
+import { toBase64 } from '../../lib/toBase64.ts'
 
 const extractRawPrimitive = (raw: Raw): Buffer => raw.raw
 
