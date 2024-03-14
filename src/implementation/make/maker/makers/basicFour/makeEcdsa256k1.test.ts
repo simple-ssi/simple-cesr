@@ -14,11 +14,11 @@ const configuration = {
   length: 33
 }
 
-const checkPrefix = prefixNotWrong('04')
+const prefix = prefixNotWrong('04')
 
 check(
   configuration,
-  checkPrefix,
+  prefix,
   lengthNotWrong,
   canMakeIt
 )
