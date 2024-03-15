@@ -31,7 +31,7 @@ describe('Transform to Raw', () => {
     const actual = transformToRaw(text)
     expect(actual).toStrictEqual(raw)
   })
-  it('should handle Binary', () => {
+  it('handles Binary', () => {
     const raw: Raw = {
       code: '1AAB',
       raw: Buffer.from('02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1', 'hex')
