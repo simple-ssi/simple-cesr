@@ -1,9 +1,9 @@
 import { match } from 'ts-pattern'
 import { Binary, Raw, Text } from '../../core/domain/domains.ts'
 import { pipe } from '../../lib/pipe.ts'
-import { removePadding } from './removePadding.ts'
-import { decodeRaw } from './decodeRaw.ts'
-import { readCode } from './readCode.ts'
+import { removePadding } from './lib/removePadding.ts'
+import { decodeRaw } from './lib/decodeRaw.ts'
+import { readCode } from './lib/readCode.ts'
 import { transformToText } from './transformToText.ts'
 
 // two function signatures: Text and Binary
