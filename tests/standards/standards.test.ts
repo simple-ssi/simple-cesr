@@ -14,14 +14,17 @@ const shouldEncodeRawAsText = (raw: string, text: string): string => {
 }
 
 describe('Standards: Text Encoder', () => {
-  matter.forEach((padSize) => {
-    padSize.examples.forEach((exampleTherein) => {
-      exampleTherein.values.forEach((valueFound) => {
-        it(shouldEncodeRawAsText(valueFound.raw, valueFound.text), () => {
-          const binary = Buffer.from(valueFound.raw, 'hex')
-          expect(encodeAsText(exampleTherein.code as Code, binary)).toBe(valueFound.text)
+  matter
+    .forEach((padSize) => {
+      padSize.examples
+        .forEach((exampleTherein) => {
+          exampleTherein.values
+            .forEach((valueFound) => {
+              it(shouldEncodeRawAsText(valueFound.raw, valueFound.text), () => {
+                const binary = Buffer.from(valueFound.raw, 'hex')
+                expect(encodeAsText(exampleTherein.code as Code, binary)).toBe(valueFound.text)
+              })
+            })
         })
-      })
     })
-  })
 })

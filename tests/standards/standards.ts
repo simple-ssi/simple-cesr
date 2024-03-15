@@ -1,3 +1,9 @@
+// static examples of the various primitives. These are the fodder for the general standards test agains the Matter class
+// code: the CESR code
+// length: the length of the encoded primitive, including code (from spec code tables)
+// values: the specific examples where:
+//  raw: is the sample value as a hexstring and
+//  text: is the expected encoded value
 export const standards = {
   matter: [
     {
