@@ -1,5 +1,5 @@
-import { Raw } from '../../../core/domain/Domains.ts'
-import { Code } from '../../../core/code/Code.ts'
+import { Raw } from '../../../core/domain/domains.ts'
+import { Code } from '../../../core/code/code.ts'
 
 // takes a transitional object removes any padding from 'raw' and returns a new Raw object
 export const removePadding = (transitional: {

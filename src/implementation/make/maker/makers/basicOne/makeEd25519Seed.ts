@@ -1,5 +1,5 @@
-import { Maker } from '../../Maker.ts'
-import { Ed25519Seed } from '../../../../../core/primitive/Primitives.ts'
+import { Maker } from '../../maker.ts'
+import { Ed25519Seed } from '../../../../../core/primitive/primitives.ts'
 import { primitiveIs32Bytes } from '../../lib/validate/validations/lengthIs.ts'
 import { makeSureThat } from '../../lib/validate/validate.ts'
 

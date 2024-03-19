@@ -1,5 +1,5 @@
 import { Buffer } from 'buffer'
-import { Code } from '../code/Code.ts'
+import { Code } from '../code/code.ts'
 
 export type Text = string
 
