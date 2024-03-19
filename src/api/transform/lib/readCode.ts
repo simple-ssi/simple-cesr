@@ -1,6 +1,6 @@
 import { match } from 'ts-pattern'
-import { Text } from '../../../core/domain/domains.ts'
-import { Code } from '../../../core/code/code.ts'
+import { Text } from '../../../core/domain/Domains.ts'
+import { Code } from '../../../core/code/Code.ts'
 
 const readOneCharCode = (text: Text): Code => text[0] as Code
 const readTwoCharCode = (text: Text): Code => text.substring(0, 2) as Code

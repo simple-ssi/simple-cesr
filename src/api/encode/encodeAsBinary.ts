@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
-import { Code } from '../../core/code/code.ts'
-import { Binary } from '../../core/domain/domains.ts'
+import { Code } from '../../core/code/Code.ts'
+import { Binary } from '../../core/domain/Domains.ts'
 import { encodeAsText } from './encodeAsText.ts'
 
 export const encodeAsBinary = (code: Code, primitive: Uint8Array): Binary =>

@@ -1,4 +1,4 @@
-import { Binary, Raw, Text } from '../../core/domain/domains.ts'
+import { Binary, Raw, Text } from '../../core/domain/Domains.ts'
 import { encodeAsBinary } from '../encode/encodeAsBinary.ts'
 import { encodeAsText } from '../encode/encodeAsText.ts'
 import { transformToRaw } from './transformToRaw.ts'

@@ -1,7 +1,7 @@
 import { match } from 'ts-pattern'
 
-import { Code } from '../../core/code/code.ts'
-import { Raw } from '../../core/domain/domains.ts'
+import { Code } from '../../core/code/Code.ts'
+import { Raw } from '../../core/domain/Domains.ts'
 import { makeEcdsa256k1 } from './maker/makers/basicFour/makeEcdsa256k1.ts'
 import { makeSha3512 } from './maker/makers/basicTwo/sha3512.ts'
 import { makeBig } from './maker/makers/basicOne/makeBig.ts'

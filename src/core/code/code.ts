@@ -1,4 +1,4 @@
-import { BasicFourCharacterCode, BasicOneCharacterCode, BasicTwoCharacterCode } from './codes.ts'
+import { BasicFourCharacterCode, BasicOneCharacterCode, BasicTwoCharacterCode } from './Codes.ts'
 
 export type CodeLength = 1 | 2 | 4
 
