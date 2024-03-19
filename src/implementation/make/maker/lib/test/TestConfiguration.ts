@@ -1,7 +1,7 @@
 import { Buffer } from 'buffer'
 
-import { Maker } from '../../maker.ts'
-import { Code } from '../../../../../core/code/code.ts'
+import { Maker } from '../../Maker.ts'
+import { Code } from '../../../../../core/code/Code.ts'
 
 export interface TestConfiguration {
   suite: string

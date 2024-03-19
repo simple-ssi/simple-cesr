@@ -1,7 +1,7 @@
 import { Buffer } from 'buffer'
 import { standards } from './standards.ts'
 import { encodeAsText } from '../../src/api/encode/encodeAsText.ts'
-import { Code } from '../../src/core/code/code.ts'
+import { Code } from '../../src/core/code/Code.ts'
 
 const matter = standards.matter
 

@@ -1,12 +1,12 @@
-import { Raw } from '../domain/domains.ts'
+import { Raw } from '../domain/Domains.ts'
 
 // One Character Codes
-export type Ed25519Seed = Raw & { code: 'A' }
-export type Short = Raw & { code: 'M' }
-export type Big = Raw & { code: 'N' }
+export type Ed25519Seed = Raw & { readonly code: 'A' }
+export type Short = Raw & { readonly code: 'M' }
+export type Big = Raw & { readonly code: 'N' }
 
 // Two Character Codes
-export type Sha3512 = Raw & { code: '0F' }
+export type Sha3512 = Raw & { readonly code: '0F' }
 
 // Four Character Codes
-export type Ecdsa256k1 = Raw & { code: '1AAB' }
+export type Ecdsa256k1 = Raw & { readonly code: '1AAB' }

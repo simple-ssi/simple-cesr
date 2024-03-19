@@ -1,5 +1,5 @@
 import { match } from 'ts-pattern'
-import { Binary, Raw, Text } from '../../core/domain/domains.ts'
+import { Binary, Raw, Text } from '../../core/domain/Domains.ts'
 import { pipe } from '../../lib/pipe.ts'
 import { removePadding } from './lib/removePadding.ts'
 import { decodeRaw } from './lib/decodeRaw.ts'

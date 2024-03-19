@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
-import { Maker } from '../../maker.ts'
-import { Sha3512 } from '../../../../../core/primitive/primitives.ts'
+import { Maker } from '../../Maker.ts'
+import { Sha3512 } from '../../../../../core/primitive/Primitives.ts'
 import { makeSureThat } from '../../lib/validate/validate.ts'
 import { primitiveIs64Bytes } from '../../lib/validate/validations/lengthIs.ts'
 

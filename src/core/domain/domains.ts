@@ -1,10 +1,10 @@
 import { Buffer } from 'buffer'
-import { Code } from '../code/code.ts'
+import { Code } from '../code/Code.ts'
 
 export type Text = string
 
 export interface Raw {
-  code: Code
-  raw: Buffer
+  readonly code: Code
+  readonly raw: Buffer
 }
 export type Binary = Buffer
