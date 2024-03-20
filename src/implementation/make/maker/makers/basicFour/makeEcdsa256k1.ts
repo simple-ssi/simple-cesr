@@ -1,6 +1,6 @@
-import { Maker } from '../../Maker.ts'
+import { Maker } from '../../maker.ts'
 import { PrimitiveInvalidInput } from '../../error.ts'
-import { Ecdsa256k1 } from '../../../../../core/primitive/Primitives.ts'
+import { Ecdsa256k1 } from '../../../../../core/primitive/primitives.ts'
 import { primitiveIs33Bytes } from '../../lib/validate/validations/lengthIs.ts'
 import { Validation } from '../../lib/validate/Validation.ts'
 import { makeSureThat } from '../../lib/validate/validate.ts'

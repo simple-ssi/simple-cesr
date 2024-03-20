@@ -1,6 +1,6 @@
 import { pipe } from '../../lib/pipe.ts'
-import { Code } from '../../core/code/Code.ts'
-import { Text } from '../../core/domain/Domains.ts'
+import { Code } from '../../core/code/code.ts'
+import { Text } from '../../core/domain/domains.ts'
 
 import { swapInTextCode } from './lib/swapInTextCode.ts'
 import { padUpFront } from './lib/padUpFront.ts'

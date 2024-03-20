@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
-import { Maker } from '../../Maker.ts'
-import { Big } from '../../../../../core/primitive/Primitives.ts'
+import { Maker } from '../../maker.ts'
+import { Big } from '../../../../../core/primitive/primitives.ts'
 import { makeSureThat } from '../../lib/validate/validate.ts'
 import { primitiveIsEightBytes } from '../../lib/validate/validations/lengthIs.ts'
 

@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
 
-import { Binary, Raw, Text } from '../../core/domain/Domains.ts'
+import { Binary, Raw, Text } from '../../core/domain/domains.ts'
 import { encodeAsText } from '../encode/encodeAsText.ts'
 
 export function transformToText (binary: Binary): Text
