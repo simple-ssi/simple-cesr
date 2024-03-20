@@ -1,22 +1,18 @@
 import { Code } from '../../../../../core/code/code.ts'
 import { check } from '../../lib/check/check.ts'
-import { prefixNotWrong } from '../../lib/check/checks/prefixNotWrong.ts'
 import { lengthNotWrong } from '../../lib/check/checks/lengthNotWrong.ts'
 import { canMakeIt } from '../../lib/check/checks/canMakeIt.ts'
 
 const configuration = {
-  suite: 'Ecdsa256k1 maker',
-  type: 'Ecdsa256k1',
-  code: '1AAB' as Code,
-  example: Buffer.from('02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1', 'hex'),
-  length: 33
+  suite: 'X25519 private decryption key maker',
+  type: 'X25519Private',
+  code: 'O' as Code,
+  example: Buffer.from('a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2', 'hex'), // valid example of X25519 private decryption key in hex
+  length: 32 // characters in bytes
 }
-
-const prefix = prefixNotWrong('04')
 
 check(
   configuration,
-  prefix,
   lengthNotWrong,
   canMakeIt
 )

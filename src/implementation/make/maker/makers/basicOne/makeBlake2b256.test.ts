@@ -1,22 +1,18 @@
 import { Code } from '../../../../../core/code/code.ts'
 import { check } from '../../lib/check/check.ts'
-import { prefixNotWrong } from '../../lib/check/checks/prefixNotWrong.ts'
 import { lengthNotWrong } from '../../lib/check/checks/lengthNotWrong.ts'
 import { canMakeIt } from '../../lib/check/checks/canMakeIt.ts'
 
 const configuration = {
-  suite: 'Ecdsa256k1 maker',
-  type: 'Ecdsa256k1',
-  code: '1AAB' as Code,
-  example: Buffer.from('02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1', 'hex'),
-  length: 33
+  suite: 'Blake2b self-addressing 256 bit digest maker',
+  type: 'Blake2b256',
+  code: 'F' as Code,
+  example: Buffer.from('b517a498bf554ab419bbcaa61be07af412d33348eed4b44bd45384550df82d41', 'hex'), // a valid example of a Blake2b256 digest in hex
+  length: 32 // characters in bytes
 }
-
-const prefix = prefixNotWrong('04')
 
 check(
   configuration,
-  prefix,
   lengthNotWrong,
   canMakeIt
 )

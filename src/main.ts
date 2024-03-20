@@ -5,7 +5,7 @@ const raw = Buffer.from([1, 2, 3, 4, 5, 6, 7, 8])
 const rawIsCorrectLength = primitiveIsEightBytes(raw)
 
 const thisCheckPasses = (): boolean => true
-const throwInAWrench = (): boolean => false
+// const throwInAWrench = (): boolean => false
 
 const result = makeSureThat(
   rawIsCorrectLength,

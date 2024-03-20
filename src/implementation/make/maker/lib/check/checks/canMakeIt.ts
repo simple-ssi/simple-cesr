@@ -1,10 +1,11 @@
+import { make } from '../../../../make.ts'
 import { TestConfiguration } from '../../test/TestConfiguration.ts'
 
 export const canMakeIt = (configuration: TestConfiguration): TestConfiguration => {
-  const { code, maker, example } = configuration
+  const { code, example } = configuration
 
   it('makes it', () => {
-    const actual = maker(example)
+    const actual = make(code, example)
 
     expect(actual.code).toBe(code)
 
