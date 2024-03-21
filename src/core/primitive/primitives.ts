@@ -16,6 +16,11 @@ export type Big = Raw & { readonly code: 'N' }
 export type X25519Private = Raw & { readonly code: 'O' }
 
 // Two Character Codes
+export type Salt128 = Raw & { readonly code: '0A' }
+export type Ed25519Sig = Raw & { readonly code: '0B' }
+export type Ecdsa256k1Sig = Raw & { readonly code: '0C' }
+export type Blake3512 = Raw & { readonly code: '0D' }
+export type Blake2b512 = Raw & { readonly code: '0E' }
 export type Sha3512 = Raw & { readonly code: '0F' }
 
 // Four Character Codes

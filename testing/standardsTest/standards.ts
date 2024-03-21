@@ -352,124 +352,124 @@ export const standards = {
     {
       pad: 'two',
       examples: [
-        // {
-        //   code: '0A',
-        //   length: 24,
-        //   values: [
-        //     {
-        //       raw: '784d092dc4a2ec260d9728b9341e1a7c',
-        //       text: '0AB4TQktxKLsJg2XKLk0Hhp8'
-        //     },
-        //     {
-        //       raw: 'e7dd8db8d223ec92accb322f13596568',
-        //       text: '0ADn3Y240iPskqzLMi8TWWVo'
-        //     },
-        //     {
-        //       raw: '39aa391b5b820de57df633ac0025af16',
-        //       text: '0AA5qjkbW4IN5X32M6wAJa8W'
-        //     },
-        //     {
-        //       raw: 'a528c1211d1116ad204f28e181ddbc7f',
-        //       text: '0AClKMEhHREWrSBPKOGB3bx_'
-        //     },
-        //     {
-        //       raw: '82ffe6f6f680915386920e925ed23204',
-        //       text: '0ACC_-b29oCRU4aSDpJe0jIE'
-        //     }
-        //   ]
-        // },
-        // {
-        //   code: '0B',
-        //   length: 88,
-        //   values: [
-        //     {
-        //       raw: '8cb872b8731604949611b8872026c3e4f7482973031773b3fa87b11f4c9c6112c4170f5ee2cd182ba5819c553a7bb9e323cd2f8aaf372ed57d47d9385761810a',
-        //       text: '0BCMuHK4cxYElJYRuIcgJsPk90gpcwMXc7P6h7EfTJxhEsQXD17izRgrpYGcVTp7ueMjzS-Krzcu1X1H2ThXYYEK'
-        //     },
-        //     {
-        //       raw: 'e7479d9eb057be7126a45cd84cebdff7bb3881afabdec79836a248f0fd4fecc0cf1650cf99ede7556b32ecb415e3bcf0d6ce2d19a02e514e735ecd0df0b75a0e',
-        //       text: '0BDnR52esFe-cSakXNhM69_3uziBr6vex5g2okjw_U_swM8WUM-Z7edVazLstBXjvPDWzi0ZoC5RTnNezQ3wt1oO'
-        //     }
-        //   ]
-        // },
-        // {
-        //   code: '0C',
-        //   length: 88,
-        //   values: [
-        //     {
-        //       raw: 'c5a0fa6553445a4fefb8b2ce35351788459271b55a548ea0674194afa8200c8e1186ab6aa231ffff58cff6bec2d96ea29cac5f4daf2972c3ac5f8c8db328f9dc',
-        //       text: '0CDFoPplU0RaT--4ss41NReIRZJxtVpUjqBnQZSvqCAMjhGGq2qiMf__WM_2vsLZbqKcrF9Nrylyw6xfjI2zKPnc'
-        //     },
-        //     {
-        //       raw: '934cd3a7265d1a1af67694af84d200d97f3faaf478f1be4f488b2639b6c9560154fff40a39250cc31bb122d8f25862ac373cab3bf590328f7556fff4f5318094',
-        //       text: '0CCTTNOnJl0aGvZ2lK-E0gDZfz-q9Hjxvk9IiyY5tslWAVT_9Ao5JQzDG7Ei2PJYYqw3PKs79ZAyj3VW__T1MYCU'
-        //     },
-        //     {
-        //       raw: 'fdbc3df8f44217a623e9e8aea7253719f4af8f59e7ee78a7783643342efed153278bd4f5e17d9e68909aee401d732584a6e9f958a5806fa82591c5f6ada916e1',
-        //       text: '0CD9vD349EIXpiPp6K6nJTcZ9K-PWefueKd4NkM0Lv7RUyeL1PXhfZ5okJruQB1zJYSm6flYpYBvqCWRxfatqRbh'
-        //     },
-        //     {
-        //       raw: 'dea61652f4211fa70e9ee55e731a3013a64de265611f75b71921520bca91234e6bb1f3fed9e0e2db71cd92124706615ea40b37dd51ccf08cba0d04bf75b1e514',
-        //       text: '0CDephZS9CEfpw6e5V5zGjATpk3iZWEfdbcZIVILypEjTmux8_7Z4OLbcc2SEkcGYV6kCzfdUczwjLoNBL91seUU'
-        //     },
-        //     {
-        //       raw: 'a6e78fb83dfd8992071fcbdff4e16af9ae7b2ed75cd7faf3120ddf075a0883cc035f538dee0090115d47db5ebbf20bda78e81bee11a4fd7298ae238ad06c0467',
-        //       text: '0CCm54-4Pf2Jkgcfy9_04Wr5rnsu11zX-vMSDd8HWgiDzANfU43uAJARXUfbXrvyC9p46BvuEaT9cpiuI4rQbARn'
-        //     }
-        //   ]
-        // },
-        // {
-        //   code: '0D',
-        //   length: 88,
-        //   values: [
-        //     {
-        //       raw: 'adbe20f5337fe64da42575bfb20372e24d3ff67fb3c57c15e2a21b387d67c7e96373a3cf984e1548ac064cf9389cef6763ae1f828a963287f6ba7cbc79521e29',
-        //       text: '0DCtviD1M3_mTaQldb-yA3LiTT_2f7PFfBXiohs4fWfH6WNzo8-YThVIrAZM-Tic72djrh-CipYyh_a6fLx5Uh4p'
-        //     },
-        //     {
-        //       raw: '347fa2163e71b2f3a2ceeb7cd31034540585e5d1933012aaf9319e7756b8076c5390223cfc4f2361317cd103eb7a7600f66ebacbe9d12469f3ae43882dad8976',
-        //       text: '0DA0f6IWPnGy86LO63zTEDRUBYXl0ZMwEqr5MZ53VrgHbFOQIjz8TyNhMXzRA-t6dgD2brrL6dEkafOuQ4gtrYl2'
-        //     },
-        //     {
-        //       raw: '3a146daa178fa1ee2ec8aa5c73749d7423addcf1298856ec885606996959e45ff206ac6670a89fdae61f94045a05be90f9bd990a0213d3846b1edb6646747a73',
-        //       text: '0DA6FG2qF4-h7i7IqlxzdJ10I63c8SmIVuyIVgaZaVnkX_IGrGZwqJ_a5h-UBFoFvpD5vZkKAhPThGse22ZGdHpz'
-        //     },
-        //     {
-        //       raw: '49f9d42a6f139c52c6fbf1776edf8721d0f815a3f39884931b716cfb415bcbdce034c3c5cdd8c60111f7ce5cf7dc0414a4b8d8c021b260fd8a955955b7f07e0c',
-        //       text: '0DBJ-dQqbxOcUsb78Xdu34ch0PgVo_OYhJMbcWz7QVvL3OA0w8XN2MYBEffOXPfcBBSkuNjAIbJg_YqVWVW38H4M'
-        //     },
-        //     {
-        //       raw: '5b461d74083e9359929957bc6756378f7dafede7c1eef28091564604bfdcbcc4dc9d557af7eab2c43977a4a51d01f82d9b8632f5b54d7e024af707b05baf61b1',
-        //       text: '0DBbRh10CD6TWZKZV7xnVjePfa_t58Hu8oCRVkYEv9y8xNydVXr36rLEOXekpR0B-C2bhjL1tU1-Akr3B7Bbr2Gx'
-        //     }
-        //   ]
-        // },
-        // {
-        //   code: '0E',
-        //   length: 88,
-        //   values: [
-        //     {
-        //       raw: '5bfe9207ddbcf530824fdfebf09390df804d7745b7337cdb146ace9fb0ab8b8edc42d799168d8f181cbf4ba8a7236f2e470202f9c40f81e8e419bcc8e5b933c8',
-        //       text: '0EBb_pIH3bz1MIJP3-vwk5DfgE13RbczfNsUas6fsKuLjtxC15kWjY8YHL9LqKcjby5HAgL5xA-B6OQZvMjluTPI'
-        //     },
-        //     {
-        //       raw: 'f5be6a9a15c11609dab9eba53e6d66497306fa91835b193b9384c26802a34f5e075250c968fe20da529465bec9eeaac5e24362cf56f18d44cec5699fe76a2509',
-        //       text: '0ED1vmqaFcEWCdq566U-bWZJcwb6kYNbGTuThMJoAqNPXgdSUMlo_iDaUpRlvsnuqsXiQ2LPVvGNRM7FaZ_naiUJ'
-        //     },
-        //     {
-        //       raw: '66aaccee9a5bce00c1eab49a18ce8a4d8f9b68e629c9b3edf0666f37452e2c6ebb0df5bbebb0ab21d0f0c57713c1871db6c3f03c6106ce3aa532591d3e32c40e',
-        //       text: '0EBmqszumlvOAMHqtJoYzopNj5to5inJs-3wZm83RS4sbrsN9bvrsKsh0PDFdxPBhx22w_A8YQbOOqUyWR0-MsQO'
-        //     },
-        //     {
-        //       raw: '726f03fa74afce792320666a7f43b37a6b19188add0571aaa3ae5f46e0b4a2af64a5e88ddf5ecd2f8b9ca992e766e4a539c83983b85404c5fdac686aa153aed6',
-        //       text: '0EBybwP6dK_OeSMgZmp_Q7N6axkYit0Fcaqjrl9G4LSir2Sl6I3fXs0vi5ypkudm5KU5yDmDuFQExf2saGqhU67W'
-        //     },
-        //     {
-        //       raw: 'f62f843fbddf045f731ff95331d0d3b3a00e02cddbec197dfc18099a9a6006d7b535f7ce7914ce458500f4926b99667ff639ffe4249ecae52fb2f05594272940',
-        //       text: '0ED2L4Q_vd8EX3Mf-VMx0NOzoA4CzdvsGX38GAmammAG17U19855FM5FhQD0kmuZZn_2Of_kJJ7K5S-y8FWUJylA'
-        //     }
-        //   ]
-        // },
+        {
+          code: '0A',
+          length: 24,
+          values: [
+            {
+              raw: '784d092dc4a2ec260d9728b9341e1a7c',
+              text: '0AB4TQktxKLsJg2XKLk0Hhp8'
+            },
+            {
+              raw: 'e7dd8db8d223ec92accb322f13596568',
+              text: '0ADn3Y240iPskqzLMi8TWWVo'
+            },
+            {
+              raw: '39aa391b5b820de57df633ac0025af16',
+              text: '0AA5qjkbW4IN5X32M6wAJa8W'
+            },
+            {
+              raw: 'a528c1211d1116ad204f28e181ddbc7f',
+              text: '0AClKMEhHREWrSBPKOGB3bx_'
+            },
+            {
+              raw: '82ffe6f6f680915386920e925ed23204',
+              text: '0ACC_-b29oCRU4aSDpJe0jIE'
+            }
+          ]
+        },
+        {
+          code: '0B',
+          length: 88,
+          values: [
+            {
+              raw: '8cb872b8731604949611b8872026c3e4f7482973031773b3fa87b11f4c9c6112c4170f5ee2cd182ba5819c553a7bb9e323cd2f8aaf372ed57d47d9385761810a',
+              text: '0BCMuHK4cxYElJYRuIcgJsPk90gpcwMXc7P6h7EfTJxhEsQXD17izRgrpYGcVTp7ueMjzS-Krzcu1X1H2ThXYYEK'
+            },
+            {
+              raw: 'e7479d9eb057be7126a45cd84cebdff7bb3881afabdec79836a248f0fd4fecc0cf1650cf99ede7556b32ecb415e3bcf0d6ce2d19a02e514e735ecd0df0b75a0e',
+              text: '0BDnR52esFe-cSakXNhM69_3uziBr6vex5g2okjw_U_swM8WUM-Z7edVazLstBXjvPDWzi0ZoC5RTnNezQ3wt1oO'
+            }
+          ]
+        },
+        {
+          code: '0C',
+          length: 88,
+          values: [
+            {
+              raw: 'c5a0fa6553445a4fefb8b2ce35351788459271b55a548ea0674194afa8200c8e1186ab6aa231ffff58cff6bec2d96ea29cac5f4daf2972c3ac5f8c8db328f9dc',
+              text: '0CDFoPplU0RaT--4ss41NReIRZJxtVpUjqBnQZSvqCAMjhGGq2qiMf__WM_2vsLZbqKcrF9Nrylyw6xfjI2zKPnc'
+            },
+            {
+              raw: '934cd3a7265d1a1af67694af84d200d97f3faaf478f1be4f488b2639b6c9560154fff40a39250cc31bb122d8f25862ac373cab3bf590328f7556fff4f5318094',
+              text: '0CCTTNOnJl0aGvZ2lK-E0gDZfz-q9Hjxvk9IiyY5tslWAVT_9Ao5JQzDG7Ei2PJYYqw3PKs79ZAyj3VW__T1MYCU'
+            },
+            {
+              raw: 'fdbc3df8f44217a623e9e8aea7253719f4af8f59e7ee78a7783643342efed153278bd4f5e17d9e68909aee401d732584a6e9f958a5806fa82591c5f6ada916e1',
+              text: '0CD9vD349EIXpiPp6K6nJTcZ9K-PWefueKd4NkM0Lv7RUyeL1PXhfZ5okJruQB1zJYSm6flYpYBvqCWRxfatqRbh'
+            },
+            {
+              raw: 'dea61652f4211fa70e9ee55e731a3013a64de265611f75b71921520bca91234e6bb1f3fed9e0e2db71cd92124706615ea40b37dd51ccf08cba0d04bf75b1e514',
+              text: '0CDephZS9CEfpw6e5V5zGjATpk3iZWEfdbcZIVILypEjTmux8_7Z4OLbcc2SEkcGYV6kCzfdUczwjLoNBL91seUU'
+            },
+            {
+              raw: 'a6e78fb83dfd8992071fcbdff4e16af9ae7b2ed75cd7faf3120ddf075a0883cc035f538dee0090115d47db5ebbf20bda78e81bee11a4fd7298ae238ad06c0467',
+              text: '0CCm54-4Pf2Jkgcfy9_04Wr5rnsu11zX-vMSDd8HWgiDzANfU43uAJARXUfbXrvyC9p46BvuEaT9cpiuI4rQbARn'
+            }
+          ]
+        },
+        {
+          code: '0D',
+          length: 88,
+          values: [
+            {
+              raw: 'adbe20f5337fe64da42575bfb20372e24d3ff67fb3c57c15e2a21b387d67c7e96373a3cf984e1548ac064cf9389cef6763ae1f828a963287f6ba7cbc79521e29',
+              text: '0DCtviD1M3_mTaQldb-yA3LiTT_2f7PFfBXiohs4fWfH6WNzo8-YThVIrAZM-Tic72djrh-CipYyh_a6fLx5Uh4p'
+            },
+            {
+              raw: '347fa2163e71b2f3a2ceeb7cd31034540585e5d1933012aaf9319e7756b8076c5390223cfc4f2361317cd103eb7a7600f66ebacbe9d12469f3ae43882dad8976',
+              text: '0DA0f6IWPnGy86LO63zTEDRUBYXl0ZMwEqr5MZ53VrgHbFOQIjz8TyNhMXzRA-t6dgD2brrL6dEkafOuQ4gtrYl2'
+            },
+            {
+              raw: '3a146daa178fa1ee2ec8aa5c73749d7423addcf1298856ec885606996959e45ff206ac6670a89fdae61f94045a05be90f9bd990a0213d3846b1edb6646747a73',
+              text: '0DA6FG2qF4-h7i7IqlxzdJ10I63c8SmIVuyIVgaZaVnkX_IGrGZwqJ_a5h-UBFoFvpD5vZkKAhPThGse22ZGdHpz'
+            },
+            {
+              raw: '49f9d42a6f139c52c6fbf1776edf8721d0f815a3f39884931b716cfb415bcbdce034c3c5cdd8c60111f7ce5cf7dc0414a4b8d8c021b260fd8a955955b7f07e0c',
+              text: '0DBJ-dQqbxOcUsb78Xdu34ch0PgVo_OYhJMbcWz7QVvL3OA0w8XN2MYBEffOXPfcBBSkuNjAIbJg_YqVWVW38H4M'
+            },
+            {
+              raw: '5b461d74083e9359929957bc6756378f7dafede7c1eef28091564604bfdcbcc4dc9d557af7eab2c43977a4a51d01f82d9b8632f5b54d7e024af707b05baf61b1',
+              text: '0DBbRh10CD6TWZKZV7xnVjePfa_t58Hu8oCRVkYEv9y8xNydVXr36rLEOXekpR0B-C2bhjL1tU1-Akr3B7Bbr2Gx'
+            }
+          ]
+        },
+        {
+          code: '0E',
+          length: 88,
+          values: [
+            {
+              raw: '5bfe9207ddbcf530824fdfebf09390df804d7745b7337cdb146ace9fb0ab8b8edc42d799168d8f181cbf4ba8a7236f2e470202f9c40f81e8e419bcc8e5b933c8',
+              text: '0EBb_pIH3bz1MIJP3-vwk5DfgE13RbczfNsUas6fsKuLjtxC15kWjY8YHL9LqKcjby5HAgL5xA-B6OQZvMjluTPI'
+            },
+            {
+              raw: 'f5be6a9a15c11609dab9eba53e6d66497306fa91835b193b9384c26802a34f5e075250c968fe20da529465bec9eeaac5e24362cf56f18d44cec5699fe76a2509',
+              text: '0ED1vmqaFcEWCdq566U-bWZJcwb6kYNbGTuThMJoAqNPXgdSUMlo_iDaUpRlvsnuqsXiQ2LPVvGNRM7FaZ_naiUJ'
+            },
+            {
+              raw: '66aaccee9a5bce00c1eab49a18ce8a4d8f9b68e629c9b3edf0666f37452e2c6ebb0df5bbebb0ab21d0f0c57713c1871db6c3f03c6106ce3aa532591d3e32c40e',
+              text: '0EBmqszumlvOAMHqtJoYzopNj5to5inJs-3wZm83RS4sbrsN9bvrsKsh0PDFdxPBhx22w_A8YQbOOqUyWR0-MsQO'
+            },
+            {
+              raw: '726f03fa74afce792320666a7f43b37a6b19188add0571aaa3ae5f46e0b4a2af64a5e88ddf5ecd2f8b9ca992e766e4a539c83983b85404c5fdac686aa153aed6',
+              text: '0EBybwP6dK_OeSMgZmp_Q7N6axkYit0Fcaqjrl9G4LSir2Sl6I3fXs0vi5ypkudm5KU5yDmDuFQExf2saGqhU67W'
+            },
+            {
+              raw: 'f62f843fbddf045f731ff95331d0d3b3a00e02cddbec197dfc18099a9a6006d7b535f7ce7914ce458500f4926b99667ff639ffe4249ecae52fb2f05594272940',
+              text: '0ED2L4Q_vd8EX3Mf-VMx0NOzoA4CzdvsGX38GAmammAG17U19855FM5FhQD0kmuZZn_2Of_kJJ7K5S-y8FWUJylA'
+            }
+          ]
+        },
         {
           code: '0F',
           length: 88,

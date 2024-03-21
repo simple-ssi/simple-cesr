@@ -2,36 +2,46 @@ import { match } from 'ts-pattern'
 
 import { Code } from '../../core/code/code.ts'
 import { Raw } from '../../core/domain/domains.ts'
-import { makeEcdsa256k1 } from './maker/makers/basicFour/makeEcdsa256k1.ts'
-import { makeX25519 } from './maker/makers/basicOne/makeX25519.ts'
-import { makeSha3512 } from './maker/makers/basicTwo/sha3512.ts'
-import { makeBig } from './maker/makers/basicOne/makeBig.ts'
-import { makeShort } from './maker/makers/basicOne/makeShort.ts'
-import { makeEd25519Seed } from './maker/makers/basicOne/makeEd25519Seed.ts'
-import { makeEd25519n } from './maker/makers/basicOne/makeEd25519n.ts'
-import { makeEd25519 } from './maker/makers/basicOne/makeEd25519.ts'
-import { makeBlake3256 } from './maker/makers/basicOne/makeBlake3256.ts'
-import { makeSha3256 } from './maker/makers/basicOne/makeSha3256.ts'
-import { makeSha2256 } from './maker/makers/basicOne/makeSha2256.ts'
-import { makeEcdsa256k1Seed } from './maker/makers/basicOne/makeEcdsa256k1Seed.ts'
-import { makeX25519Private } from './maker/makers/basicOne/makeX25519Private.ts'
-import { makeBlake2b256 } from './maker/makers/basicOne/makeBlake2b256.ts'
-import { makeBlake2s256 } from './maker/makers/basicOne/makeBlake2s256.ts'
+import { ecdsa256k1 } from './maker/makers/basicFour/ecdsa256k1.ts'
+import { x25519 } from './maker/makers/basicOne/x25519.ts'
+import { sha3512 } from './maker/makers/basicTwo/sha3512.ts'
+import { big } from './maker/makers/basicOne/big.ts'
+import { short } from './maker/makers/basicOne/short.ts'
+import { ed25519Seed } from './maker/makers/basicOne/ed25519Seed.ts'
+import { ed25519n } from './maker/makers/basicOne/ed25519n.ts'
+import { ed25519 } from './maker/makers/basicOne/ed25519.ts'
+import { blake3256 } from './maker/makers/basicOne/blake3256.ts'
+import { sha3256 } from './maker/makers/basicOne/sha3256.ts'
+import { sha2256 } from './maker/makers/basicOne/sha2256.ts'
+import { ecdsa256k1Seed } from './maker/makers/basicOne/ecdsa256k1Seed.ts'
+import { x25519Private } from './maker/makers/basicOne/x25519Private.ts'
+import { blake2b256 } from './maker/makers/basicOne/blake2b256.ts'
+import { blake2s256 } from './maker/makers/basicOne/blake2s256.ts'
+import { salt128 } from './maker/makers/basicTwo/salt128.ts'
+import { ed25519Sig } from './maker/makers/basicTwo/ed25519Sig.ts'
+import { ecdsa256k1Sig } from './maker/makers/basicTwo/ecdsa256k1Sig.ts'
+import { blake3512 } from './maker/makers/basicTwo/blake3512.ts'
+import { blake2b512 } from './maker/makers/basicTwo/blake2b512.ts'
 
 export const make = (code: Code, primitive: any): Raw => match(code)
-  .with('A', () => makeEd25519Seed(primitive))
-  .with('B', () => makeEd25519n(primitive))
-  .with('C', () => makeX25519(primitive))
-  .with('D', () => makeEd25519(primitive))
-  .with('E', () => makeBlake3256(primitive))
-  .with('F', () => makeBlake2b256(primitive))
-  .with('G', () => makeBlake2s256(primitive))
-  .with('H', () => makeSha3256(primitive))
-  .with('I', () => makeSha2256(primitive))
-  .with('J', () => makeEcdsa256k1Seed(primitive))
-  .with('M', () => makeShort(primitive))
-  .with('N', () => makeBig(primitive))
-  .with('O', () => makeX25519Private(primitive))
-  .with('0F', () => makeSha3512(primitive))
-  .with('1AAB', () => makeEcdsa256k1(primitive))
+  .with('A', () => ed25519Seed(primitive))
+  .with('B', () => ed25519n(primitive))
+  .with('C', () => x25519(primitive))
+  .with('D', () => ed25519(primitive))
+  .with('E', () => blake3256(primitive))
+  .with('F', () => blake2b256(primitive))
+  .with('G', () => blake2s256(primitive))
+  .with('H', () => sha3256(primitive))
+  .with('I', () => sha2256(primitive))
+  .with('J', () => ecdsa256k1Seed(primitive))
+  .with('M', () => short(primitive))
+  .with('N', () => big(primitive))
+  .with('O', () => x25519Private(primitive))
+  .with('0A', () => salt128(primitive))
+  .with('0B', () => ed25519Sig(primitive))
+  .with('0C', () => ecdsa256k1Sig(primitive))
+  .with('0D', () => blake3512(primitive))
+  .with('0E', () => blake2b512(primitive))
+  .with('0F', () => sha3512(primitive))
+  .with('1AAB', () => ecdsa256k1(primitive))
   .exhaustive()

@@ -25,9 +25,9 @@ export class MatterCodex extends Codex {
     ->X25519_Private: string = 'O'; // X25519 private decryption key converted from Ed25519
     X25519_Cipher_Seed: string = 'P'; // X25519 124 char b64 Cipher of 44 char qb64 Seed
     ECDSA_256r1_Seed: string = 'Q'; // ECDSA secp256r1 256 bit random Seed for private key
-    Salt_128: string = '0A'; // 128 bit random salt or 128 bit number (see Huge)
-    Ed25519_Sig: string = '0B'; // Ed25519 signature.
-    ECDSA_256k1_Sig: string = '0C'; // ECDSA secp256k1 signature.
+    ->Salt_128: string = '0A'; // 128 bit random salt or 128 bit number (see Huge)
+    ->Ed25519_Sig: string = '0B'; // Ed25519 signature.
+    ->ECDSA_256k1_Sig: string = '0C'; // ECDSA secp256k1 signature.
     ECDSA_256r1_Sig: string = '0I'; // ECDSA secp256r1 signature.
     StrB64_L0: string = '4A'; // String Base64 Only Lead Size 0
     StrB64_L1: string = '5A'; // String Base64 Only Lead Size 1
@@ -59,7 +59,7 @@ export class DigiCodex extends Codex {
     Blake2s_256: string = 'G'; // Blake2s 256 bit digest self-addressing derivation.
     SHA3_256: string = 'H'; // SHA3 256 bit digest self-addressing derivation.
     SHA2_256: string = 'I'; // SHA2 256 bit digest self-addressing derivation.
-    Blake3_512: string = '0D'; // Blake3 512 bit digest self-addressing derivation.
+    ->Blake3_512: string = '0D'; // Blake3 512 bit digest self-addressing derivation.
     Blake2b_512: string = '0E'; // Blake2b 512 bit digest self-addressing derivation.
     ->SHA3_512: string = '0F'; // SHA3 512 bit digest self-addressing derivation.
     SHA2_512: string = '0G'; // SHA2 512 bit digest self-addressing derivation.
