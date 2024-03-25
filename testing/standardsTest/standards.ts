@@ -495,90 +495,90 @@ export const standards = {
               text: '0FBbz6htk4zSLYhFYdJF0Tn_oqN64izHhUsm1_qkf3j21JIX99JCHZIkONkPSnu5HhrLcN_LM_D9TPzipxucJuth'
             }
           ]
+        },
+        {
+          code: '0G',
+          length: 88,
+          values: [
+            {
+              raw: '01e6d981d060da5305c0c4b798cfdca1f20bde68b4070e5a8b23cfa1016f4f249af48b265d7871f357279efdcba8678a35e0226fdd82edb775b72ebd56205528',
+              text: '0GAB5tmB0GDaUwXAxLeYz9yh8gveaLQHDlqLI8-hAW9PJJr0iyZdeHHzVyee_cuoZ4o14CJv3YLtt3W3Lr1WIFUo'
+            },
+            {
+              raw: 'b5e8e05b5281b4df3b3e1518220e7d93661960cb1b7d9c08f86a66ee8386799696c461bb592ca559082fe7bb3a843cd27e32c973d677c0ae1e4d821b13bc56e5',
+              text: '0GC16OBbUoG03zs-FRgiDn2TZhlgyxt9nAj4ambug4Z5lpbEYbtZLKVZCC_nuzqEPNJ-Mslz1nfArh5NghsTvFbl'
+            },
+            {
+              raw: 'e449839b82f6861fa9eb98ec6b089de8f7a8324a3151f275f2f0110ee1a4b888bf2738a20130858b816db80a4d8dce53f356b9e36dc2d17879a9ee50f17a2faf',
+              text: '0GDkSYObgvaGH6nrmOxrCJ3o96gySjFR8nXy8BEO4aS4iL8nOKIBMIWLgW24Ck2NzlPzVrnjbcLReHmp7lDxei-v'
+            },
+            {
+              raw: '685f2659c1409f1d8217e4ce43833c2c2069e3ed82264c70f2016359bc3295b47aa7db1ddeb9513e74216be2c5d452c95fff601e377be938810cad7134b40122',
+              text: '0GBoXyZZwUCfHYIX5M5DgzwsIGnj7YImTHDyAWNZvDKVtHqn2x3euVE-dCFr4sXUUslf_2AeN3vpOIEMrXE0tAEi'
+            },
+            {
+              raw: 'ce5d5131e29ba529371d5a73017a7a1a1272cda75deb19a0c9426045177b11d824a48611030d566b7acba94277ddfb0ab108252f5a76be0ec4daa8561846cb5e',
+              text: '0GDOXVEx4pulKTcdWnMBenoaEnLNp13rGaDJQmBFF3sR2CSkhhEDDVZresupQnfd-wqxCCUvWna-DsTaqFYYRste'
+            }
+          ]
+        },
+        {
+          code: '0H',
+          length: 8,
+          values: [
+            {
+              raw: '48fd43fd',
+              text: '0HBI_UP9'
+            },
+            {
+              raw: '822e72f5',
+              text: '0HCCLnL1'
+            },
+            {
+              raw: '48f3c9eb',
+              text: '0HBI88nr'
+            },
+            {
+              raw: '20e5ac52',
+              text: '0HAg5axS'
+            },
+            {
+              raw: 'ce60aabc',
+              text: '0HDOYKq8'
+            }
+          ]
         }
-        // {
-        //   code: '0G',
-        //   length: 88,
-        //   values: [
-        //     {
-        //       raw: '01e6d981d060da5305c0c4b798cfdca1f20bde68b4070e5a8b23cfa1016f4f249af48b265d7871f357279efdcba8678a35e0226fdd82edb775b72ebd56205528',
-        //       text: '0GAB5tmB0GDaUwXAxLeYz9yh8gveaLQHDlqLI8-hAW9PJJr0iyZdeHHzVyee_cuoZ4o14CJv3YLtt3W3Lr1WIFUo'
-        //     },
-        //     {
-        //       raw: 'b5e8e05b5281b4df3b3e1518220e7d93661960cb1b7d9c08f86a66ee8386799696c461bb592ca559082fe7bb3a843cd27e32c973d677c0ae1e4d821b13bc56e5',
-        //       text: '0GC16OBbUoG03zs-FRgiDn2TZhlgyxt9nAj4ambug4Z5lpbEYbtZLKVZCC_nuzqEPNJ-Mslz1nfArh5NghsTvFbl'
-        //     },
-        //     {
-        //       raw: 'e449839b82f6861fa9eb98ec6b089de8f7a8324a3151f275f2f0110ee1a4b888bf2738a20130858b816db80a4d8dce53f356b9e36dc2d17879a9ee50f17a2faf',
-        //       text: '0GDkSYObgvaGH6nrmOxrCJ3o96gySjFR8nXy8BEO4aS4iL8nOKIBMIWLgW24Ck2NzlPzVrnjbcLReHmp7lDxei-v'
-        //     },
-        //     {
-        //       raw: '685f2659c1409f1d8217e4ce43833c2c2069e3ed82264c70f2016359bc3295b47aa7db1ddeb9513e74216be2c5d452c95fff601e377be938810cad7134b40122',
-        //       text: '0GBoXyZZwUCfHYIX5M5DgzwsIGnj7YImTHDyAWNZvDKVtHqn2x3euVE-dCFr4sXUUslf_2AeN3vpOIEMrXE0tAEi'
-        //     },
-        //     {
-        //       raw: 'ce5d5131e29ba529371d5a73017a7a1a1272cda75deb19a0c9426045177b11d824a48611030d566b7acba94277ddfb0ab108252f5a76be0ec4daa8561846cb5e',
-        //       text: '0GDOXVEx4pulKTcdWnMBenoaEnLNp13rGaDJQmBFF3sR2CSkhhEDDVZresupQnfd-wqxCCUvWna-DsTaqFYYRste'
-        //     }
-        //   ]
-        // },
-        // {
-        //   code: '0H',
-        //   length: 8,
-        //   values: [
-        //     {
-        //       raw: '48fd43fd',
-        //       text: '0HBI_UP9'
-        //     },
-        //     {
-        //       raw: '822e72f5',
-        //       text: '0HCCLnL1'
-        //     },
-        //     {
-        //       raw: '48f3c9eb',
-        //       text: '0HBI88nr'
-        //     },
-        //     {
-        //       raw: '20e5ac52',
-        //       text: '0HAg5axS'
-        //     },
-        //     {
-        //       raw: 'ce60aabc',
-        //       text: '0HDOYKq8'
-        //     }
-        //   ]
-        // }
       ]
     },
     {
       pad: 'four',
       examples: [
-        // {
-        //   code: '1AAA',
-        //   length: 48,
-        //   values: [
-        //     {
-        //       raw: '02b4e3429fccb0541c8018d172325c2671c6a248df84aefc3b146f616b5a394762',
-        //       text: '1AAAArTjQp_MsFQcgBjRcjJcJnHGokjfhK78OxRvYWtaOUdi'
-        //     },
-        //     {
-        //       raw: '03a34d6f462f1b81a64c2a01cb7c8ad882a48ed215f954b4c4f5b6d687116bb03e',
-        //       text: '1AAAA6NNb0YvG4GmTCoBy3yK2IKkjtIV-VS0xPW21ocRa7A-'
-        //     },
-        //     {
-        //       raw: '0291e19a245ddc8ba29acb4159f89e8e1c974d8ec3db57c471fe1a5c2d8e4bafdc',
-        //       text: '1AAAApHhmiRd3IuimstBWfiejhyXTY7D21fEcf4aXC2OS6_c'
-        //     },
-        //     {
-        //       raw: '0369a092b6b5276b5f3ab509be3d74c6d8c7711a243a63ee1fabb0454df8ddf245',
-        //       text: '1AAAA2mgkra1J2tfOrUJvj10xtjHcRokOmPuH6uwRU343fJF'
-        //     },
-        //     {
-        //       raw: '025fb3d5f4b8769cfb3f19749103b8b9a1b17c7cb5dfc006c167b5d5a7f3b8c634',
-        //       text: '1AAAAl-z1fS4dpz7Pxl0kQO4uaGxfHy138AGwWe11afzuMY0'
-        //     }
-        //   ]
-        // },
+        {
+          code: '1AAA',
+          length: 48,
+          values: [
+            {
+              raw: '02b4e3429fccb0541c8018d172325c2671c6a248df84aefc3b146f616b5a394762',
+              text: '1AAAArTjQp_MsFQcgBjRcjJcJnHGokjfhK78OxRvYWtaOUdi'
+            },
+            {
+              raw: '03a34d6f462f1b81a64c2a01cb7c8ad882a48ed215f954b4c4f5b6d687116bb03e',
+              text: '1AAAA6NNb0YvG4GmTCoBy3yK2IKkjtIV-VS0xPW21ocRa7A-'
+            },
+            {
+              raw: '0291e19a245ddc8ba29acb4159f89e8e1c974d8ec3db57c471fe1a5c2d8e4bafdc',
+              text: '1AAAApHhmiRd3IuimstBWfiejhyXTY7D21fEcf4aXC2OS6_c'
+            },
+            {
+              raw: '0369a092b6b5276b5f3ab509be3d74c6d8c7711a243a63ee1fabb0454df8ddf245',
+              text: '1AAAA2mgkra1J2tfOrUJvj10xtjHcRokOmPuH6uwRU343fJF'
+            },
+            {
+              raw: '025fb3d5f4b8769cfb3f19749103b8b9a1b17c7cb5dfc006c167b5d5a7f3b8c634',
+              text: '1AAAAl-z1fS4dpz7Pxl0kQO4uaGxfHy138AGwWe11afzuMY0'
+            }
+          ]
+        },
         {
           code: '1AAB',
           length: 48,
@@ -604,110 +604,111 @@ export const standards = {
               text: '1AABAv6rJW6LTzF7tehbS016Lyp-NitLXuivHGqpB7ML_cB2'
             }
           ]
+        },
+        {
+          code: '1AAC',
+          length: 80,
+          values: [
+            {
+              raw: '9a768bfe3045cd2189abcdef1234567890fedcba9876543210abcdef1234567890abcd1234ef567890abcd1234ef567890abcd1234ef567890',
+              text: '1AACmnaL_jBFzSGJq83vEjRWeJD-3LqYdlQyEKvN7xI0VniQq80SNO9WeJCrzRI071Z4kKvNEjTvVniQ'
+            },
+            {
+              raw: '1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef12',
+              text: '1AACEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJCrze8S'
+            },
+            {
+              raw: 'fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fe',
+              text: '1AAC_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-'
+            },
+            {
+              raw: 'abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890ab',
+              text: '1AACq83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJCr'
+            },
+            {
+              raw: '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef01',
+              text: '1AACASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8B'
+            }
+          ]
+        },
+        {
+          code: '1AAD',
+          length: 80,
+          values: [
+            {
+              raw: 'a1b2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef012',
+              text: '1AADobLD1OX2eJASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8BI0VniavN7wEjRWeJq83vAS'
+            },
+            {
+              raw: '123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef012',
+              text: '1AADEjRWeJq83vASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8BI0VniavN7wEjRWeJq83vAS'
+            },
+            {
+              raw: 'fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fe',
+              text: '1AAD_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-'
+            },
+            {
+              raw: '9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba98',
+              text: '1AADmHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-3LqY'
+            },
+            {
+              raw: '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef01',
+              text: '1AADASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8B'
+            }
+          ]
+        },
+        {
+          code: '1AAE',
+          length: 156,
+          values: [
+            {
+              raw: 'f123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcd',
+              text: '1AAE8SNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8BI0VniavN'
+            },
+            {
+              raw: 'e9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fed',
+              text: '1AAE6YdlQyEP7cuph2VDIQ_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_t'
+            },
+            {
+              raw: 'aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00',
+              text: '1AAEqrvM3e7_ABEiM0RVZneImaq7zN3u_wARIjNEVWZ3iJmqu8zd7v8A'
+            },
+            {
+              raw: '00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566',
+              text: '1AAEABEiM0RVZneImaq7zN3u_wARIjNEVWZ3iJmqu8zd7v8AESIzRFVm'
+            },
+            {
+              raw: 'ffeeddccbbaa99887766554433221100ffeeddccbbaa99887766554433221100ffeeddccbbaa99',
+              text: '1AAE_-7dzLuqmYh3ZlVEMyIRAP_u3cy7qpmId2ZVRDMiEQD_7t3Mu6qZ'
+            }
+          ]
+        },
+        {
+          code: '1AAF',
+          length: 8,
+          values: [
+            {
+              raw: '464259',
+              text: '1AAFRkJZ'
+            },
+            {
+              raw: 'e4feff',
+              text: '1AAF5P7_'
+            },
+            {
+              raw: '493bcb',
+              text: '1AAFSTvL'
+            },
+            {
+              raw: 'e4482d',
+              text: '1AAF5Egt'
+            },
+            {
+              raw: 'e43537',
+              text: '1AAF5DU3'
+            }
+          ]
         }
-        // {
-        //   code: '1AAC',
-        //   length: 80,
-        //   values: [
-        //     {
-        //       raw: '9a768bfe3045cd2189abcdef1234567890fedcba9876543210abcdef1234567890abcd1234ef567890abcd1234ef567890abcd1234ef567890abcd1234ef5678',
-        //       text: '1AACmnaL_jBFzSGJq83vEjRWeJD-3LqYdlQyEKvN7xI0VniQq80SNO9WeJCrzRI071Z4kKvNEjTvVniQ'
-        //     },
-        //     {
-        //       raw: '1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcd',
-        //       text: '1AACEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJCrze8S'
-        //     },
-        //     {
-        //       raw: 'fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fe',
-        //       text: '1AAC_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-'
-        //     },
-        //     {
-        //       raw: 'abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890ab',
-        //       text: '1AACq83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJCr'
-        //     },
-        //     {
-        //       raw: '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef01',
-        //       text: '1AACASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8B'
-        //     }
-        //   ]
-        // },
-        // {
-        //   code: '1AAD',
-        //   length: 80,
-        //   values: [
-        //     {
-        //       raw: 'a1b2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcd',
-        //       text: '1AADobLD1OX2eJASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8BI0VniavN7wEjRWeJq83vAS'
-        //     },
-        //     {
-        //       raw: '123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0',
-        //       text: '1AADEjRWeJq83vASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8BI0VniavN7wEjRWeJq83vAS'
-        //     },
-        //     {
-        //       raw: 'fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fd',
-        //       text: '1AAD_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-'
-        //     },
-        //     {
-        //       raw: '9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fe',
-        //       text: '1AADmHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_ty6mHZUMhD-3LqY'
-        //     },
-        //     {
-        //       raw: '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcd',
-        //       text: '1AADASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8B'
-        //     }
-        //   ]
-        // },
-        // {
-        //   code: '1AAE',
-        //   length: 156,
-        //   values: [
-        //     {
-        //       raw: 'f123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123',
-        //       text: '1AAE8SNFZ4mrze8BI0VniavN7wEjRWeJq83vASNFZ4mrze8BI0VniavN'
-        //     },
-        //     {
-        //       raw: 'e9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876',
-        //       text: '1AAE6YdlQyEP7cuph2VDIQ_ty6mHZUMhD-3LqYdlQyEP7cuph2VDIQ_t'
-        //     },
-        //     {
-        //       raw: 'aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00',
-        //       text: '1AAEqrvM3e7_ABEiM0RVZneImaq7zN3u_wARIjNEVWZ3iJmqu8zd7v8A'
-        //     },
-        //     {
-        //       raw: '00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff0011223344556677',
-        //       text: '1AAEABEiM0RVZneImaq7zN3u_wARIjNEVWZ3iJmqu8zd7v8AESIzRFVm'
-        //     },
-        //     {
-        //       raw: 'ffeeddccbbaa99887766554433221100ffeeddccbbaa99887766554433221100ffeeddccbbaa99887766554433221100ffeeddccbbaa99887766554433221100ffeeddccbbaa99887766554433221100ffeeddccbbaa99',
-        //       text: '1AAE_-7dzLuqmYh3ZlVEMyIRAP_u3cy7qpmId2ZVRDMiEQD_7t3Mu6qZ'
-        //     }
-        //   ]
-        // },
-        // {
-        //   code: '1AAF',
-        //   length: 8,
-        //   values: [
-        //     {
-        //       raw: '464259',
-        //       text: '1AAFRkJZ'
-        //     },
-        //     {
-        //       raw: 'e4feff',
-        //       text: '1AAF5P7_'
-        //     },
-        //     {
-        //       raw: '493bcb',
-        //       text: '1AAFSTvL'
-        //     },
-        //     {
-        //       raw: 'e4482d',
-        //       text: '1AAF5Egt'
-        //     },
-        //     {
-        //       raw: 'e43537',
-        //       text: '1AAF5DU3'
-        //     }]
-        // }
       ]
     }
   ]

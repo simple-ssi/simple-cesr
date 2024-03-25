@@ -1,4 +1,3 @@
-import { Buffer } from 'buffer'
 import { Code } from '../../../../../core/code/code.ts'
 import { check } from '../../lib/check/check.ts'
 import { lengthNotWrong } from '../../lib/check/checks/lengthNotWrong.ts'
@@ -6,11 +5,11 @@ import { canMakeIt } from '../../lib/check/checks/canMakeIt.ts'
 import { prefixis02or03 } from '../../lib/check/checks/prefixNotWrong.ts'
 
 const configuration = {
-  suite: 'With ECDSA public verification key',
-  type: 'Ecdsa256k1',
-  code: '1AAB' as Code,
-  example: Buffer.from('02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1', 'hex'),
-  length: 33
+  suite: 'With ECDSA secp256k1 verification key, basic derivation',
+  type: 'Ecdsa256k1n',
+  code: '1AAA' as Code,
+  example: Buffer.from('03b89efadf2d1a7e3c0fbec09b14d151d0b93ecaf6c4614e7a56b75802c1f2e3a8', 'hex'), // a valid example of a compressed ECDSA secp256k1 verification key in hex
+  length: 64 // characters in bytes
 }
 
 check(

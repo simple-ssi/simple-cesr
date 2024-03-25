@@ -9,7 +9,8 @@
     "test": "jest ./src/api ./src/implementation",
     "build": "npx tsc",
     "standards-test": "jest ./testing/standards",
-    "all-tests": "jest"
+    "all-tests": "jest",
+    "sizage": "npx tsx ./script.ts"
   },
   "author": "Jonathan Rayback",
   "license": "UNLICENSED",

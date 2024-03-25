@@ -7,7 +7,7 @@ import { Code } from '../../../../../core/code/code.ts'
 const example = '011F' // becomes two byte Buffer
 
 const configuration = {
-  suite: 'With Short number',
+  suite: 'With Short (2-byte) number',
   type: 'Short',
   code: 'M' as Code,
   example: Buffer.from(example, 'hex'),

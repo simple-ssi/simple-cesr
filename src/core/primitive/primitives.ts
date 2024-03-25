@@ -22,6 +22,13 @@ export type Ecdsa256k1Sig = Raw & { readonly code: '0C' }
 export type Blake3512 = Raw & { readonly code: '0D' }
 export type Blake2b512 = Raw & { readonly code: '0E' }
 export type Sha3512 = Raw & { readonly code: '0F' }
+export type Sha2512 = Raw & { readonly code: '0G' }
+export type Long = Raw & { readonly code: '0H' }
 
 // Four Character Codes
+export type Ecdsa256k1n = Raw & { readonly code: '1AAA' }
 export type Ecdsa256k1 = Raw & { readonly code: '1AAB' }
+export type Ed448n = Raw & { readonly code: '1AAC' }
+export type Ed448 = Raw & { readonly code: '1AAD' }
+export type Ed448s = Raw & { readonly code: '1AAE' }
+export type Base644CharOr3Byte = Raw & { readonly code: '1AAF' }
