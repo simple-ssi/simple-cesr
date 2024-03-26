@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
 
-import { pipe } from '../../../../../../lib/pipe.ts'
+import { pipe } from '../../../../../../lib/util/pipe.ts'
 import { make } from '../../../../make.ts'
 import { PrimitiveInvalidInput } from '../../../error.ts'
 import { TestConfiguration } from '../../test/TestConfiguration.ts'

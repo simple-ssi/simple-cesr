@@ -1,4 +1,4 @@
-import { pipe } from '../../lib/pipe.ts'
+import { pipe } from '../../lib/util/pipe.ts'
 import { Code } from '../../core/code/code.ts'
 import { Text } from '../../core/domain/domains.ts'
 
