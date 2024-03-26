@@ -1,10 +1,10 @@
 import { Binary, Text, Raw } from '../../core/domain/domains.ts'
-import { encodeAsBinary } from '../encode/encodeAsBinary.ts'
+import { encodeBinary } from '../encode/encoders/encodeBinary.ts'
 
 export function transformToBinary (text: Text): Binary
 export function transformToBinary (Raw: Raw): Binary
 
 export function transformToBinary (textOrRaw: Text | Raw): Binary {
   if (typeof textOrRaw === 'string') return Buffer.from(textOrRaw, 'base64url')
-  else return encodeAsBinary(textOrRaw.code, textOrRaw.raw)
+  else return encodeBinary(textOrRaw.code, textOrRaw.raw)
 }
