@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer'
 import { encodeText } from './encodeText.ts'
 
 describe('Text Encoder', () => {

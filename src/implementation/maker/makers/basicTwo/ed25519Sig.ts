@@ -1,7 +1,7 @@
 import { Buffer } from 'buffer'
 import { Maker } from '../../maker.ts'
-import { makeSureThat } from '../../lib/validate/validate.ts'
-import { itIs64Bytes } from '../../lib/validate/validations/lengthIs.ts'
+import { makeSureThat } from '../../validation/makeSureThat.ts'
+import { itIs64Bytes } from '../../validation/validations/lengthIsRight.ts'
 import { Ed25519Sig } from '../../../../core/primitive/primitives.ts'
 
 // SHA3 512-bit digest

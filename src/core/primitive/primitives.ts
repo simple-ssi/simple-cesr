@@ -31,4 +31,4 @@ export type Ecdsa256k1 = Raw & { readonly code: '1AAB' }
 export type Ed448n = Raw & { readonly code: '1AAC' }
 export type Ed448 = Raw & { readonly code: '1AAD' }
 export type Ed448s = Raw & { readonly code: '1AAE' }
-export type Base644CharOr3Byte = Raw & { readonly code: '1AAF' }
+export type FourB64ThreeByte = Raw & { readonly code: '1AAF' }

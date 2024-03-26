@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer'
 import { Binary, Text, Raw } from '../../core/domain/domains.ts'
 import { encodeBinary } from '../encode/encoders/encodeBinary.ts'
 

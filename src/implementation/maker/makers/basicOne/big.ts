@@ -1,8 +1,8 @@
 import { Buffer } from 'buffer'
 import { Maker } from '../../maker.ts'
 import { Big } from '../../../../core/primitive/primitives.ts'
-import { makeSureThat } from '../../lib/validate/validate.ts'
-import { itIsEightBytes } from '../../lib/validate/validations/lengthIs.ts'
+import { makeSureThat } from '../../validation/makeSureThat.ts'
+import { itIsEightBytes } from '../../validation/validations/lengthIsRight.ts'
 
 // 8-byte base-2 number
 export const big: Maker = (raw: Buffer): Big => {

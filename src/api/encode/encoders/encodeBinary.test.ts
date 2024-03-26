@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer'
 import { encodeBinary } from './encodeBinary.ts'
 
 describe('Binary encoder', () => {

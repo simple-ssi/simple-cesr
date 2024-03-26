@@ -30,6 +30,7 @@ import { ed448 } from './maker/makers/basicFour/ed448.ts'
 import { ed448s } from './maker/makers/basicFour/ed448s.ts'
 import { fourB64ThreeByte } from './maker/makers/basicFour/fourB64ThreeByte.ts'
 
+// make a Raw holding the appropriate primitive
 export const make = (code: Code, primitive: any): Raw =>
   match(code)
     .with('A', () => ed25519Seed(primitive))

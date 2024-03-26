@@ -1,9 +1,9 @@
 import { Maker } from '../../maker.ts'
-import { Base644CharOr3Byte as FourB64ThreeByte } from '../../../../core/primitive/primitives.ts'
-import { itIsThreeBytes } from '../../lib/validate/validations/lengthIs.ts'
-import { makeSureThat } from '../../lib/validate/validate.ts'
+import { FourB64ThreeByte } from '../../../../core/primitive/primitives.ts'
+import { itIsThreeBytes } from '../../validation/validations/lengthIsRight.ts'
+import { makeSureThat } from '../../validation/makeSureThat.ts'
 
-// ECDSA public verification or encryption key, compressed
+// four Base64 characters or a 3-byte base-2 number
 export const fourB64ThreeByte: Maker = (primitive: Buffer): FourB64ThreeByte => {
   makeSureThat(
     itIsThreeBytes(primitive)
