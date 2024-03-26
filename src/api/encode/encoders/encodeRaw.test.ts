@@ -1,7 +1,6 @@
 import { Buffer } from 'buffer'
 import { encodeRaw } from './encodeRaw.ts'
 
-// to do: move the essential primitive-specific tests to the primitive-specific test files and make this test a more general test of makeRaw
 describe('Raw encoder', () => {
   it("encodes a one-character primitive: 'A'", () => {
     // exmaple of 256 bit seed for ED25519 private key

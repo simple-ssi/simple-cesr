@@ -6,7 +6,7 @@ import { itIsEightBytes } from '../../validation/validations/lengthIsRight.ts'
 
 // 8-byte base-2 number
 export const big: Maker = (raw: Buffer): Big => {
-  // Must be 8 bytes
+  // must be 8 bytes
   makeSureThat(
     itIsEightBytes(raw)
   )

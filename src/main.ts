@@ -41,10 +41,3 @@ const actualChars = actualBytes.map((bytes) => numberOfCharacters(bytes))
 // is it right?
 const areCharsCalculatedCorrectly = actualChars.every((chars, index) => chars === refChars[index])
 console.log(areCharsCalculatedCorrectly)
-
-const raw: Raw = {
-  code: '1AAB',
-  raw: Buffer.from('02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1', 'hex')
-}
-const text: Text = encodeText(raw.code, raw.raw)
-const actual = toRaw(text)
