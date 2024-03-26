@@ -1,10 +1,12 @@
 import { match } from 'ts-pattern'
 import { Binary, Raw, Text } from '../../core/domain/domains.ts'
 import { pipe } from '../../lib/util/pipe.ts'
-import { removePadding } from './lib/removePadding.ts'
-import { asBinary } from './lib/asBinary.ts'
+import { removeThreeBytes, removeOneByte, removeTwoBytes, PaddingRemover } from './lib/removeBytes.ts'
+import { toBytes } from './lib/toBytes.ts'
 import { readCodeFromString } from './lib/readCodeFromString.ts'
 import { toText } from './toText.ts'
+import { CodeLength } from '../../core/code/code.ts'
+import { asRaw } from './lib/asRaw.ts'
 
 // two function signatures: Text and Binary
 export function toRaw (text: Text): Raw
@@ -17,13 +19,16 @@ export function toRaw (textOrBinary: Text | Binary): Raw {
     .otherwise(() => binaryToRaw(textOrBinary as Binary))
 }
 
-const textToRaw = (textDomain: Text): Raw => {
-  const code = readCodeFromString(textDomain)
+const textToRaw = (text: Text): Raw => {
+  const code = readCodeFromString(text)
+  const length = code.length as CodeLength
+  const removePadding = howManyBytes(length)
+
   return pipe(
-    textDomain,
-    readCodeFromString,
-    asBinary,
-    removePadding
+    text,
+    toBytes,
+    removePadding,
+    asRaw(code)
   )
 }
 
@@ -32,3 +37,9 @@ const binaryToRaw = (binaryDomain: Binary): Raw => pipe(
   toText,
   textToRaw
 )
+
+const howManyBytes = (length: CodeLength): PaddingRemover => match(length)
+  .with(1, () => removeOneByte)
+  .with(2, () => removeTwoBytes)
+  .with(4, () => removeThreeBytes)
+  .exhaustive()
