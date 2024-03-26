@@ -4,7 +4,8 @@ import { padUpFront } from './encoders/lib/padUpFront.ts'
 import { convertToBase64 } from './encoders/lib/convertToBase64.ts'
 import { Code } from '../../core/code/code.ts'
 
-export const asText = (primitive: Buffer, code: Code): string =>
+// builds the proper text encoding for the given primitive
+export const asText = (code: Code, primitive: Buffer): string =>
   pipe(
     primitive,
     padUpFront,

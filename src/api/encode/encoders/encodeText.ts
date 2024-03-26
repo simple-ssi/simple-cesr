@@ -12,5 +12,5 @@ export const encodeText = (code: Code, primitive: Uint8Array): Text => {
 
   // encode the raw primitive as Text
   const raw = tuplet.raw
-  return asText(raw, code)
+  return asText(code, raw)
 }
