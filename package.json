@@ -8,7 +8,7 @@
     "start": "npx tsx src/main.ts",
     "test": "jest ./src/api ./src/implementation",
     "build": "npx tsc",
-    "standards-test": "jest ./testing/standards",
+    "standards-test": "jest ./test/standards",
     "all-tests": "jest",
     "sizage": "npx tsx ./script.ts"
   },
