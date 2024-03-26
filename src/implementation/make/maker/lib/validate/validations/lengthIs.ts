@@ -2,7 +2,7 @@ import { PrimitiveWrongLength } from '../../../error.ts'
 import { Validation } from '../Validation.ts'
 
 const lengthIs = (length: number) => (primitive: Buffer): Validation => () => {
-  if (primitive.length !== length) throw new PrimitiveWrongLength()
+  if (primitive.length !== length) throw new PrimitiveWrongLength(length, primitive.length)
   return true
 }
 
