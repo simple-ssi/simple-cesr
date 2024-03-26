@@ -4,11 +4,11 @@ import { lengthNotWrong } from '../../lib/check/checks/lengthNotWrong.ts'
 import { canMakeIt } from '../../lib/check/checks/canMakeIt.ts'
 
 const configuration = {
-  suite: 'With Sha3 self-addressing 512 bit digest',
-  type: 'Sha3512',
-  code: '0F' as Code,
-  example: Buffer.from('ddaf35a193617abacc417349ae20413112e6fa4e89a97ea20a9eeee64b55d39a2192992a274fc1a836ba3c23a3feebbd454d4423643ce80e2a9ac94fa54ca49f', 'hex'),
-  length: 64 // characters in bytes
+  suite: 'With 128 bit random salt',
+  type: 'Salt128',
+  code: '0A' as Code,
+  example: Buffer.from('39aa391b5b820de57df633ac0025af16', 'hex'), // valid example of 128 bit random salt in hex
+  length: 16 // characters in bytes
 }
 
 check(

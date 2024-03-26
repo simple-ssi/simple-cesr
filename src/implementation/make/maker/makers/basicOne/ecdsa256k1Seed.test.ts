@@ -4,11 +4,11 @@ import { lengthNotWrong } from '../../lib/check/checks/lengthNotWrong.ts'
 import { canMakeIt } from '../../lib/check/checks/canMakeIt.ts'
 
 const configuration = {
-  suite: 'With Sha3 self-addressing 512 bit digest',
-  type: 'Sha3512',
-  code: '0F' as Code,
-  example: Buffer.from('ddaf35a193617abacc417349ae20413112e6fa4e89a97ea20a9eeee64b55d39a2192992a274fc1a836ba3c23a3feebbd454d4423643ce80e2a9ac94fa54ca49f', 'hex'),
-  length: 64 // characters in bytes
+  suite: 'With ECDSA secp256k1 256 bit seed',
+  type: 'Ecdsa256k1Seed',
+  code: 'J' as Code,
+  example: Buffer.from('f7e8d9a0b1c2d3e4f5a6b7c8d9e0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8', 'hex'), // valid example of ECDSA secp256k1 256 bit seed in hex
+  length: 32 // characters in bytes
 }
 
 check(

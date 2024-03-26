@@ -1,6 +1,6 @@
 import { match } from 'ts-pattern'
 import { Binary, Raw, Text } from '../../core/domain/domains.ts'
-import { pipe } from '../../lib/pipe.ts'
+import { pipe } from '../../lib/util/pipe.ts'
 import { removePadding } from './lib/removePadding.ts'
 import { decodeRaw } from './lib/decodeRaw.ts'
 import { readCode } from './lib/readCode.ts'
