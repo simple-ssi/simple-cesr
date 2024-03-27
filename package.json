@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "files": ["dist"],
   "scripts": {
-    "build": "tsc",
+    "build": "npx rimraf ./dist && npx swc src index.ts -d dist --ignore **/*.test.ts --ignore **/main.ts",
     "start": "npx tsx src/main.ts",
     "test": "jest ./src/api ./src/implementation",
     "standards-test": "jest ./testing/standards",
