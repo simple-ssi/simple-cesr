@@ -1,20 +1,34 @@
 {
-  "name": "jmr-cesr",
+  "name": "simple-cesr",
   "type": "module",
-  "version": "1.0.0",
-  "description": "An implementation of the CESR protocol.",
-  "main": "index.ts",
+  "version": "0.1.0",
+  "description": "A simple, limited, true-to-spec implementation of the CESR protocol.",
+  "main": "dist/index.js",
+  "files": ["dist"],
   "scripts": {
+    "build": "tsc",
     "start": "npx tsx src/main.ts",
     "test": "jest ./src/api ./src/implementation",
-    "build": "npx tsc",
-    "standards-test": "jest ./test/standards",
-    "all-tests": "jest",
-    "sizage": "npx tsx ./script.ts"
+    "standards-test": "jest ./testing/standards",
+    "all-tests": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/futureforging/simple-cesr.git"
+  },
+  "keywords": [
+    "KERI",
+    "CESR"
+  ],
   "author": "Jonathan Rayback",
   "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/futureforging/simple-cesr/issues"
+  },
+  "homepage": "https://github.com/futureforging/simple-cesr#readme",
   "devDependencies": {
+    "@swc/cli": "^0.3.10",
+    "@swc/core": "^1.4.11",
     "@tsconfig/node20": "^20.1.2",
     "@types/jest": "^29.5.5",
     "jest": "^29.7.0",
@@ -34,5 +48,8 @@
     "buffer": "^6.0.3",
     "immer": "^10.0.3",
     "ts-pattern": "^5.0.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
