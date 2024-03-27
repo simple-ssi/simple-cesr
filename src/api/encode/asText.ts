@@ -1,8 +1,8 @@
-import { pipe } from '../../lib/util/pipe.ts'
-import { swapInTypeCode } from './encoders/lib/swapInTypeCode.ts'
-import { padUpFront } from './encoders/lib/padUpFront.ts'
-import { convertToBase64 } from './encoders/lib/convertToBase64.ts'
-import { Code } from '../../core/code/code.ts'
+import { pipe } from '../../lib/util/pipe.js'
+import { swapInTypeCode } from './encoders/lib/swapInTypeCode.js'
+import { padUpFront } from './encoders/lib/padUpFront.js'
+import { convertToBase64 } from './encoders/lib/convertToBase64.js'
+import { Code } from '../../core/code/code.js'
 
 // builds the proper text encoding for the given primitive
 export const asText = (code: Code, primitive: Buffer): string =>

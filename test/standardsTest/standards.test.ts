@@ -1,7 +1,7 @@
 import { Buffer } from 'buffer'
-import { standards } from './standards.ts'
-import { encodeText } from '../../src/api/encode/encoders/encodeText.ts'
-import { Code } from '../../src/core/code/code.ts'
+import { standards } from './standards.js'
+import { encodeText } from '../../src/api/encode/encoders/encodeText.js'
+import { Code } from '../../src/core/code/code.js'
 
 // Test is only against Matter output for now
 const matter = standards.matter

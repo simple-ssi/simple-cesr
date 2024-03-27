@@ -1,4 +1,4 @@
-import { Raw } from '../domain/domains.ts'
+import { Raw } from '../domain/domains.js'
 
 // One Character Codes
 export type Ed25519Seed = Raw & { readonly code: 'A' }

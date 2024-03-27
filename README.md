@@ -65,4 +65,4 @@ To get a feel for things:
 npm start
 ```
 
-This will run `src/main.ts` and is a good way to get oriented.
+This will run `src/main.js` and is a good way to get oriented.

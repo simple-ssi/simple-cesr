@@ -1,5 +1,5 @@
 import { match } from 'ts-pattern'
-import { Code, CodeLength } from '../../../../core/code/code.ts'
+import { Code, CodeLength } from '../../../../core/code/code.js'
 
 type Swapper = (text: string) => string
 

@@ -1,8 +1,8 @@
-import { Code } from '../../../core/code/code.ts'
-import { Text } from '../../../core/domain/domains.ts'
+import { Code } from '../../../core/code/code.js'
+import { Text } from '../../../core/domain/domains.js'
 
-import { make } from '../../../implementation/make.ts'
-import { asText } from '../asText.ts'
+import { make } from '../../../implementation/make.js'
+import { asText } from '../asText.js'
 
 export const encodeText = (code: Code, primitive: Uint8Array): Text => {
   // requires two steps...

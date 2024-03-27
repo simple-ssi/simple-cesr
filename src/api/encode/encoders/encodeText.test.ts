@@ -1,5 +1,5 @@
 import { Buffer } from 'buffer'
-import { encodeText } from './encodeText.ts'
+import { encodeText } from './encodeText.js'
 
 describe('Text Encoder', () => {
   it('gets "MAAB" from ["M", 1]', () => {

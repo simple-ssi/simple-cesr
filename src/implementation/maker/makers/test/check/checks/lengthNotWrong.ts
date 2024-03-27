@@ -1,6 +1,6 @@
-import { make } from '../../../../../make.ts'
-import { PrimitiveWrongLength } from '../../../../maker.ts'
-import { Configuration } from '../../configuration.ts'
+import { make } from '../../../../../make.js'
+import { PrimitiveWrongLength } from '../../../../maker.js'
+import { Configuration } from '../../configuration.js'
 
 const oneTooLong = (primitive: Buffer): Buffer => Buffer.alloc(primitive.length + 1, 0)
 

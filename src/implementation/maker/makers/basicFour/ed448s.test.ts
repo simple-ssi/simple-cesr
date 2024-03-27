@@ -1,9 +1,9 @@
 // '9a768bfe3045cd2189abcdef1234567890fedcba9876543210abcdef1234567890abcd1234ef567890abcd1234ef567890abcd1234ef567890abcd1234ef5678'
 import { Buffer } from 'buffer'
-import { Code } from '../../../../core/code/code.ts'
-import { check } from '../test/check/check.ts'
-import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.ts'
-import { canMakeIt } from '../test/check/checks/canMakeIt.ts'
+import { Code } from '../../../../core/code/code.js'
+import { check } from '../test/check/check.js'
+import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
+import { canMakeIt } from '../test/check/checks/canMakeIt.js'
 
 const configuration = {
   describe: 'With Ed448 public signature',

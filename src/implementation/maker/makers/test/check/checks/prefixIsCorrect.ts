@@ -1,9 +1,9 @@
 import { Buffer } from 'buffer'
 
-import { pipe } from '../../../../../../lib/util/pipe.ts'
-import { make } from '../../../../../make.ts'
-import { PrimitiveInvalidInput } from '../../../../maker.ts'
-import { Configuration } from '../../configuration.ts'
+import { pipe } from '../../../../../../lib/util/pipe.js'
+import { make } from '../../../../../make.js'
+import { PrimitiveInvalidInput } from '../../../../maker.js'
+import { Configuration } from '../../configuration.js'
 
 const throwsErrorForWrongPrefix = (length: number) => (configuration: Configuration): Configuration => {
   const { code, example } = configuration
