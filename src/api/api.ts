@@ -5,7 +5,7 @@ import { toBinary } from './transform/toBinary.js'
 import { toText } from './transform/toText.js'
 import { toRaw } from './transform/toRaw.js'
 
-export default {
+export {
   encodeBinary,
   encodeText,
   encodeRaw,

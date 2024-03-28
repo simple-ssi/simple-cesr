@@ -8,7 +8,7 @@ export default {
     '^(\\.{1,2}/.*)\\.js$': '$1'
   },
   transform: {
-    // allows jest to resolve .js module paths to a .js source file
+    // allows jest to resolve module paths to a .ts source file using a .js extension
     // see dox for more information on this setting: https://kulshekhar.github.io/ts-jest/docs/guides/esm-support/
     '^.+\\.[tj]sx?$': [
       'ts-jest',

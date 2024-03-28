@@ -1,4 +1,5 @@
-import * as cesr from './src/api/api.js'
+/* eslint-disable @typescript-eslint/no-var-requires */
 
-export default cesr
-Object.assign(module.exports, cesr) // presumably for CommonJS
+export * as cesr from './src/api/api.js'
+
+Object.assign(module.exports, require('./src/api/api.js')) // presumably for CommonJS
