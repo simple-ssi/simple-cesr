@@ -1,7 +1,7 @@
 {
   "name": "@jrayback/simple-cesr",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple, limited, true-to-spec implementation of the CESR protocol.",
   "main": "dist/index.js",
   "files": [

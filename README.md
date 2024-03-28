@@ -37,7 +37,7 @@ This implementation is consistent with the [1.0](https://weboftrust.github.io/ie
 ## Usage
 
 ```bash
-npm install simple-cesr
+npm install @jrayback/simple-cesr
 ```
 
 ## Development
