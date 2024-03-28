@@ -1,7 +1,7 @@
-import { Ed25519Seed } from '../../../../core/primitive/primitives.ts'
-import { makeSureThat } from '../../validation/makeSureThat.ts'
-import { itIs32Bytes } from '../../validation/validations/lengthIsRight.ts'
-import { Maker } from '../../maker.ts'
+import { Ed25519Seed } from '../../../../core/primitive/primitives.js'
+import { makeSureThat } from '../../validation/makeSureThat.js'
+import { itIs32Bytes } from '../../validation/validations/lengthIsRight.js'
+import { Maker } from '../../maker.js'
 
 export const ed25519Seed: Maker = (primitive: Buffer): Ed25519Seed => {
   makeSureThat(

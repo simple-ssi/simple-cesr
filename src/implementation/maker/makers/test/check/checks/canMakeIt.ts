@@ -1,5 +1,5 @@
-import { make } from '../../../../../make.ts'
-import { Configuration } from '../../configuration.ts'
+import { make } from '../../../../../make.js'
+import { Configuration } from '../../configuration.js'
 
 export const canMakeIt = (configuration: Configuration): Configuration => {
   const { code, example } = configuration

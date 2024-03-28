@@ -1,9 +1,9 @@
 import { Buffer } from 'buffer'
-import { Code } from '../../../../core/code/code.ts'
-import { check } from '../test/check/check.ts'
-import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.ts'
-import { canMakeIt } from '../test/check/checks/canMakeIt.ts'
-import { prefixis02or03 } from '../test/check/checks/prefixIsCorrect.ts'
+import { Code } from '../../../../core/code/code.js'
+import { check } from '../test/check/check.js'
+import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
+import { canMakeIt } from '../test/check/checks/canMakeIt.js'
+import { prefixis02or03 } from '../test/check/checks/prefixIsCorrect.js'
 
 const configuration = {
   describe: 'With ECDSA public verification key',

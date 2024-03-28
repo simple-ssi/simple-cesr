@@ -1,7 +1,7 @@
 import { Buffer } from 'buffer'
 
-import { Binary, Raw, Text } from '../../core/domain/domains.ts'
-import { encodeText } from '../encode/encoders/encodeText.ts'
+import { Binary, Raw, Text } from '../../core/domain/domains.js'
+import { encodeText } from '../encode/encoders/encodeText.js'
 
 export function toText (binary: Binary): Text
 export function toText (raw: Raw): Text

@@ -1,12 +1,12 @@
 import { match } from 'ts-pattern'
-import { Binary, Raw, Text } from '../../core/domain/domains.ts'
-import { pipe } from '../../lib/util/pipe.ts'
-import { removeThreeBytes, removeOneByte, removeTwoBytes, PaddingRemover } from './lib/removeBytes.ts'
-import { toBytes } from './lib/toBytes.ts'
-import { readCodeFromString } from './lib/readCodeFromString.ts'
-import { toText } from './toText.ts'
-import { CodeLength } from '../../core/code/code.ts'
-import { asRaw } from './lib/asRaw.ts'
+import { Binary, Raw, Text } from '../../core/domain/domains.js'
+import { pipe } from '../../lib/util/pipe.js'
+import { removeThreeBytes, removeOneByte, removeTwoBytes, PaddingRemover } from './lib/removeBytes.js'
+import { toBytes } from './lib/toBytes.js'
+import { readCodeFromString } from './lib/readCodeFromString.js'
+import { toText } from './toText.js'
+import { CodeLength } from '../../core/code/code.js'
+import { asRaw } from './lib/asRaw.js'
 
 // two function signatures: Text and Binary
 export function toRaw (text: Text): Raw

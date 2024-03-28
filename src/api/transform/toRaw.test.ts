@@ -1,8 +1,8 @@
 import { Buffer } from 'buffer'
-import { Binary, Raw, Text } from '../../core/domain/domains.ts'
-import { encodeBinary } from '../encode/encoders/encodeBinary.ts'
-import { encodeText } from '../encode/encoders/encodeText.ts'
-import { toRaw } from './toRaw.ts'
+import { Binary, Raw, Text } from '../../core/domain/domains.js'
+import { encodeBinary } from '../encode/encoders/encodeBinary.js'
+import { encodeText } from '../encode/encoders/encodeText.js'
+import { toRaw } from './toRaw.js'
 
 describe('Transform to Raw', () => {
   it('handles Text with one-character code', () => {

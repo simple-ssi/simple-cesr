@@ -1,5 +1,5 @@
 import { Buffer } from 'buffer'
-import { encodeBinary } from './encodeBinary.ts'
+import { encodeBinary } from './encodeBinary.js'
 
 describe('Binary encoder', () => {
   it('processes code "M" correctly', () => {

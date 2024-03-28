@@ -1,8 +1,8 @@
 import { Buffer } from 'buffer'
-import { Raw } from '../../core/domain/domains.ts'
-import { encodeBinary } from '../encode/encoders/encodeBinary.ts'
-import { encodeText } from '../encode/encoders/encodeText.ts'
-import { toText } from './toText.ts'
+import { Raw } from '../../core/domain/domains.js'
+import { encodeBinary } from '../encode/encoders/encodeBinary.js'
+import { encodeText } from '../encode/encoders/encodeText.js'
+import { toText } from './toText.js'
 
 describe('Transform to Text', () => {
   it('handles Binary', () => {

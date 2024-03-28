@@ -1,8 +1,8 @@
 import { Buffer } from 'buffer'
-import { Maker } from '../../maker.ts'
-import { Salt128 } from '../../../../core/primitive/primitives.ts'
-import { makeSureThat } from '../../validation/makeSureThat.ts'
-import { itIs16Bytes } from '../../validation/validations/lengthIsRight.ts'
+import { Maker } from '../../maker.js'
+import { Salt128 } from '../../../../core/primitive/primitives.js'
+import { makeSureThat } from '../../validation/makeSureThat.js'
+import { itIs16Bytes } from '../../validation/validations/lengthIsRight.js'
 
 // SHA3 512-bit digest
 export const salt128: Maker = (primitive: Buffer): Salt128 => {

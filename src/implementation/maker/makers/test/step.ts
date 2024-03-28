@@ -1,3 +1,3 @@
-import { Configuration } from './configuration.ts'
+import { Configuration } from './configuration.js'
 
 export type Step = (configuration: Configuration) => Configuration

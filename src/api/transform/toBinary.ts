@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
-import { Binary, Text, Raw } from '../../core/domain/domains.ts'
-import { encodeBinary } from '../encode/encoders/encodeBinary.ts'
+import { Binary, Text, Raw } from '../../core/domain/domains.js'
+import { encodeBinary } from '../encode/encoders/encodeBinary.js'
 
 export function toBinary (text: Text): Binary
 export function toBinary (Raw: Raw): Binary

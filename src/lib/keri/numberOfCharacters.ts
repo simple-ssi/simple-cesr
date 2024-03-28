@@ -1,4 +1,4 @@
-import { padSize } from './padSize.ts'
+import { padSize } from './padSize.js'
 
 const calculateCodeSize = (bytes: number): number =>
   padSize(bytes) !== 0

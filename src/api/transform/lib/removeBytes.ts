@@ -1,5 +1,5 @@
 import { match } from 'ts-pattern'
-import { CodeLength } from '../../../core/code/code.ts'
+import { CodeLength } from '../../../core/code/code.js'
 
 export type PaddingRemover = (bytes: Buffer) => Buffer
 

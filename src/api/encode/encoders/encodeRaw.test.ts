@@ -1,5 +1,5 @@
 import { Buffer } from 'buffer'
-import { encodeRaw } from './encodeRaw.ts'
+import { encodeRaw } from './encodeRaw.js'
 
 describe('Raw encoder', () => {
   it("encodes a one-character primitive: 'A'", () => {

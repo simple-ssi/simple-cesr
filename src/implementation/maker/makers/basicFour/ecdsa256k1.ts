@@ -1,8 +1,8 @@
-import { Maker, PrimitiveInvalidInput } from '../../maker.ts'
-import { Ecdsa256k1 } from '../../../../core/primitive/primitives.ts'
-import { itIs33Bytes } from '../../validation/validations/lengthIsRight.ts'
-import { Validation } from '../../validation/validation.ts'
-import { makeSureThat } from '../../validation/makeSureThat.ts'
+import { Maker, PrimitiveInvalidInput } from '../../maker.js'
+import { Ecdsa256k1 } from '../../../../core/primitive/primitives.js'
+import { itIs33Bytes } from '../../validation/validations/lengthIsRight.js'
+import { Validation } from '../../validation/validation.js'
+import { makeSureThat } from '../../validation/makeSureThat.js'
 
 export const ecdsa256k1: Maker = (primitive: Buffer): Ecdsa256k1 => {
   makeSureThat(

@@ -1,5 +1,5 @@
-import { Raw } from '../../../core/domain/domains.ts'
-import { Code } from '../../../core/code/code.ts'
+import { Raw } from '../../../core/domain/domains.js'
+import { Code } from '../../../core/code/code.js'
 
 export const asRaw = (code: Code) => (raw: Buffer): Raw => (
   {

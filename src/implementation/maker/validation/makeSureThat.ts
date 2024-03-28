@@ -1,4 +1,4 @@
-import { Validation } from './validation.ts'
+import { Validation } from './validation.js'
 
 const validate = (...validations: Validation[]): boolean =>
   validations

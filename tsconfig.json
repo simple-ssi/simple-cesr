@@ -1,15 +1,14 @@
 {
-  "extends": "@tsconfig/node20/tsconfig.json",
+  "extends": "@tsconfig/node18/tsconfig.json",
   "ts-node": {
     "transpileOnly": true, // don't type-check, just transpile
     "esm": true
   },
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
-    "noEmit": true, // don't emit any files, just type-check
+    "noEmit": true, // don't emit any files -- we're using ts-node to run the code and swc to transpile it
     "module": "NodeNext", // the only valid options for a node project are "Node16" and "NodeNext", see inset text at https://www.typescriptlang.org/docs/handbook/modules/theory.html#the-module-output-format
     "moduleResolution": "NodeNext",
-    "allowImportingTsExtensions": true, // allow importing .ts files
     "forceConsistentCasingInFileNames": true,
     "strict": true, // enforce all strict type-checking options
     "skipLibCheck": true, // don't type-check declarations from other libraries
