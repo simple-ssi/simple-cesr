@@ -1,3 +1,4 @@
+
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 export default {
   // need esm preset to support esm modules
@@ -10,11 +11,11 @@ export default {
   transform: {
     // allows jest to resolve module paths to a .ts source file using a .js extension
     // see dox for more information on this setting: https://kulshekhar.github.io/ts-jest/docs/guides/esm-support/
-    '^.+\\.[tj]sx?$': [
-      'ts-jest',
-      {
-        useESM: true
-      }
+    '^.+\\.[t|j]sx?$': [
+      '@swc/jest' // use swc swap in for faster tests
+      // {
+      //   useESM: true // don't seem to need this section when using @swc/jest
+      // }
     ]
   },
   // use a fancier test reporter
