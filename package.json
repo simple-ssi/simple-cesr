@@ -10,7 +10,9 @@
     "start": "npx tsx src/main.ts",
     "test": "jest ./src/api ./src/implementation",
     "standards-test": "jest ./testing/standards",
-    "all-tests": "jest"
+    "all-tests": "jest",
+    "formatting": "npx ts-standard --fix",
+    "full-build": "npm run all-tests && npm run formatting && npm run build"
   },
   "repository": {
     "type": "git",
