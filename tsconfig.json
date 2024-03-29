@@ -6,11 +6,12 @@
   },
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
-    "noEmit": true, // don't emit any files -- we're using ts-node to run the code and swc to transpile it
     "module": "NodeNext", // the only valid options for a node project are "Node16" and "NodeNext", see inset text at https://www.typescriptlang.org/docs/handbook/modules/theory.html#the-module-output-format
     "moduleResolution": "NodeNext",
     "forceConsistentCasingInFileNames": true,
     "strict": true, // enforce all strict type-checking options
     "skipLibCheck": true, // don't type-check declarations from other libraries
+    // "declaration": true, // generate .d.ts files - even though we're using swc to compile, it doesn't generate the t.d.ts files we need
+    // "outDir": "./dist", // output directory for generated files
   }
 }

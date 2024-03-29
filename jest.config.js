@@ -11,7 +11,7 @@ export default {
   transform: {
     // allows jest to resolve module paths to a .ts source file using a .js extension
     // see dox for more information on this setting: https://kulshekhar.github.io/ts-jest/docs/guides/esm-support/
-    '^.+\\.[t|j]sx?$': [
+    '^.+\\.[tj]sx?$': [
       '@swc/jest' // use swc swap in for faster tests
       // {
       //   useESM: true // don't seem to need this section when using @swc/jest

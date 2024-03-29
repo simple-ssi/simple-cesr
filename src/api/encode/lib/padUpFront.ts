@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer'
 import { match } from 'ts-pattern'
-import { padSize } from '../../../../lib/keri/padSize.js'
+import { padSize } from '../../../lib/keri/padSize.js'
 
 // only valid pad sizes in KERI are 0, 1, or 2
 type PadSize = 0 | 1 | 2
