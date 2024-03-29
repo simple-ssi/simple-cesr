@@ -1,15 +1,6 @@
-import { encodeBinary } from './encode/encoders/encodeBinary.js'
-import { encodeText } from './encode/encoders/encodeText.js'
-import { encodeRaw } from './encode/encoders/encodeRaw.js'
-import { toBinary } from './transform/toBinary.js'
-import { toText } from './transform/toText.js'
-import { toRaw } from './transform/toRaw.js'
-
-export {
-  encodeBinary,
-  encodeText,
-  encodeRaw,
-  toBinary,
-  toText,
-  toRaw
-}
+export { binary } from './encode/binary.js'
+export { text } from './encode/text.js'
+export { raw } from './encode/raw.js'
+export { toBinary } from './transform/toBinary.js'
+export { toText } from './transform/toText.js'
+export { toRaw } from './transform/toRaw.js'
