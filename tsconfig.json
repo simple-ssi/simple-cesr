@@ -11,7 +11,5 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true, // enforce all strict type-checking options
     "skipLibCheck": true, // don't type-check declarations from other libraries
-    // "declaration": true, // generate .d.ts files - even though we're using swc to compile, it doesn't generate the t.d.ts files we need
-    // "outDir": "./dist", // output directory for generated files
   }
 }
