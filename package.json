@@ -14,7 +14,7 @@
     "standards-test": "jest ./testing/standards",
     "all-tests": "jest",
     "formatter": "npx ts-standard --fix",
-    "emitter" : "tsc --emitDeclarationOnly --declaration --outDir dist",
+    "emitter" : "tsc -p tsconfig-emit.json --emitDeclarationOnly --declaration --outDir dist",
     "full-build": "npm run all-tests && npm run formatter && npm run build && npm run emitter"
   },
   "repository": {
