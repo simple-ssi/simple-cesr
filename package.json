@@ -1,7 +1,7 @@
 {
   "name": "@jrayback/simple-cesr",
   "type": "module",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A simple, limited, true-to-spec implementation of the CESR protocol.",
   "main": "dist/index.js",
   "files": [
@@ -26,7 +26,7 @@
     "CESR"
   ],
   "author": "Jonathan Rayback",
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/futureforging/simple-cesr/issues"
   },
