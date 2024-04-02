@@ -8,11 +8,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "npx rimraf ./dist && npx swc src index.ts -d dist --ignore **/*.test.ts --ignore **/main.ts",
     "start": "npx tsx src/main.ts",
     "test": "jest ./src",
-    "standards-test": "jest ./testing/standards",
+    "standards-test": "jest ./test/standards",
     "all-tests": "jest",
+    "build": "npx rimraf ./dist && npx swc src index.ts -d dist --ignore **/*.test.ts --ignore **/main.ts",
     "formatter": "npx ts-standard --fix",
     "emitter": "tsc -p tsconfig-emit.json --emitDeclarationOnly --declaration --outDir dist",
     "full-build": "npm run all-tests && npm run formatter && npm run build && npm run emitter"
