@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer/'
 import { Maker } from '../../maker.js'
 import { FourB64ThreeByte } from '../../../../core/primitive/primitives.js'
 import { itIsThreeBytes } from '../../validation/validations/lengthIsRight.js'

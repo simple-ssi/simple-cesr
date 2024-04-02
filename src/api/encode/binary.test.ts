@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer'
+import { Buffer } from 'buffer/'
 import { binary } from './binary.js'
 
 describe('Binary encoder', () => {

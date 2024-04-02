@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer/'
 import { Maker, PrimitiveInvalidInput } from '../../maker.js'
 import { Ecdsa256k1n } from '../../../../core/primitive/primitives.js'
 import { itIs33Bytes } from '../../validation/validations/lengthIsRight.js'

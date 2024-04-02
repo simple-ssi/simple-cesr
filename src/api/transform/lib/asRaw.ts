@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer/'
 import { Raw } from '../../../core/domain/domains.js'
 import { Code } from '../../../core/code/code.js'
 

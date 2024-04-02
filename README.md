@@ -1,6 +1,8 @@
 # simple-cesr
 
-`simple-cesr` is a simple, limited, true-to-spec implementation of [Composable Event Streaming Representation (CESR)](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html). It is compatible with Node.js and major browsers. It has a simple API for encoding primitives and transforming them across the three [domain representations](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-concrete-domain-representat) (Raw, Text, and Binary). It conspicuously adheres to terminology from the spec and carefully avoids introducing any outside concepts beyond CESR. In this initial version, only a selected subset of primitives from the [small fixed](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-small-fixed-raw-size-tables) and [large fixed](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-large-fixed-raw-size-tables) raw size tables have been implemented. Specifically, these primitives have been implemented (full table of potential options [here](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-master-code-table)):
+`simple-cesr` is a simple, limited, true-to-spec implementation of [Composable Event Streaming Representation (CESR)](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html). It is compatible with Node.js and major browsers. It has a simple API for encoding primitives and transforming them across the three [domain representations](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-concrete-domain-representat) (Raw, Text, and Binary). It conspicuously adheres to terminology from the spec and carefully avoids introducing any outside concepts beyond CESR.
+
+For now, only a selected subset of primitives from the [small fixed raw size](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-small-fixed-raw-size-tables) and [large fixed raw size](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-large-fixed-raw-size-tables) tables have been implemented, as follows:
 
 | Code | Description                 |
 | :--: | :-------------------------- |
@@ -31,6 +33,8 @@
 | 1AAD | Ed448 public verification key |
 | 1AAE | Ed448 signature |
 | 1AAF | Tag Base64 4 chars or 3 byte base-2 number |
+
+A [full list](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-master-code-table) of all the primitives supported by the CESR protocol can be found in the spec.
 
 This implementation is consistent with the [1.0](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html) spec housed at IETF and has not yet considered the soon-to-be-finished CESR [2.0](https://trustoverip.github.io/tswg-cesr-specification/) spec coming from the Trust Over IP Foundation.
 
