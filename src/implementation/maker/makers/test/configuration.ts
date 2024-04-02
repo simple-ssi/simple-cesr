@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer'
+import { Buffer } from 'buffer/'
 
 import { Code } from '../../../../core/code/code.js'
 

@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer'
+import { Buffer } from 'buffer/'
 import { Maker } from '../../maker.js'
 import { makeSureThat } from '../../validation/makeSureThat.js'
 import { Long } from '../../../../core/primitive/primitives.js'

@@ -1,4 +1,5 @@
 
+import { Buffer } from 'buffer/'
 import { Raw } from '../../core/domain/domains.js'
 import { binary } from '../encode/binary.js'
 import { text } from '../encode/text.js'

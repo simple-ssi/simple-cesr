@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer'
+import { Buffer } from 'buffer/'
 import { Maker } from '../../maker.js'
 import { Ecdsa256k1Sig } from '../../../../core/primitive/primitives.js'
 import { makeSureThat } from '../../validation/makeSureThat.js'

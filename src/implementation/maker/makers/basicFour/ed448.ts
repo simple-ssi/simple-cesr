@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer/'
 import { Maker } from '../../maker.js'
 import { itIs57Bytes } from '../../validation/validations/lengthIsRight.js'
 import { makeSureThat } from '../../validation/makeSureThat.js'

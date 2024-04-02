@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer'
+import { Buffer } from 'buffer/'
 import { raw } from './raw.js'
 
 describe('Raw encoder', () => {

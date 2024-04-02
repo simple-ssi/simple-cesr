@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer/'
 import { Ecdsa256k1Seed } from '../../../../core/primitive/primitives.js'
 import { makeSureThat } from '../../validation/makeSureThat.js'
 import { itIs32Bytes } from '../../validation/validations/lengthIsRight.js'

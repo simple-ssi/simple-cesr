@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer/'
 import { pipe } from '../../lib/util/pipe.js'
 import { Code } from '../../core/code/code.js'
 import { Raw, Text } from '../../core/domain/domains.js'
@@ -10,11 +11,11 @@ export const text = (code: Code, primitive: Uint8Array): Text => {
 
   // requires two steps...
   return pipe(
-    primitive,
+    Buffer.from(primitive), // internally, we use Buffers
     doRaw, // make the Raw
     doText // encode the raw primitive as Text
   )
 }
 
-const rawWith = (code: Code) => (primitive: Uint8Array) => make(code, primitive)
+const rawWith = (code: Code) => (primitive: Buffer) => make(code, primitive)
 const textWith = (code: Code) => (tuple: Raw) => asText(code, tuple.raw)

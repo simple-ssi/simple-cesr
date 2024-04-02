@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer/'
 import { Maker } from '../../maker.js'
 import { Ed448n } from '../../../../core/primitive/primitives.js'
 import { itIs57Bytes } from '../../validation/validations/lengthIsRight.js'

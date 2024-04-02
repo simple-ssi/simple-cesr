@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer'
+import { Buffer } from 'buffer/'
 import { match } from 'ts-pattern'
 import { padSize } from '../../../lib/keri/padSize.js'
 
