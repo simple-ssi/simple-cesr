@@ -3,5 +3,6 @@
   "exclude": [
     "**/*.test.ts",
     "**/main.ts",
+    "test"
   ]
 }
