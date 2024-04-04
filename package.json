@@ -1,21 +1,25 @@
 {
-  "name": "@jrayback/simple-cesr",
+  "name": "@simple-ssi/simple-cesr",
   "type": "module",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A simple, limited, true-to-spec implementation of the CESR protocol.",
-  "main": "dist/index.js",
+  "types": "./dist/cjs/types/index.d.ts",
+  "main": "dist/cjs/index.js",
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "scripts": {
     "start": "npx tsx src/main.ts",
     "test": "jest ./src",
     "standards-test": "jest ./test/standards",
     "all-tests": "jest",
-    "build": "npx rimraf ./dist && npx swc src index.ts -d dist --ignore **/*.test.ts --ignore **/main.ts --ignore test",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./tsconfigs/tsconfig.esm.json && mv dist/esm/index.js dist/esm/index.mjs",
+    "build:cjs": "tsc -p ./tsconfigs/tsconfig.cjs.json",
     "formatter": "npx ts-standard --fix",
-    "emitter": "tsc -p tsconfig-emit.json --emitDeclarationOnly --declaration --outDir dist",
-    "full-build": "npm run all-tests && npm run formatter && npm run build && npm run emitter"
+    "full-build": "npm run all-tests && npm run formatter && npm run build",
+    "prepack": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -32,9 +36,6 @@
   },
   "homepage": "https://github.com/futureforging/simple-cesr#readme",
   "devDependencies": {
-    "@swc/cli": "^0.3.10",
-    "@swc/core": "^1.4.11",
-    "@swc/jest": "^0.2.36",
     "@tsconfig/node18": "^18.2.4",
     "@types/jest": "^29.5.5",
     "jest": "^29.7.0",
@@ -56,5 +57,17 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/types/index.d.ts",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
   }
 }

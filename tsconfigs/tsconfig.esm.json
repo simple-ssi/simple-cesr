@@ -1,0 +1,12 @@
+// compiles for ES6 modules
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "outDir": "../dist/esm",
+    "declarationDir": "../dist/esm/types"
+  }
+}

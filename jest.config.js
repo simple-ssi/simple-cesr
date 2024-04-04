@@ -9,13 +9,13 @@ export default {
     '^(\\.{1,2}/.*)\\.js$': '$1'
   },
   transform: {
-    // allows jest to resolve module paths to a .ts source file using a .js extension
-    // see dox for more information on this setting: https://kulshekhar.github.io/ts-jest/docs/guides/esm-support/
-    '^.+\\.[tj]sx?$': [
-      '@swc/jest' // use swc swap in for faster tests
-      // {
-      //   useESM: true // don't seem to need this section when using @swc/jest
-      // }
+    // '^.+\\.[tj]sx?$' to process js/ts with `ts-jest`
+    // '^.+\\.m?[tj]sx?$' to process js/ts/mjs/mts with `ts-jest`
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        useESM: true
+      }
     ]
   },
   // use a fancier test reporter
