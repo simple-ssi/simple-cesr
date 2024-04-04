@@ -1,7 +1,7 @@
 {
   "name": "@simple-ssi/simple-cesr",
   "type": "module",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A simple, limited, true-to-spec implementation of the CESR protocol.",
   "types": "./dist/cjs/types/index.d.ts",
   "main": "dist/cjs/index.js",
