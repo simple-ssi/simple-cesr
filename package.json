@@ -16,8 +16,8 @@
     "clean": "rimraf ./dist",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc -p ./tsconfigs/tsconfig.esm.json && mv dist/esm/index.js dist/esm/index.mjs",
-    "build:cjs": "tsc -p ./tsconfigs/tsconfig.cjs.json",
-    "formatter": "npx ts-standard --fix",
+    "build:cjs": "tsc -p ./tsconfigs/tsconfig.cjs.json && mv dist/cjs/index.js dist/cjs/index.cjs",
+    "formatter": "npx ts-standard -p ./tsconfigs/tsconfig.eslint.json --fix",
     "full-build": "npm run all-tests && npm run formatter && npm run build",
     "prepack": "npm run build"
   },
@@ -49,7 +49,8 @@
   "ts-standard": {
     "ignore": [
       "dist"
-    ]
+    ],
+    "project": "./tsconfigs/tsconfig.eslint.json"
   },
   "dependencies": {
     "buffer": "^6.0.3",
