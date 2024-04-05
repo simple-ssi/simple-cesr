@@ -1,4 +1,4 @@
-import { Raw } from '../../core/domain/domains.js'
+import { Raw } from '../../core/domain/domains'
 
 export type Maker = (primitive: any) => Raw
 

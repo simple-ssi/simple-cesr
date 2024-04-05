@@ -1,5 +1,7 @@
-import { Configuration } from '../configuration.js'
-import { Step } from '../step.js'
+import 'mocha'
+
+import { Configuration } from '../configuration'
+import { Step } from '../step'
 
 export const check = (configuration: Configuration, ...steps: Step[]): void => {
   describe(configuration.describe, () => {

@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer/'
-import { PrimitiveWrongLength } from '../../maker.js'
-import { Validation } from '../validation.js'
+import { PrimitiveWrongLength } from '../../maker'
+import { Validation } from '../validation'
 
 const lengthIsRight = (length: number) => (primitive: Buffer): Validation => () => {
   if (primitive.length !== length) throw new PrimitiveWrongLength(length, primitive.length)

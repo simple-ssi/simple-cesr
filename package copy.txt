@@ -1,0 +1,74 @@
+{
+  "name": "@simple-ssi/simple-cesr",
+  "type": "module",
+  "version": "0.1.7",
+  "description": "A simple, limited, true-to-spec implementation of the CESR protocol.",
+  "types": "./dist/cjs/types/index.d.ts",
+  "main": "dist/cjs/index.cjs",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "start": "npx tsx src/main.ts",
+    "test": "jest ./src",
+    "standards-test": "jest ./test/standards",
+    "all-tests": "jest",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./tsconfigs/tsconfig.esm.json && mv dist/esm/index.js dist/esm/index.mjs",
+    "build:cjs": "tsc -p ./tsconfigs/tsconfig.cjs.json && mv dist/cjs/index.js dist/cjs/index.cjs",
+    "formatter": "npx ts-standard -p ./tsconfigs/tsconfig.eslint.json --fix",
+    "full-build": "npm run all-tests && npm run formatter && npm run build",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/futureforging/simple-cesr.git"
+  },
+  "keywords": [
+    "KERI",
+    "CESR"
+  ],
+  "author": "Jonathan Rayback",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/futureforging/simple-cesr/issues"
+  },
+  "homepage": "https://github.com/futureforging/simple-cesr#readme",
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.4",
+    "@types/jest": "^29.5.5",
+    "jest": "^29.7.0",
+    "jest-ci-spec-reporter": "^1.0.3",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "ts-standard": "^12.0.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.2.2"
+  },
+  "ts-standard": {
+    "ignore": [
+      "dist"
+    ],
+    "project": "./tsconfigs/tsconfig.eslint.json"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "ts-pattern": "^5.0.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/types/index.d.ts",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/types/index.d.ts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    }
+  }
+}

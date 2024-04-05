@@ -1,7 +1,10 @@
+import 'mocha'
+import { assert } from 'chai'
+
 import { Buffer } from 'buffer/'
-import { make } from '../../../../../make.js'
-import { PrimitiveWrongLength } from '../../../../maker.js'
-import { Configuration } from '../../configuration.js'
+import { make } from '../../../../../make'
+import { PrimitiveWrongLength } from '../../../../maker'
+import { Configuration } from '../../configuration'
 
 const oneTooLong = (primitive: Buffer): Buffer => Buffer.alloc(primitive.length + 1, 0)
 
@@ -11,11 +14,8 @@ export const lengthNotWrong = (configuration: Configuration): Configuration => {
   const { code, example } = configuration
 
   it('checks length', () => {
-    expect(() => make(code, oneTooLong(example)))
-      .toThrow(PrimitiveWrongLength)
-
-    expect(() => make(code, oneTooShort(example)))
-      .toThrow(PrimitiveWrongLength)
+    assert.throws(() => make(code, oneTooLong(example)), PrimitiveWrongLength)
+    assert.throws(() => make(code, oneTooShort(example)), PrimitiveWrongLength)
   })
 
   return configuration

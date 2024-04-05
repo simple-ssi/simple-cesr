@@ -1,5 +1,8 @@
-import { make } from '../../../../../make.js'
-import { Configuration } from '../../configuration.js'
+import 'mocha'
+import { assert } from 'chai'
+
+import { make } from '../../../../../make'
+import { Configuration } from '../../configuration'
 
 export const canMakeIt = (configuration: Configuration): Configuration => {
   const { code, example } = configuration
@@ -7,8 +10,8 @@ export const canMakeIt = (configuration: Configuration): Configuration => {
   it('makes it', () => {
     const actual = make(code, example)
 
-    expect(actual.code).toBe(code)
-    expect(actual.raw).toBe(example)
+    assert.strictEqual(actual.code, code)
+    assert.strictEqual(actual.raw, example)
   })
   return configuration
 }

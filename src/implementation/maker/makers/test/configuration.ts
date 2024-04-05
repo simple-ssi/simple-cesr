@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer/'
 
-import { Code } from '../../../../core/code/code.js'
+import { Code } from '../../../../core/code/code'
 
 export interface Configuration {
   describe: string // the description of the test
