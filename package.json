@@ -1,8 +1,9 @@
 {
-  "name": "npm-package-base",
-  "version": "0.0.0-development",
-  "description": "[FILL IN YOURS] A VS Code project template for npm packages.",
+  "name": "@simple-ssi/simple-cesr",
+  "version": "0.2.0-dev.0",
+  "description": "A simple, limited, true-to-spec implementation of the CESR protocol.",
   "type": "module",
+  "access": "public",
   "exports": {
     ".": {
       "import": {
@@ -21,27 +22,31 @@
     "dist/**/*"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "jest ./src",
     "clean": "del-cli ./dist",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc -p ./configs/tsconfig.esm.json && npx echo-cli '{\"type\": \"module\"}' > dist/esm/package.json",
     "build:cjs": "tsc -p ./configs/tsconfig.cjs.json && npx echo-cli '{\"type\": \"commonjs\"}' > dist/cjs/package.json",
     "formatter": "ts-standard --fix",
-    "prepack": "npm run build"
+    "standards-test": "jest ./test/standards/standards.test.ts",
+    "all-tests": "npm run test && npm run standards-test",
+    "full-build": "npm run all-tests && npm run formatter && npm run build",
+    "prepack": "npm run full-build"
   },
   "repository": {
     "type": "git",
-    "url": "[FILL IN YOURS]"
+    "url": "git+https://github.com/futureforging/simple-cesr.git"
   },
   "keywords": [
-    "template"
+    "KERI",
+    "CESR"
   ],
-  "author": "[FILL IN YOURS]",
-  "license": "UNLICENSED",
+  "author": "Jonathan Rayback",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://FILL.IN.YOURS"
+    "url": "https://github.com/futureforging/simple-cesr/issues"
   },
-  "homepage": "https://FILL.IN.YOURS",
+  "homepage": "https://github.com/futureforging/simple-cesr#readme",
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "del-cli": "^5.0.0",
@@ -53,6 +58,10 @@
     "ts-node": "^10.9.2",
     "ts-standard": "^12.0.2",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "ts-pattern": "^5.0.6"
   },
   "engines": {
     "node": ">=18.0.0"

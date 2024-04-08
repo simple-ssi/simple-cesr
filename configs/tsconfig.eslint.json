@@ -3,5 +3,5 @@
   "compilerOptions": {
     "strictNullChecks": true,
   },
-  "include": ["../index.ts", "../src/**/*.ts", "../tests/**/*.ts"]
+  "include": ["../src/**/*.ts", "../test/**/*.ts"],
 }
