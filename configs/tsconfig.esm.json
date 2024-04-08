@@ -4,7 +4,7 @@
     "lib": ["ES2022", "DOM"],
     "module": "NodeNext",
     "outDir": "../dist/esm",
-    "declarationDir": "../dist/types"
+    "declarationDir": "../dist/esm/types"
   },
   "exclude": ["../**/*.test.ts"]
 }
