@@ -1,10 +1,12 @@
+import { hello, goodbye } from './message/message.js'
+
 export function helloWorld (): string {
-  const message = 'Hello World from my example modern npm package!'
+  const message = `${hello} from my example modern npm package!`
   return message
 }
 
 export function goodBye (): string {
-  const message = 'Goodbye from my example modern npm package!'
+  const message = `${goodbye} from my example modern npm package!`
   return message
 }
 

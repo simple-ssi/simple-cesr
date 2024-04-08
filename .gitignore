@@ -28,5 +28,8 @@ typings/
 .env
 .env.test
 
+# MacOs specific
+.DS_Store
+
 .vscode
-lib
+dist

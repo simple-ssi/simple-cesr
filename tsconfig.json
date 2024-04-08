@@ -1,0 +1,7 @@
+// jest seems to want a tsconfig file in the root of the project, so for now we'll give it what it wants.
+{
+  "extends": "./configs/tsconfig.base.json",
+  "compilerOptions": {
+    "esModuleInterop": true
+  }
+}

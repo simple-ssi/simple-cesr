@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "strict": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "checkJs": true,
@@ -10,5 +9,5 @@
     "declarationMap": true,
     "allowSyntheticDefaultImports": true
   },
-  "files": ["../src/index.ts"]
+  "include": ["../src/**/*.ts"]
 }
