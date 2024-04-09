@@ -6,10 +6,10 @@ import { exhaustive } from '../lib/util/exhaustive.js'
 
 // import { Code } from '../core/code/code.js'
 // import { Raw } from '../core/domain/domains.js'
-// import { ecdsa256k1 } from './maker/makers/basicFour/ecdsa256k1.js'
+import { ecdsa256k1 } from './maker/makers/basicFour/ecdsa256k1.js'
 // import { x25519 } from './maker/makers/basicOne/x25519.js'
-// import { sha3512 } from './maker/makers/basicTwo/sha3512.js'
-// import { big } from './maker/makers/basicOne/big.js'
+import { sha3512 } from './maker/makers/basicTwo/sha3512.js'
+import { big } from './maker/makers/basicOne/big.js'
 import { short } from './maker/makers/basicOne/short.js'
 // import { ed25519Seed } from './maker/makers/basicOne/ed25519Seed.js'
 // import { ed25519n } from './maker/makers/basicOne/ed25519n.js'
@@ -38,8 +38,12 @@ import { short } from './maker/makers/basicOne/short.js'
 export const make = (code: Code, primitive: any): Raw => {
   switch (code) {
     case 'M': return short(primitive)
+    case 'N': return big(primitive)
+    case '0F': return sha3512(primitive)
+    case '1AAB': return ecdsa256k1(primitive)
   }
-  return exhaustive(code) // anything other than 0, 1, or 2 can't happen, we've covered all cases
+  // anything other than the defined Codes can't happen, assert that we've handled all cases exhaustively
+  return exhaustive(code)
 }
 // match(code)
 //   .with('A', () => ed25519Seed(primitive))

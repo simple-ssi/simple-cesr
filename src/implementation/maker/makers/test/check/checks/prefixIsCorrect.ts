@@ -21,7 +21,7 @@ const throwsErrorForWrongPrefix = (length: number) => (configuration: Configurat
 const f = (length: number) => (valids: string[]) => (configuration: Configuration): Configuration => {
   const { example } = configuration
   const hex = example.toString('hex')
-  it('and has the correct prefix', () => {
+  it('sees the correct prefix', () => {
     const actualPrefix = hex.substring(0, length)
     expect(valids.includes(actualPrefix)).toBe(true)
   })

@@ -293,33 +293,33 @@ export const standards = {
           text: 'MOL_'
         }
       ]
-    }
-    // {
-    //   code: 'N',
-    //   length: 12,
-    //   samples: [
-    //     {
-    //       raw: 'c6e64b12b9fe842c',
-    //       text: 'NMbmSxK5_oQs'
-    //     },
-    //     {
-    //       raw: 'a3f8d5704b9e6310',
-    //       text: 'NKP41XBLnmMQ'
-    //     },
-    //     {
-    //       raw: '7cb569c376159d1a',
-    //       text: 'NHy1acN2FZ0a'
-    //     },
-    //     {
-    //       raw: '9a5bf1c8ae63b027',
-    //       text: 'NJpb8ciuY7An'
-    //     },
-    //     {
-    //       raw: '0d5f2816ca3098e7',
-    //       text: 'NA1fKBbKMJjn'
-    //     }
-    //   ]
-    // },
+    },
+    {
+      code: 'N',
+      length: 12,
+      samples: [
+        {
+          raw: 'c6e64b12b9fe842c',
+          text: 'NMbmSxK5_oQs'
+        },
+        {
+          raw: 'a3f8d5704b9e6310',
+          text: 'NKP41XBLnmMQ'
+        },
+        {
+          raw: '7cb569c376159d1a',
+          text: 'NHy1acN2FZ0a'
+        },
+        {
+          raw: '9a5bf1c8ae63b027',
+          text: 'NJpb8ciuY7An'
+        },
+        {
+          raw: '0d5f2816ca3098e7',
+          text: 'NA1fKBbKMJjn'
+        }
+      ]
+    },
     // {
     //   code: 'O',
     //   length: 44,
@@ -464,32 +464,32 @@ export const standards = {
     //     }
     //   ]
     // },
-    // {
-    //   code: '0F',
-    //   length: 88,
-    //   samples: [
-    //     {
-    //       raw: '1af4f1196ba3ec4781a919983b206407e99234db0ba1f616e3258959693d60738be207b3b1c9a997955ed8de6ea08cbe115665b6fceef4374a544174605444b3',
-    //       text: '0FAa9PEZa6PsR4GpGZg7IGQH6ZI02wuh9hbjJYlZaT1gc4viB7OxyamXlV7Y3m6gjL4RVmW2_O70N0pUQXRgVESz'
-    //     },
-    //     {
-    //       raw: 'b7b7c16b742f6cc61e28da2dd2a8c0b78f28c906d0fd144805d9161539f6a4c0f853a1f1eeef1c59a15f56b91be6a533124df5f946085f4c6229f79b0657b6e6',
-    //       text: '0FC3t8FrdC9sxh4o2i3SqMC3jyjJBtD9FEgF2RYVOfakwPhTofHu7xxZoV9WuRvmpTMSTfX5RghfTGIp95sGV7bm'
-    //     },
-    //     {
-    //       raw: 'd31fad43cd02adaa95df6f6083e1a15cf4342150358a14ce648f953dc0cc0b80458544c24d490544b5f3e42854bc013fe9f57c924c4f185f49b4726f1fde15e7',
-    //       text: '0FDTH61DzQKtqpXfb2CD4aFc9DQhUDWKFM5kj5U9wMwLgEWFRMJNSQVEtfPkKFS8AT_p9XySTE8YX0m0cm8f3hXn'
-    //     },
-    //     {
-    //       raw: '66796c34de3ed7fb610537e8df273abfa5946103972ca8ed777539de36e69b974372ea6c5f07a658f1ffd665c7940d016adce0d8bc3d94ce4459c667569da50c',
-    //       text: '0FBmeWw03j7X-2EFN-jfJzq_pZRhA5csqO13dTneNuabl0Ny6mxfB6ZY8f_WZceUDQFq3ODYvD2UzkRZxmdWnaUM'
-    //     },
-    //     {
-    //       raw: '5bcfa86d938cd22d884561d245d139ffa2a37ae22cc7854b26d7faa47f78f6d49217f7d2421d922438d90f4a7bb91e1acb70dfcb33f0fd4cfce2a71b9c26eb61',
-    //       text: '0FBbz6htk4zSLYhFYdJF0Tn_oqN64izHhUsm1_qkf3j21JIX99JCHZIkONkPSnu5HhrLcN_LM_D9TPzipxucJuth'
-    //     }
-    //   ]
-    // },
+    {
+      code: '0F',
+      length: 88,
+      samples: [
+        {
+          raw: '1af4f1196ba3ec4781a919983b206407e99234db0ba1f616e3258959693d60738be207b3b1c9a997955ed8de6ea08cbe115665b6fceef4374a544174605444b3',
+          text: '0FAa9PEZa6PsR4GpGZg7IGQH6ZI02wuh9hbjJYlZaT1gc4viB7OxyamXlV7Y3m6gjL4RVmW2_O70N0pUQXRgVESz'
+        },
+        {
+          raw: 'b7b7c16b742f6cc61e28da2dd2a8c0b78f28c906d0fd144805d9161539f6a4c0f853a1f1eeef1c59a15f56b91be6a533124df5f946085f4c6229f79b0657b6e6',
+          text: '0FC3t8FrdC9sxh4o2i3SqMC3jyjJBtD9FEgF2RYVOfakwPhTofHu7xxZoV9WuRvmpTMSTfX5RghfTGIp95sGV7bm'
+        },
+        {
+          raw: 'd31fad43cd02adaa95df6f6083e1a15cf4342150358a14ce648f953dc0cc0b80458544c24d490544b5f3e42854bc013fe9f57c924c4f185f49b4726f1fde15e7',
+          text: '0FDTH61DzQKtqpXfb2CD4aFc9DQhUDWKFM5kj5U9wMwLgEWFRMJNSQVEtfPkKFS8AT_p9XySTE8YX0m0cm8f3hXn'
+        },
+        {
+          raw: '66796c34de3ed7fb610537e8df273abfa5946103972ca8ed777539de36e69b974372ea6c5f07a658f1ffd665c7940d016adce0d8bc3d94ce4459c667569da50c',
+          text: '0FBmeWw03j7X-2EFN-jfJzq_pZRhA5csqO13dTneNuabl0Ny6mxfB6ZY8f_WZceUDQFq3ODYvD2UzkRZxmdWnaUM'
+        },
+        {
+          raw: '5bcfa86d938cd22d884561d245d139ffa2a37ae22cc7854b26d7faa47f78f6d49217f7d2421d922438d90f4a7bb91e1acb70dfcb33f0fd4cfce2a71b9c26eb61',
+          text: '0FBbz6htk4zSLYhFYdJF0Tn_oqN64izHhUsm1_qkf3j21JIX99JCHZIkONkPSnu5HhrLcN_LM_D9TPzipxucJuth'
+        }
+      ]
+    },
     // {
     //   code: '0G',
     //   length: 88,
@@ -568,32 +568,32 @@ export const standards = {
     //     }
     //   ]
     // },
-    // {
-    //   code: '1AAB',
-    //   length: 48,
-    //   samples: [
-    //     {
-    //       raw: '029d8fb7ee8bee47d25a44fb3e83a4c1a1b5b5edf1d9ff7b2d3f3b5fe3b0ede8ac',
-    //       text: '1AABAp2Pt-6L7kfSWkT7PoOkwaG1te3x2f97LT87X-Ow7eis'
-    //     },
-    //     {
-    //       raw: '03e8f9b8a16e9a64b8e8f058b48b6f56d3ff8d9ee4af2bc43b6ba6488d9d72a6f1',
-    //       text: '1AABA-j5uKFummS46PBYtItvVtP_jZ7kryvEO2umSI2dcqbx'
-    //     },
-    //     {
-    //       raw: '027fbfecbce2d7b9c8d9a8b0a8e0be0b3d9a927d2a5b9e4e4a77af260e05dace28',
-    //       text: '1AABAn-_7Lzi17nI2aiwqOC-Cz2akn0qW55OSnevJg4F2s4o'
-    //     },
-    //     {
-    //       raw: '0323a1f8339b4a2186cfeb1216691a2fb5285234b094307b2d8d8d8af3a391a5ff',
-    //       text: '1AABAyOh-DObSiGGz-sSFmkaL7UoUjSwlDB7LY2NivOjkaX_'
-    //     },
-    //     {
-    //       raw: '02feab256e8b4f317bb5e85b4b4d7a2f2a7e362b4b5ee8af1c6aa907b30bfdc076',
-    //       text: '1AABAv6rJW6LTzF7tehbS016Lyp-NitLXuivHGqpB7ML_cB2'
-    //     }
-    //   ]
-    // },
+    {
+      code: '1AAB',
+      length: 48,
+      samples: [
+        {
+          raw: '029d8fb7ee8bee47d25a44fb3e83a4c1a1b5b5edf1d9ff7b2d3f3b5fe3b0ede8ac',
+          text: '1AABAp2Pt-6L7kfSWkT7PoOkwaG1te3x2f97LT87X-Ow7eis'
+        },
+        {
+          raw: '03e8f9b8a16e9a64b8e8f058b48b6f56d3ff8d9ee4af2bc43b6ba6488d9d72a6f1',
+          text: '1AABA-j5uKFummS46PBYtItvVtP_jZ7kryvEO2umSI2dcqbx'
+        },
+        {
+          raw: '027fbfecbce2d7b9c8d9a8b0a8e0be0b3d9a927d2a5b9e4e4a77af260e05dace28',
+          text: '1AABAn-_7Lzi17nI2aiwqOC-Cz2akn0qW55OSnevJg4F2s4o'
+        },
+        {
+          raw: '0323a1f8339b4a2186cfeb1216691a2fb5285234b094307b2d8d8d8af3a391a5ff',
+          text: '1AABAyOh-DObSiGGz-sSFmkaL7UoUjSwlDB7LY2NivOjkaX_'
+        },
+        {
+          raw: '02feab256e8b4f317bb5e85b4b4d7a2f2a7e362b4b5ee8af1c6aa907b30bfdc076',
+          text: '1AABAv6rJW6LTzF7tehbS016Lyp-NitLXuivHGqpB7ML_cB2'
+        }
+      ]
+    }
     // {
     //   code: '1AAC',
     //   length: 80,
