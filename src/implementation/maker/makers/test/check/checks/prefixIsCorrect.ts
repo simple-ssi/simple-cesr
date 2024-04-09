@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer/'
+import { Buffer } from 'buffer/index.js'
 
 import { pipe } from '../../../../../../lib/util/pipe.js'
 import { make } from '../../../../../make.js'

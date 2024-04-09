@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer/'
+import { Buffer } from 'buffer/index.js'
 import { make } from '../../../../../make.js'
 import { PrimitiveWrongLength } from '../../../../maker.js'
 import { Configuration } from '../../configuration.js'

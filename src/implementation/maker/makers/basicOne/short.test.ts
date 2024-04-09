@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer/'
+import { Buffer } from 'buffer/index.js'
 import { check } from '../test/check/check.js'
 import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
 import { canMakeIt } from '../test/check/checks/canMakeIt.js'

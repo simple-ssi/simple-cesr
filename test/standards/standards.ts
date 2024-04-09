@@ -275,23 +275,23 @@ export const standards = {
         {
           raw: '6ae3',
           text: 'MGrj'
+        },
+        {
+          raw: 'b7e2',
+          text: 'MLfi'
+        },
+        {
+          raw: '3f3b',
+          text: 'MD87'
+        },
+        {
+          raw: '8d90',
+          text: 'MI2Q'
+        },
+        {
+          raw: 'e2ff',
+          text: 'MOL_'
         }
-        // {
-        //   raw: 'b7e2',
-        //   text: 'MLfi'
-        // },
-        // {
-        //   raw: '3f3b',
-        //   text: 'MD87'
-        // },
-        // {
-        //   raw: '8d90',
-        //   text: 'MI2Q'
-        // },
-        // {
-        //   raw: 'e2ff',
-        //   text: 'MOL_'
-        // }
       ]
     }
     // {
