@@ -19,9 +19,8 @@ export const padUpFront = (primitive: Buffer): Buffer => {
       return Buffer.concat([Buffer.from([0]), primitive])
     case 2:
       return Buffer.concat([Buffer.from([0, 0]), primitive])
-    default:
-      return exhaustive(padSize) // anything other than 0, 1, or 2 can't happen, we've covered all cases
   }
+  return exhaustive(padSize) // anything other than 0, 1, or 2 can't happen, we've covered all cases
 }
 // {
 //   const padSize = ps(primitive.length)

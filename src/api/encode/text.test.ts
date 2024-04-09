@@ -2,14 +2,10 @@
 import { text } from './text.js'
 
 describe('Text Encoder', () => {
-  it('gets "MGrj" from STATIC IMPLEMENTATION', () => {
-    const result = text('M', new Uint8Array([0x00, 0x01]))
-    expect(result).toBe('MGrj')
+  it('gets "MAAB" from ["M", 1]', () => {
+    const result = text('M', Buffer.from([0x00, 0x01]))
+    expect(result).toBe('MAAB')
   })
-  // it('gets "MAAB" from ["M", 1]', () => {
-  //   const result = text('M', Buffer.from([0x00, 0x01]))
-  //   expect(result).toBe('MAAB')
-  // })
   // it('gets "NAAAAAAAAAAB" from ["N", 1]', () => {
   //   const result = text('N', Buffer.from([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01]))
   //   expect(result).toBe('NAAAAAAAAAAB')
