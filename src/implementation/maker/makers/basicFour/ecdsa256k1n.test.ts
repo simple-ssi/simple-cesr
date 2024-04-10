@@ -6,10 +6,10 @@ import { canMakeIt } from '../test/check/checks/canMakeIt.js'
 import { prefixis02or03 } from '../test/check/checks/prefixIsCorrect.js'
 
 const configuration = {
-  describe: 'ECDSA public verification key',
-  code: '1AAB' as Code,
-  example: Buffer.from('02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1', 'hex'),
-  length: 33
+  describe: 'ECDSA secp256k1 verification key, basic derivation',
+  code: '1AAA' as Code,
+  example: Buffer.from('03b89efadf2d1a7e3c0fbec09b14d151d0b93ecaf6c4614e7a56b75802c1f2e3a8', 'hex'), // a valid example of a compressed ECDSA secp256k1 verification key in hex
+  length: 64 // expected length of example in bytes
 }
 
 check(

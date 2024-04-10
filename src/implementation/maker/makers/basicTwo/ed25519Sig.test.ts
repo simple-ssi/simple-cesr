@@ -3,18 +3,16 @@ import { Code } from '../../../../core/code/code.js'
 import { check } from '../test/check/check.js'
 import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
 import { canMakeIt } from '../test/check/checks/canMakeIt.js'
-import { prefixis02or03 } from '../test/check/checks/prefixIsCorrect.js'
 
 const configuration = {
-  describe: 'ECDSA public verification key',
-  code: '1AAB' as Code,
-  example: Buffer.from('02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1', 'hex'),
-  length: 33
+  describe: 'Ed25519 signature',
+  code: '0B' as Code,
+  example: Buffer.from('e7479d9eb057be7126a45cd84cebdff7bb3881afabdec79836a248f0fd4fecc0cf1650cf99ede7556b32ecb415e3bcf0d6ce2d19a02e514e735ecd0df0b75a0e', 'hex'), // valid example of an ED25519 signature in hex
+  length: 64 // expected length of example in bytes
 }
 
 check(
   configuration,
-  prefixis02or03,
   lengthNotWrong,
   canMakeIt
 )

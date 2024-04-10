@@ -3,18 +3,16 @@ import { Code } from '../../../../core/code/code.js'
 import { check } from '../test/check/check.js'
 import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
 import { canMakeIt } from '../test/check/checks/canMakeIt.js'
-import { prefixis02or03 } from '../test/check/checks/prefixIsCorrect.js'
 
 const configuration = {
-  describe: 'ECDSA public verification key',
-  code: '1AAB' as Code,
-  example: Buffer.from('02b4f97f6e8e9214e9a2021b2c7ad6f2233499f114fed33ea6bfc3e2b1feaf24c1', 'hex'),
-  length: 33
+  describe: 'Blake2s self-addressing 256 bit digest',
+  code: 'G' as Code,
+  example: Buffer.from('2080982ef42d6be9c30716c33633f0b4e8f35f7e031e5822e4f6e994617aee2e', 'hex'), // valid example of Blake2s256 digest in hex
+  length: 32 // expected length of example in bytes
 }
 
 check(
   configuration,
-  prefixis02or03,
   lengthNotWrong,
   canMakeIt
 )

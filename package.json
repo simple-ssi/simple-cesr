@@ -29,7 +29,7 @@
     "build:cjs": "npx echo-cli '\\033[0;34mBuilding CommonJS modules...\\033[0m' && tsc -p ./configs/tsconfig.cjs.json && npx echo-cli '{\"type\": \"commonjs\"}' > dist/cjs/package.json",
     "formatter": "npx echo-cli '\\033[0;34mApplying TypeScript Standard style...\\033[0m' && ts-standard --fix",
     "standards-test": "npx echo-cli '\\033[0;34mRunning standards test...\\033[0m' && jest ./test/standards/standards.test.ts",
-    "all-tests": "npx echo-cli '\\033[0;34mRunning all tests...\\033[0m' && npm run test && npm run standards-test",
+    "all-tests": "npx echo-cli '\\033[0;34mRunning all tests...\\033[0m' && npm test && npm run standards-test",
     "full-build": "npx echo-cli '\\033[0;34mFULL BUILD.\\033[0m\\n' && npm run all-tests && npm run formatter && npm run build && echo-cli '\\n\\033[0;34mDONE.\\033[0m'",
     "prepack": "npm run full-build"
   },
