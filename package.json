@@ -22,7 +22,7 @@
     "dist/**/*"
   ],
   "scripts": {
-    "test": "npx echo-cli '\\033[0;34mRunning unit tests...\\033[0m' && jest --testPathPattern=src",
+    "test": "npx echo-cli '\\033[0;34mRunning unit tests...\\033[0m' && jest --testPathIgnorePatterns=standards.test.ts",
     "clean": "npx echo-cli '\\033[0;34mDeleting old files...\\033[0m' && del-cli ./dist",
     "build": "npx echo-cli '\\033[0;34mBuilding project...\\033[0m' && npm run clean && npm run build:esm && npm run build:cjs && npx echo-cli '\\n\\033[0;34mProject built.\\033[0m'",
     "build:esm": "npx echo-cli '\\033[0;34mBuilding ECMAScript modules...\\033[0m' && tsc -p ./configs/tsconfig.esm.json && npx echo-cli '{\"type\": \"module\"}' > dist/esm/package.json",
