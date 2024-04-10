@@ -1,7 +1,7 @@
 import { Buffer } from 'buffer/index.js'
 import { text } from './text.js'
 
-describe('Text Encoder', () => {
+describe('Text encoder', () => {
   it('correctly encodes ["M", 1] as "MAAB"', () => {
     const result = text('M', Buffer.from([0x00, 0x01]))
     expect(result).toBe('MAAB')
