@@ -1,6 +1,6 @@
 # simple-cesr
 
-`simple-cesr` is a simple, limited, true-to-spec implementation of [Composable Event Streaming Representation (CESR)](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html). It is compatible with Node.js and major browsers. It has a simple API for encoding and transforming primitives across the three [domain representations](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-concrete-domain-representat) (Raw, Text, and Binary). It conspicuously adheres to terminology from the spec and carefully avoids introducing outside concepts beyond CESR.
+`simple-cesr` is a simple, limited, true-to-spec implementation of [Composable Event Streaming Representation (CESR)](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html). It is compatible with Node.js and major browsers. It has a simple API for encoding and transforming primitives across three [domain representations](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-concrete-domain-representat) (Raw, Text, and Binary), as discussed in the spec. It conspicuously adheres to terminology from the spec and carefully avoids introducing outside concepts.
 
 For now, we have only implemented a selected subset of primitives from the [small fixed raw size](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-small-fixed-raw-size-tables) and [large fixed raw size](https://weboftrust.github.io/ietf-cesr/draft-ssmith-cesr.html#name-large-fixed-raw-size-tables) tables:
 
@@ -44,22 +44,73 @@ This implementation is consistent with the [1.0](https://weboftrust.github.io/ie
 npm install @simple-ssi/simple-cesr
 ```
 
+then:
+
+```bash
+const cesr = require('@simple-ssi/simple-cesr')
+```
+
+or
+
+```bash
+import * as cesr from '@simple-ssi/simple-cesr'
+```
+
+## API
+
+The API has three encode functions and three transform functions.
+
+### Encode
+
+Encode functions are in the form `function (code, raw)`.
+
+- `code` is the text code, as a string, for the primitive you are encoding.
+- `raw` is the raw primitive as a `Uint8Array`.
+
+Encode Functions:
+
+- `raw(code, raw)` - returns an object functionally equivalent to a tuple, `{code, raw}`.
+  - `code` is the text code as a string.
+  - `raw` is the raw primitive as a byte array.
+
+- `text(code, raw)` - returns the primitive as a CESR-encoded text string.
+
+- `binary(code, raw)` - returns the primitive as a CESR-encoded byte array.
+
+### Transform
+
+Transform functions are in the form `function (rawOrTextOrBinary)`.
+
+- `rawOrTextOrBinary` is the primitive you want to transform in its current domain representation.
+
+Transform Functions:
+
+- `toRaw(textOrBinary)` - takes a primitive encoded as Text or Binary and transforms it into Raw.
+- `toText(rawOrBinary)` - takes a primitive encoded as Raw or Binary and transforms it into Text.
+- `toBinary(rawOrText)` - takes a primitive encoded as Raw or Text and transforms it into Binary.
+
 ## Development
 
-Run unit tests with:
+Run unit tests.
 
 ```bash
 npm test
 ```
 
-You can run a high-level test that verifies the compatibility of `simple-cesr` with other CESR implementations like  [`cesr-ts`](https://github.com/webOfTrust/cesr-ts/) (derived from [`signify-ts`](https://github.com/WebOfTrust/signify-ts)) with:
+Run a high-level sanity test suite to verify the consistency of `simple-cesr`'s output with another prominent CESR implementation, the `matter` class from [`signify-ts`](https://github.com/WebOfTrust/signify-ts).
 
 ```bash
 npm run standards-test
 ```
 
-Run all tests with:
+Run both test suites.
 
 ```bash
 npm run all-tests
+```
+
+Run all tests, format the code, transpile for ECMAScript and CommonJS, and write the output to the `dist` directory at the project's root.
+
+```bash
+npm run full-build
 ```
