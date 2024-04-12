@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer/'
+import { Buffer } from 'buffer/index.js'
 import { swapInTypeCode } from './swapInTypeCode.js'
 import { padUpFront } from './padUpFront.js'
 import { convertToBase64 } from './convertToBase64.js'

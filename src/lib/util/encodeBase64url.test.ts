@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer/'
+import { Buffer } from 'buffer/index.js'
 import { encodeBase64url } from './encodeBase64url.js'
 
 describe('Base64Url encoder', () => {

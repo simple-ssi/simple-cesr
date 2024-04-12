@@ -6,7 +6,7 @@ import { Code } from '../../src/core/code/code.js'
 // Test is only against Matter output for now
 const matter = standards.matter
 
-describe('Standards test => ', () => {
+describe('Check against Matter output for ', () => {
   matter
     .forEach((type) => {
       const code = type.code

@@ -1,8 +1,8 @@
-import { Buffer } from 'buffer/'
+import { Buffer } from 'buffer/index.js'
 
 import { pipe } from '../../../../../../lib/util/pipe.js'
 import { make } from '../../../../../make.js'
-import { PrimitiveInvalidInput } from '../../../../maker.js'
+import { PrimitiveInvalidInput } from '../../../../errors/primitiveInvalidInput.js'
 import { Configuration } from '../../configuration.js'
 
 const throwsErrorForWrongPrefix = (length: number) => (configuration: Configuration): Configuration => {
@@ -21,7 +21,7 @@ const throwsErrorForWrongPrefix = (length: number) => (configuration: Configurat
 const f = (length: number) => (valids: string[]) => (configuration: Configuration): Configuration => {
   const { example } = configuration
   const hex = example.toString('hex')
-  it('and has the correct prefix', () => {
+  it('sees the correct prefix', () => {
     const actualPrefix = hex.substring(0, length)
     expect(valids.includes(actualPrefix)).toBe(true)
   })

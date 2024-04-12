@@ -1,7 +1,7 @@
-import { Buffer } from 'buffer/'
+import { Buffer } from 'buffer/index.js'
 import { Maker } from '../../maker.js'
-import { makeSureThat } from '../../validation/makeSureThat.js'
-import { itIs64Bytes } from '../../validation/validations/lengthIsRight.js'
+import { makeSureThat } from '../validation/makeSureThat.js'
+import { itIs64Bytes } from '../validation/validations/itIsXBytes.js'
 import { Ed25519Sig } from '../../../../core/primitive/primitives.js'
 
 // SHA3 512-bit digest

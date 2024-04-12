@@ -1,6 +1,6 @@
 
-import { Buffer } from 'buffer/'
-import { Raw } from '../../core/domain/domains.js'
+import { Buffer } from 'buffer/index.js'
+import { Raw } from '../../core/domain/raw.js'
 import { binary } from '../encode/binary.js'
 import { text } from '../encode/text.js'
 import { toBinary } from './toBinary.js'

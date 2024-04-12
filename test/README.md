@@ -2,12 +2,12 @@
 
 ## Unit Tests
 
-Unit tests are found under `src`, inline with the component under test.
+Unit tests are inline next to the component under test in `src`.
 
 ## High-level Tests
 
-Other, more holistic, tests can be found in this directory:
+This directory contains more holistic tests.
 
 ### Standards
 
-The standards test confirms agreement of `simple-cesr`'s output with other implementations of CESR. For now, only the output from `Matter` in [cesr-ts](https://github.com/weboftrust/cesr-ts) (derived from [signify-ts](https://github.com/weboftrust/signify-ts)) from [WebOfTrust](https://github.com/weboftrust) is checked against.
+The standards test confirms agreement between `simple-cesr`'s output and other implementations of CESR. Currently, it checks against the output from `matter` in [signify-ts](https://github.com/weboftrust/signify-ts) from [WebOfTrust](https://github.com/weboftrust).

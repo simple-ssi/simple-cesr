@@ -1,7 +1,8 @@
-import { Buffer } from 'buffer/'
+import { Buffer } from 'buffer/index.js'
 import { pipe } from '../../lib/util/pipe.js'
 import { Code } from '../../core/code/code.js'
-import { Raw, Text } from '../../core/domain/domains.js'
+import { Raw } from '../../core/domain/raw.js'
+import { Text } from '../../core/domain/text.js'
 import { make } from '../../implementation/make.js'
 import { asText } from './lib/asText.js'
 
@@ -17,5 +18,5 @@ export const text = (code: Code, primitive: Uint8Array): Text => {
   )
 }
 
-const rawWith = (code: Code) => (primitive: Buffer) => make(code, primitive)
+const rawWith = (code: Code) => (primitive: Buffer) => make(code, primitive) // need to call make() since this is where input validation happens
 const textWith = (code: Code) => (tuple: Raw) => asText(code, tuple.raw)

@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer/'
+import { Buffer } from 'buffer/index.js'
 import { encodeBase64url } from '../../../lib/util/encodeBase64url.js'
 
 // simple conversion of the primitive (as a byte array) to Base64
