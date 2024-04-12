@@ -1,6 +1,8 @@
 import { Buffer } from 'buffer/index.js'
 
-import { Binary, Raw, Text } from '../../core/domain/domains.js'
+import { Binary } from '../../core/domain/binary.js'
+import { Raw } from '../../core/domain/raw.js'
+import { Text } from '../../core/domain/text.js'
 import { text } from '../encode/text.js'
 import { encodeBase64url } from '../../lib/util/encodeBase64url.js'
 

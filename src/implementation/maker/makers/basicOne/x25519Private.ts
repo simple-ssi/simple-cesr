@@ -1,7 +1,7 @@
 import { Buffer } from 'buffer/index.js'
 import { X25519Private } from '../../../../core/primitive/primitives.js'
-import { makeSureThat } from '../../validation/makeSureThat.js'
-import { itIs32Bytes } from '../../validation/validations/lengthIsRight.js'
+import { makeSureThat } from '../validation/makeSureThat.js'
+import { itIs32Bytes } from '../validation/validations/itIsXBytes.js'
 import { Maker } from '../../maker.js'
 
 export const x25519Private: Maker = (primitive: Buffer): X25519Private => {

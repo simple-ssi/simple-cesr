@@ -2,7 +2,7 @@ import { Buffer } from 'buffer/index.js'
 
 import { pipe } from '../../../../../../lib/util/pipe.js'
 import { make } from '../../../../../make.js'
-import { PrimitiveInvalidInput } from '../../../../maker.js'
+import { PrimitiveInvalidInput } from '../../../../errors/primitiveInvalidInput.js'
 import { Configuration } from '../../configuration.js'
 
 const throwsErrorForWrongPrefix = (length: number) => (configuration: Configuration): Configuration => {

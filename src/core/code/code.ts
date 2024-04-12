@@ -1,10 +1,6 @@
-import {
-  BasicOneCharacterCode,
-  BasicTwoCharacterCode,
-  BasicFourCharacterCode
-} from './codes.js'
-
-export type CodeLength = 1 | 2 | 4
+import { BasicFourCharacterCode } from './basicFourCharacterCode.js'
+import { BasicTwoCharacterCode } from './basicTwoCharacterCode.js'
+import { BasicOneCharacterCode } from './basicOneCharacterCode.js'
 
 export type Code =
   BasicOneCharacterCode |

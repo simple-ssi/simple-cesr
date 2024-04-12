@@ -1,7 +1,7 @@
 // import { match } from 'ts-pattern'
 
 import { Code } from '../core/code/code.js'
-import { Raw } from '../core/domain/domains.js'
+import { Raw } from '../core/domain/raw.js'
 import { exhaustive } from '../lib/util/exhaustive.js'
 
 import { big } from './maker/makers/basicOne/big.js'
@@ -68,32 +68,3 @@ export const make = (code: Code, primitive: any): Raw => {
   // anything other than the defined Codes can't happen, assert that we've handled all cases exhaustively
   return exhaustive(code)
 }
-// match(code)
-//   .with('A', () => ed25519Seed(primitive))
-//   .with('B', () => ed25519n(primitive))
-//   .with('C', () => x25519(primitive))
-//   .with('D', () => ed25519(primitive))
-//   .with('E', () => blake3256(primitive))
-//   .with('F', () => blake2b256(primitive))
-//   .with('G', () => blake2s256(primitive))
-//   .with('H', () => sha3256(primitive))
-//   .with('I', () => sha2256(primitive))
-//   .with('J', () => ecdsa256k1Seed(primitive))
-//   .with('M', () => short(primitive))
-//   .with('N', () => big(primitive))
-//   .with('O', () => x25519Private(primitive))
-//   .with('0A', () => salt128(primitive))
-//   .with('0B', () => ed25519Sig(primitive))
-//   .with('0C', () => ecdsa256k1Sig(primitive))
-//   .with('0D', () => blake3512(primitive))
-//   .with('0E', () => blake2b512(primitive))
-//   .with('0F', () => sha3512(primitive))
-//   .with('0G', () => sha2512(primitive))
-//   .with('0H', () => long(primitive))
-//   .with('1AAA', () => ecdsa256k1n(primitive))
-//   .with('1AAB', () => ecdsa256k1(primitive))
-//   .with('1AAC', () => ed448n(primitive))
-//   .with('1AAD', () => ed448(primitive))
-//   .with('1AAE', () => ed448s(primitive))
-//   .with('1AAF', () => fourB64ThreeByte(primitive))
-//   .exhaustive()

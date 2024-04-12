@@ -22,11 +22,3 @@ export const padUpFront = (primitive: Buffer): Buffer => {
   }
   return exhaustive(padSize) // anything other than 0, 1, or 2 can't happen, we've covered all cases
 }
-// {
-//   const padSize = ps(primitive.length)
-//   return match(padSize)
-//     .with(0, () => primitive)
-//     .with(1, () => Buffer.concat([Buffer.from([0]), primitive]))
-//     .with(2, () => Buffer.concat([Buffer.from([0, 0]), primitive]))
-//     .exhaustive()
-// }
