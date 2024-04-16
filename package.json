@@ -1,6 +1,6 @@
 {
   "name": "@simple-ssi/simple-cesr",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple, limited, true-to-spec implementation of the CESR protocol.",
   "type": "module",
   "access": "public",
