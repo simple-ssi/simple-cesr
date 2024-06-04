@@ -4,19 +4,16 @@ import { pipe } from '../../../lib/util/pipe.js'
 import { transformTextToBinary } from './transformTextToBinary.js'
 import { readCodeFromText } from '../lib/readCodeFromText.js'
 import { CodeLength } from '../../../core/code/codeLength.js'
-import { splitIntoTuple } from '../lib/splitIntoTuple.js'
-import { trimBufferBytes } from '../lib/trimBufferBytes.js'
+import { makeIntoTuple } from '../lib/makeIntoTuple.js'
+import { removeBufferBytes } from '../lib/removeBufferBytes.js'
 
 export const transformTextToRaw = (text: Text): Raw => {
-  // helper functions
   const code = readCodeFromText(text)
-  const length = code.length as CodeLength
-  const removeFrontPadding = trimBufferBytes(length)
-
+  const codeLength = code.length as CodeLength
   return pipe(
     text,
     transformTextToBinary,
-    removeFrontPadding,
-    splitIntoTuple(code)
+    removeBufferBytes(codeLength),
+    makeIntoTuple(code)
   )
 }

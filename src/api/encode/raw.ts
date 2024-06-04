@@ -6,5 +6,6 @@ import { Raw } from '../../core/domain/raw.js'
 export const raw = (code: Code, primitive: Uint8Array): Raw =>
   make(
     code,
-    Buffer.from(primitive) // internally, we use Buffers
+    Buffer
+      .from(primitive) // internally, we use Buffers
   )
