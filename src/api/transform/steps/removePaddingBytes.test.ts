@@ -1,21 +1,21 @@
 import { Buffer } from 'buffer/index.js'
-import { removeBufferBytes } from './removeBufferBytes.js'
+import { removePaddingBytes } from './removePaddingBytes.js'
 
 describe('Trim Bytes', () => {
   it('handles code length of one', () => {
-    const trimOneByte = removeBufferBytes(1)
+    const trimOneByte = removePaddingBytes(1)
     const bin = Buffer.from([0x30, 0x00, 0x01])
     const actual = trimOneByte(bin)
     expect(actual).toStrictEqual(Buffer.from([0x00, 0x01]))
   })
   it('handles code length of two', () => {
-    const trimTwoBytes = removeBufferBytes(2)
+    const trimTwoBytes = removePaddingBytes(2)
     const bin = Buffer.from([0xd0, 0x70, 0x00, 0x00, 0x00, 0x01])
     const actual = trimTwoBytes(bin)
     expect(actual).toStrictEqual(Buffer.from([0x00, 0x00, 0x00, 0x01]))
   })
   it('handles code length of four', () => {
-    const trimThreeBytes = removeBufferBytes(4)
+    const trimThreeBytes = removePaddingBytes(4)
     const bin = Buffer.from([0xd4, 0x00, 0x05, 0x00, 0x00, 0x01])
     const actual = trimThreeBytes(bin)
     expect(actual).toStrictEqual(Buffer.from([0x00, 0x00, 0x01]))

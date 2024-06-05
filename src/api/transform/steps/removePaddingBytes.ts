@@ -3,13 +3,13 @@ import { CodeLength } from '../../../core/code/codeLength.js'
 import { exhaustive } from '../../../lib/util/exhaustive.js'
 import { removeBytes } from '../../../lib/util/removeBytes.js'
 
-type Trimmer = (bytes: Buffer) => Buffer
+type Trimmer = (buffer: Buffer) => Buffer
 
 const removeOneByte = removeBytes(1)
 const removeTwoBytes = removeBytes(2)
 const removeThreeBytes = removeBytes(3)
 
-export const removeBufferBytes = (codeLength: CodeLength): Trimmer =>
+export const removePaddingBytes = (codeLength: CodeLength): Trimmer =>
   codeLength === 1
     ? removeOneByte // 1 Base64 char (6 bits) can be represented in 1 byte (8 bits) with padding
     : codeLength === 2
