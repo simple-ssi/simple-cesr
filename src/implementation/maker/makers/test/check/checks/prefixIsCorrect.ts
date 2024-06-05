@@ -6,7 +6,7 @@ import { PrimitiveInvalidInput } from '../../../../errors/primitiveInvalidInput.
 import { Configuration } from '../../configuration.js'
 
 const throwsErrorForWrongPrefix = (length: number) => (configuration: Configuration): Configuration => {
-  const { code, example } = configuration
+  const { code, primitive: example } = configuration
   const bogusPrefix = '0'.repeat(length) // assumes zero by itself or repeated any number of times is not a valid prefix
   it('checks prefix', () => {
     const input = Buffer.from(
@@ -19,7 +19,7 @@ const throwsErrorForWrongPrefix = (length: number) => (configuration: Configurat
 }
 
 const f = (length: number) => (valids: string[]) => (configuration: Configuration): Configuration => {
-  const { example } = configuration
+  const { primitive: example } = configuration
   const hex = example.toString('hex')
   it('sees the correct prefix', () => {
     const actualPrefix = hex.substring(0, length)

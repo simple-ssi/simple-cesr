@@ -4,15 +4,12 @@ import { check } from '../test/check/check.js'
 import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
 import { canMakeIt } from '../test/check/checks/canMakeIt.js'
 
-const configuration = {
-  describe: 'Blake2s self-addressing 256 bit digest',
-  code: 'G' as Code,
-  example: Buffer.from('2080982ef42d6be9c30716c33633f0b4e8f35f7e031e5822e4f6e994617aee2e', 'hex'), // valid example of Blake2s256 digest in hex
-  length: 32 // expected length of example in bytes
-}
-
 check(
-  configuration,
+  {
+    name: 'Blake2s self-addressing 256 bit digest',
+    code: 'G' as Code,
+    primitive: Buffer.from('2080982ef42d6be9c30716c33633f0b4e8f35f7e031e5822e4f6e994617aee2e', 'hex')
+  },
   lengthNotWrong,
   canMakeIt
 )

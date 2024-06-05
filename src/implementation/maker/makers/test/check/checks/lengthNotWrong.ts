@@ -8,7 +8,7 @@ const oneTooLong = (primitive: Buffer): Buffer => Buffer.alloc(primitive.length 
 const oneTooShort = (primitive: Buffer): Buffer => Buffer.alloc(primitive.length - 1, 0)
 
 export const lengthNotWrong = (configuration: Configuration): Configuration => {
-  const { code, example } = configuration
+  const { code, primitive: example } = configuration
 
   it('checks length', () => {
     expect(() => make(code, oneTooLong(example)))

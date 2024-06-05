@@ -4,15 +4,12 @@ import { check } from '../test/check/check.js'
 import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
 import { canMakeIt } from '../test/check/checks/canMakeIt.js'
 
-const configuration = {
-  describe: '128 bit random salt',
-  code: '0A' as Code,
-  example: Buffer.from('39aa391b5b820de57df633ac0025af16', 'hex'), // valid example of 128 bit random salt in hex
-  length: 16 // expected length of example in bytes
-}
-
 check(
-  configuration,
+  {
+    name: '128 bit random salt',
+    code: '0A' as Code,
+    primitive: Buffer.from('39aa391b5b820de57df633ac0025af16', 'hex')
+  },
   lengthNotWrong,
   canMakeIt
 )

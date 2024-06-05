@@ -4,17 +4,12 @@ import { check } from '../test/check/check.js'
 import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
 import { canMakeIt } from '../test/check/checks/canMakeIt.js'
 
-const example = '10bdf135' // becomes 4 byte Buffer
-
-const configuration = {
-  describe: 'Long (4-byte) number',
-  code: '0H' as Code,
-  example: Buffer.from(example, 'hex'), // 4 bytes as hex
-  length: 4 // expected length of example in bytes
-}
-
 check(
-  configuration,
+  {
+    name: 'Long (4-byte) number',
+    code: '0H' as Code,
+    primitive: Buffer.from('10bdf135', 'hex') // 4 bytes as hex
+  },
   lengthNotWrong,
   canMakeIt
 )

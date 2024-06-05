@@ -1,6 +1,6 @@
 // debugging tool to log the current state of a value in a pipe
 
-// example:
+// primitive:
 
 // pipe(
 //   'hello',
