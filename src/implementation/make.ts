@@ -1,5 +1,5 @@
 import { Code } from '../core/code/code.js'
-import { Raw } from '../core/domain/raw.js'
+import { Raw } from '../core/domain/domains/raw.js'
 import { exhaustive } from '../lib/util/exhaustive.js'
 
 import { big } from './maker/makers/basicOne/big.js'

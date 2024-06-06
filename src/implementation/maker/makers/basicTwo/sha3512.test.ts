@@ -1,10 +1,10 @@
 import { Buffer } from 'buffer/index.js'
 import { Code } from '../../../../core/code/code.js'
-import { check } from '../test/check/check.js'
-import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
-import { canMakeIt } from '../test/check/checks/canMakeIt.js'
+import { checkThat } from '../testLib/checkThat.js'
+import { lengthNotWrong } from '../testLib/check/checks/lengthNotWrong.js'
+import { canMakeIt } from '../testLib/check/checks/canMakeIt.js'
 
-check(
+checkThat(
   {
     name: 'Sha3 self-addressing 512 bit digest',
     code: '0F' as Code,

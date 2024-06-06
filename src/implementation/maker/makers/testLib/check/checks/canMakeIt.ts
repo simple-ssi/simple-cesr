@@ -1,7 +1,7 @@
 import { make } from '../../../../../make.js'
-import { Configuration } from '../../configuration.js'
+import { MakerTestParameters } from '../../makerTestParameters.js'
 
-export const canMakeIt = (configuration: Configuration): Configuration => {
+export const canMakeIt = (configuration: MakerTestParameters): MakerTestParameters => {
   const { code, primitive } = configuration
 
   it('makes it', () => {

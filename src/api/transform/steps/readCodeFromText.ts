@@ -1,5 +1,5 @@
 // import { match } from 'ts-pattern'
-import { Text } from '../../../core/domain/text.js'
+import { Text } from '../../../core/domain/domains/text.js'
 import { Code } from '../../../core/code/code.js'
 import { exhaustive } from '../../../lib/util/exhaustive.js'
 import { Selector } from '../../../core/selector/selector.js'

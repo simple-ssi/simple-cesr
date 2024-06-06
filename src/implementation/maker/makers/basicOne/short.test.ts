@@ -1,10 +1,10 @@
 import { Buffer } from 'buffer/index.js'
-import { check } from '../test/check/check.js'
-import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
-import { canMakeIt } from '../test/check/checks/canMakeIt.js'
+import { checkThat } from '../testLib/checkThat.js'
+import { lengthNotWrong } from '../testLib/check/checks/lengthNotWrong.js'
+import { canMakeIt } from '../testLib/check/checks/canMakeIt.js'
 import { Code } from '../../../../core/code/code.js'
 
-check(
+checkThat(
   {
     name: 'Short (2-byte) number',
     code: 'M' as Code,

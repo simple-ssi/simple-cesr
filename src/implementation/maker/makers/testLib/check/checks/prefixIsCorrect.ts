@@ -1,11 +1,10 @@
 import { Buffer } from 'buffer/index.js'
-
+import { PrimitiveInvalidInput } from '../../../../errors/primitiveInvalidInput.js'
 import { pipe } from '../../../../../../lib/util/pipe.js'
 import { make } from '../../../../../make.js'
-import { PrimitiveInvalidInput } from '../../../../errors/primitiveInvalidInput.js'
-import { Configuration } from '../../configuration.js'
+import { MakerTestParameters } from '../../makerTestParameters.js'
 
-const throwsErrorForWrongPrefix = (length: number) => (configuration: Configuration): Configuration => {
+const throwsErrorForWrongPrefix = (length: number) => (configuration: MakerTestParameters): MakerTestParameters => {
   const { code, primitive: example } = configuration
   const bogusPrefix = '0'.repeat(length) // assumes zero by itself or repeated any number of times is not a valid prefix
   it('checks prefix', () => {
@@ -18,7 +17,7 @@ const throwsErrorForWrongPrefix = (length: number) => (configuration: Configurat
   return configuration
 }
 
-const f = (length: number) => (valids: string[]) => (configuration: Configuration): Configuration => {
+const f = (length: number) => (valids: string[]) => (configuration: MakerTestParameters): MakerTestParameters => {
   const { primitive: example } = configuration
   const hex = example.toString('hex')
   it('sees the correct prefix', () => {
@@ -31,7 +30,7 @@ const f = (length: number) => (valids: string[]) => (configuration: Configuratio
 const checkPrefix =
 (length: number) =>
   (...validPrefixes: string[]) =>
-    (configuration: Configuration): Configuration =>
+    (configuration: MakerTestParameters): MakerTestParameters =>
       pipe(
         configuration,
         f(length)(validPrefixes),

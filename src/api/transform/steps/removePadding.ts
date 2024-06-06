@@ -1,15 +1,15 @@
 import { Buffer } from 'buffer/index.js'
-import { CodeLength } from '../../../core/code/codeLength.js'
+import { CodeLength } from '../../../core/code/code.js'
 import { exhaustive } from '../../../lib/util/exhaustive.js'
-import { removeBytes } from '../../../lib/util/removeBytes.js'
+import { removeFrontBytes } from '../../../lib/keri/removeFrontBytes.js'
 
 type Trimmer = (buffer: Buffer) => Buffer
 
-const removeOneByte = removeBytes(1)
-const removeTwoBytes = removeBytes(2)
-const removeThreeBytes = removeBytes(3)
+const removeOneByte = removeFrontBytes(1)
+const removeTwoBytes = removeFrontBytes(2)
+const removeThreeBytes = removeFrontBytes(3)
 
-export const removePaddingBytes = (codeLength: CodeLength): Trimmer =>
+export const removePadding = (codeLength: CodeLength): Trimmer =>
   codeLength === 1
     ? removeOneByte // 1 Base64 char (6 bits) can be represented in 1 byte (8 bits) with padding
     : codeLength === 2

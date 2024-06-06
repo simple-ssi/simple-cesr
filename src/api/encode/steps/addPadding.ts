@@ -6,7 +6,7 @@ const prependWithNothing = (primitive: Buffer): Buffer => primitive
 const prependWithZero = (primitive: Buffer): Buffer => Buffer.concat([Buffer.from([0]), primitive])
 const prependWithTwoZeros = (primitive: Buffer): Buffer => Buffer.concat([Buffer.from([0, 0]), primitive])
 
-export const prependWithZeros = (primitive: Buffer): Buffer => {
+export const addPadding = (primitive: Buffer): Buffer => {
   const padSize: PadSize = ps(primitive.length)
   return padSize === 0
     ? prependWithNothing(primitive)
