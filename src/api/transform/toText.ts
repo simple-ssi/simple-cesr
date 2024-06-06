@@ -1,8 +1,8 @@
 import { Buffer } from 'buffer/index.js'
 
-import { Binary } from '../../core/domain/binary.js'
-import { Raw } from '../../core/domain/raw.js'
-import { Text } from '../../core/domain/text.js'
+import { Binary } from '../../core/domain/domains/binary.js'
+import { Raw } from '../../core/domain/domains/raw.js'
+import { Text } from '../../core/domain/domains/text.js'
 import { transformBinaryToText } from './transformers/transformBinaryToText.js'
 import { transformRawToText } from './transformers/transformRawToText.js'
 

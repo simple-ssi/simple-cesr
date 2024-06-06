@@ -1,8 +1,8 @@
 import { Buffer } from 'buffer/index.js'
 import { Maker } from '../../maker.js'
 import { Sha3512 } from '../../../../core/primitive/primitives.js'
-import { makeSureThat } from '../validation/makeSureThat.js'
-import { itIs64Bytes } from '../validation/validations/itIsXBytes.js'
+import { makeSureThat } from '../../validation/makeSureThat.js'
+import { itIs64Bytes } from '../../validation/conditions/itIsNBytes.js'
 
 // SHA3 512-bit digest
 export const sha3512: Maker = (primitive: Buffer): Sha3512 => {

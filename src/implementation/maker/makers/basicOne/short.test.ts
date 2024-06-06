@@ -1,20 +1,15 @@
 import { Buffer } from 'buffer/index.js'
-import { check } from '../test/check/check.js'
-import { lengthNotWrong } from '../test/check/checks/lengthNotWrong.js'
-import { canMakeIt } from '../test/check/checks/canMakeIt.js'
+import { checkThat } from '../testLib/checkThat.js'
+import { lengthNotWrong } from '../testLib/check/checks/lengthNotWrong.js'
+import { canMakeIt } from '../testLib/check/checks/canMakeIt.js'
 import { Code } from '../../../../core/code/code.js'
 
-const example = '011F' // becomes two byte Buffer
-
-const configuration = {
-  describe: 'Short (2-byte) number',
-  code: 'M' as Code,
-  example: Buffer.from(example, 'hex'),
-  length: 2 // 2 bytes
-}
-
-check(
-  configuration,
+checkThat(
+  {
+    name: 'Short (2-byte) number',
+    code: 'M' as Code,
+    primitive: Buffer.from('011F', 'hex') // 2 bytes in hex
+  },
   canMakeIt,
   lengthNotWrong
 )

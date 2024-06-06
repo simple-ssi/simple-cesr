@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer'
+import { Buffer } from 'buffer/index.js'
 import { standards } from './standards.js'
 import { text } from '../../src/api/encode/text.js'
 import { Code } from '../../src/core/code/code.js'

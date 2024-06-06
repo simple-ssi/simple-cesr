@@ -1,22 +1,19 @@
-import { Raw } from '../../../core/domain/raw.js'
-import { Text } from '../../../core/domain/text.js'
+import { Raw } from '../../../core/domain/domains/raw.js'
+import { Text } from '../../../core/domain/domains/text.js'
 import { pipe } from '../../../lib/util/pipe.js'
-import { transformTextToBinary } from './transformTextToBinary.js'
-import { readCodeFromText } from '../lib/readCodeFromText.js'
-import { CodeLength } from '../../../core/code/codeLength.js'
-import { splitIntoTuple } from '../lib/splitIntoTuple.js'
-import { trimBufferBytes } from '../lib/trimBufferBytes.js'
+import { convertToByteArray } from '../steps/convertToByteArray.js'
+import { readCodeFromText } from '../steps/readCodeFromText.js'
+import { CodeLength } from '../../../core/code/code.js'
+import { removePadding } from '../steps/removePadding.js'
+import { produceTheRaw } from '../steps/produceTheRaw.js'
 
 export const transformTextToRaw = (text: Text): Raw => {
-  // helper functions
   const code = readCodeFromText(text)
-  const length = code.length as CodeLength
-  const removeFrontPadding = trimBufferBytes(length)
-
+  const codeLength = code.length as CodeLength
   return pipe(
     text,
-    transformTextToBinary,
-    removeFrontPadding,
-    splitIntoTuple(code)
+    convertToByteArray,
+    removePadding(codeLength),
+    produceTheRaw(code)
   )
 }

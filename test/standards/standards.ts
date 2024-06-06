@@ -491,6 +491,58 @@ export const standards = {
       ]
     },
     {
+      code: '0G',
+      length: 88,
+      samples: [
+        {
+          raw: '01e6d981d060da5305c0c4b798cfdca1f20bde68b4070e5a8b23cfa1016f4f249af48b265d7871f357279efdcba8678a35e0226fdd82edb775b72ebd56205528',
+          text: '0GAB5tmB0GDaUwXAxLeYz9yh8gveaLQHDlqLI8-hAW9PJJr0iyZdeHHzVyee_cuoZ4o14CJv3YLtt3W3Lr1WIFUo'
+        },
+        {
+          raw: 'b5e8e05b5281b4df3b3e1518220e7d93661960cb1b7d9c08f86a66ee8386799696c461bb592ca559082fe7bb3a843cd27e32c973d677c0ae1e4d821b13bc56e5',
+          text: '0GC16OBbUoG03zs-FRgiDn2TZhlgyxt9nAj4ambug4Z5lpbEYbtZLKVZCC_nuzqEPNJ-Mslz1nfArh5NghsTvFbl'
+        },
+        {
+          raw: 'e449839b82f6861fa9eb98ec6b089de8f7a8324a3151f275f2f0110ee1a4b888bf2738a20130858b816db80a4d8dce53f356b9e36dc2d17879a9ee50f17a2faf',
+          text: '0GDkSYObgvaGH6nrmOxrCJ3o96gySjFR8nXy8BEO4aS4iL8nOKIBMIWLgW24Ck2NzlPzVrnjbcLReHmp7lDxei-v'
+        },
+        {
+          raw: '685f2659c1409f1d8217e4ce43833c2c2069e3ed82264c70f2016359bc3295b47aa7db1ddeb9513e74216be2c5d452c95fff601e377be938810cad7134b40122',
+          text: '0GBoXyZZwUCfHYIX5M5DgzwsIGnj7YImTHDyAWNZvDKVtHqn2x3euVE-dCFr4sXUUslf_2AeN3vpOIEMrXE0tAEi'
+        },
+        {
+          raw: 'ce5d5131e29ba529371d5a73017a7a1a1272cda75deb19a0c9426045177b11d824a48611030d566b7acba94277ddfb0ab108252f5a76be0ec4daa8561846cb5e',
+          text: '0GDOXVEx4pulKTcdWnMBenoaEnLNp13rGaDJQmBFF3sR2CSkhhEDDVZresupQnfd-wqxCCUvWna-DsTaqFYYRste'
+        }
+      ]
+    },
+    {
+      code: '0H',
+      length: 8,
+      samples: [
+        {
+          raw: '48fd43fd',
+          text: '0HBI_UP9'
+        },
+        {
+          raw: '822e72f5',
+          text: '0HCCLnL1'
+        },
+        {
+          raw: '48f3c9eb',
+          text: '0HBI88nr'
+        },
+        {
+          raw: '20e5ac52',
+          text: '0HAg5axS'
+        },
+        {
+          raw: 'ce60aabc',
+          text: '0HDOYKq8'
+        }
+      ]
+    },
+    {
       code: '1AAB',
       length: 48,
       samples: [

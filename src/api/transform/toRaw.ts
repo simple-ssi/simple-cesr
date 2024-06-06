@@ -1,6 +1,6 @@
-import { Binary } from '../../core/domain/binary.js'
-import { Raw } from '../../core/domain/raw.js'
-import { Text } from '../../core/domain/text.js'
+import { Binary } from '../../core/domain/domains/binary.js'
+import { Raw } from '../../core/domain/domains/raw.js'
+import { Text } from '../../core/domain/domains/text.js'
 import { transformTextToRaw } from './transformers/transformTextToRaw.js'
 import { transformBinaryToRaw } from './transformers/transformBinaryToRaw.js'
 

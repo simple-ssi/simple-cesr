@@ -1,4 +1,4 @@
-// jest wantw a tsconfig file in the root of the project.
+// jest wants a tsconfig file in the root of the project.
 {
   "extends": "./configs/tsconfig.base.json",
   "compilerOptions": {
