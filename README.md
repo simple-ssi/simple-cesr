@@ -114,3 +114,9 @@ Run all tests, format the code, transpile for ECMAScript and CommonJS, and write
 ```bash
 npm run full-build
 ```
+
+Three files that serve as a good starting point for developers becoming familiar with the project.
+
+`src/api/encode/text.ts`
+`src/api/transform/transformers/transformTextToRaw.ts`
+`src/implementation/make.ts`
