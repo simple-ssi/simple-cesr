@@ -9,13 +9,13 @@ const readTwoCharCode = (text: Text): Code => text.substring(0, 2) as Code
 const readFourCharCode = (text: Text): Code => text.substring(0, 4) as Code
 
 // reads the code characters from the Text
-export const readCodeFromText = (textDomain: Text): Code => {
-  const selector = textDomain[0] as Selector
+export const readCodeFromText = (text: Text): Code => {
+  const selector = text[0] as Selector
   return selector !== '0' && selector !== '1'
-    ? readOneCharCode(textDomain)
+    ? readOneCharCode(text)
     : selector === '0'
-      ? readTwoCharCode(textDomain)
+      ? readTwoCharCode(text)
       : selector === '1'
-        ? readFourCharCode(textDomain)
+        ? readFourCharCode(text)
         : exhaustive(selector)
 }
