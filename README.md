@@ -115,6 +115,8 @@ Run all tests, format the code, transpile for ECMAScript and CommonJS, and write
 npm run full-build
 ```
 
+## Getting Started
+
 Three files that serve as a good starting point for developers becoming familiar with the project.
 
 `src/api/encode/text.ts`
