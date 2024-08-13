@@ -1,6 +1,6 @@
 {
   "name": "@simple-ssi/simple-cesr",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A simple, limited, true-to-spec implementation of the CESR protocol.",
   "type": "module",
   "access": "public",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/futureforging/simple-cesr.git"
+    "url": "git+https://github.com/simple-ssi/simple-cesr.git"
   },
   "keywords": [
     "KERI",
@@ -45,9 +45,9 @@
   "author": "Jonathan Rayback",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/futureforging/simple-cesr/issues"
+    "url": "https://github.com/simple-ssi/simple-cesr/issues"
   },
-  "homepage": "https://github.com/futureforging/simple-cesr#readme",
+  "homepage": "https://github.com/simple-ssi/simple-cesr#readme",
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "del-cli": "^5.0.0",
